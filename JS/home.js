@@ -1,7 +1,7 @@
 new Vue({
     el: '#home',
     data: {
-     timeGreeting:"Good ",
+        timeGreeting:"Good ",
     },
     mounted: function() {
         try{
@@ -11,5 +11,4 @@ new Vue({
         else this.timeGreeting+="evening!"
         } catch (e) {this.timeGreeting = "Hello there!"}
     }
- });
- 
+});

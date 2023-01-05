@@ -55,14 +55,14 @@
         <div id="puzzles" class="container tab-pane fade"><br>
           <h2><b>Puzzles</b></h2>
           <h3>A various collection of puzzles I've collected and created. I encourage you to solve these!</h3>
-          <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div class="container-fluid">
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link" href="#FoursPuzzle">Fours Puzzle</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#PowerupPuzzle">Power-up Maze</a>
+                  <a class="nav-link" href="#PowerupMaze">Power-up Maze</a>
                 </li>
               </ul>
             </div>
@@ -96,44 +96,29 @@
               Case #3: NO<br>
               Case #4: NO<br>
               
-              In Case 1, we are given three 4s to get the number 2 as a result. We can do: (4 + 4) / 4 to return the number 2.<br>
-              In Case 2, we are given five 4s to get the number 1. We can do: 4 / 4 to return the number 1. The number of 4s we use does not have to be exactly N, but has to be less or equal to N.<br>
-              In Case 3, we are given three 4s to get 10. 10 can be found with 4 + 4 + (4 + 4) / 4; however, we print NO because we used more than three 4s.<br>
+              In Case 1, we are given three 4s to get the number 2 as a result. We can do: <b>(4 + 4) / 4</b> to return the number 2.<br>
+              In Case 2, we are given five 4s to get the number 1. We can do: <b>4 / 4</b> to return the number 1. The number of 4s we use does not have to be exactly N, but has to be less or equal to N.<br>
+              In Case 3, we are given three 4s to get 10. 10 can be found with <b>4 + 4 + (4 + 4) / 4</b>; however, we print NO because we used more than three 4s.<br>
               In Case 4, with only one 4, our only possible result is 4. Therefore, we cannot get a result of 0.
             </p><br><br>
           </div>
-          <div id="PowerupPuzzle" class="container-fluid"><br>
-            <h3><b>Power-up Puzzle</b></h3>
+          <div id="PowerupMaze" class="container-fluid"><br>
+            <h3><b>Power-up Maze</b></h3>
             <h5>
-              I can't remember too well the origin of this puzzle. I believe I dreamed of it on the 24th of December 
+              I can't remember too well the origin of this puzzle. 
+              I believe I dreamed of it on the 24th of December, after reading about a puzzle with (possibly) a similar solution. 
             </h5>
             <p>
-              Given a finite amount of the number 4, and the mathematical operations +, -, *, and ÷, determine whether it is possible or not to produce a result using those operations.<br><br>
-              
-              Input will be formatted as follows. The first line will be an integer number of how many inputs there will be. For each input, there will be two positive integers N and K separated by a space. The first integer N is how many 4’s you are allowed to use. The second integer K is the number to calculate.<br>
-              1 <= N <= 10<br>
-              0 <= K <= 1,000,000<br><br>
-              
-              For each case, output the case number, along with if K is able to be calculated.<br><br>
-              
-              Example input:<br>
-              4<br>
-              3 2<br>
-              5 1<br>
-              3 10<br>
-              1 0<br><br>
-              
-              Output, given that example input:<br>
-              Case #1: YES<br>
-              Case #2: YES<br>
-              Case #3: NO<br>
-              Case #4: NO<br>
-              
-              In Case 1, we are given three 4s to get the number 2 as a result. We can do: (4 + 4) / 4 to return the number 2.<br>
-              In Case 2, we are given five 4s to get the number 1. We can do: 4 / 4 to return the number 1. The number of 4s we use does not have to be exactly N, but has to be less or equal to N.<br>
-              In Case 3, we are given three 4s to get 10. 10 can be found with 4 + 4 + (4 + 4) / 4; however, we print NO because we used more than three 4s.<br>
-              In Case 4, with only one 4, our only possible result is 4. Therefore, we cannot get a result of 0.
+              A mouse is running through a maze, represented by a 2D grid, shown below. A # represents a wall, and a . represents an empty tile. 
+              Each second, it can move one tile upwards, leftwards, rightwards, or downwards on an empty space, but cannot go through walls. 
+              The mouse starts on the space marked A, and wants to move to the space marked B.<br><br>
+              Around the maze are two powerups marked P. The mouse must move over every tile marked P in order to complete the maze.
+              Whenever the mouse moves over a space marked P, the space becomes an empty tile, and 
+              the mouse is able to move an additional tile per second (not counting its current turn).<br><br>
             </p><br><br>
+
+            <pre>{{currentMaze}}</pre>
+            <p>{{explanation}}</p>
           </div>
         </div>
         
@@ -148,5 +133,6 @@
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-<script src="JS/index.js"></script>
+<script src="JS/home.js"></script>
+<script src="JS/maze.js"></script>
 </html>
