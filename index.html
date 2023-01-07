@@ -20,8 +20,8 @@
     <div class="container mt-3"><br>
       <!-- Nav tabs -->
       <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#home">Home</a>
+        <li class="nav-item active">
+          <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#about">About</a>
@@ -38,16 +38,60 @@
       <div class="tab-content">
         
         <!-- Home -->
-        <div id="home" class="container tab-pane fade"><br>
+        <div id="home" class="container tab-pane fade show active"><br>
           <h2><b>Home</b></h2>
-          <h3>{{timeGreeting}} My name is Jason Feng.</h3>
-          <p></p>
+          <img class="img-fluid rounded mx-auto d-block" src="resources/clubday2photo.jpg" alt="Sierra College Club Day 2, Fall 2022" width="621" height="441"><br>
+          <h3>{{timeGreeting}} My name is Jason Feng, and this is my website. </h3>
+          <h5>It is still under construction, but I will add new features soon.</h5><br>
+          <p><b>Check out my puzzles!</b> Most of these puzzles are original ones that come to me in dreams.</p><br>
+          
+          <div>
+            <a title="LinkedIn" href="https://www.linkedin.com/in/jasonfeng365" target="_blank"><svg size="large" viewBox="2 2 20 20" fill="dimgray" width="48" height="48"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg></a> &nbsp&nbsp
+            <a title="GitHub" href="https://github.com/JasonFeng365" target="_blank"><svg size="large" viewBox="0 0 16 16" fill="dimgray" width="48" height="48"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a> &nbsp&nbsp
+            <a title="Project Euler" href="https://projecteuler.net/progress=fengster" target="_blank"><svg size="large" viewBox="0 0 1920 1920" fill="dimgray" width="48" height="48"><path transform="translate(0,1920) scale(1,-1)" d="M270 1881 c-128 -40 -232 -159 -247 -282 l-6 -49 928 0 928 0 -6 49 c-12 102 -87 205 -189 258 l-53 28 -665 2 c-366 1 -676 -2 -690 -6z M140 945 l0 -445 140 0 140 0 0 165 0 165 108 0 c186 0 278 38 335 138 72 129 34 312 -77 377 -66 38 -131 45 -396 45 l-250 0 0 -445z m429 254 c51 -18 77 -91 50 -141 -16 -29 -70 -48 -139 -48 l-60 0 0 100 0 100 59 0 c32 0 72 -5 90 -11z M990 945 l0 -445 380 0 380 0 0 44 c0 23 -3 71 -6 105 l-7 61 -233 0 -234 0 0 85 0 85 215 0 215 0 0 90 0 90 -215 0 -215 0 0 70 0 70 230 0 230 0 0 95 0 95 -370 0 -370 0 0 -445z M30 295 c0 -29 50 -115 90 -155 22 -22 63 -52 92 -67 l53 -28 680 0 680 0 53 28 c29 15 70 45 92 67 40 40 90 126 90 155 0 13 -100 15 -915 15 -815 0 -915 -2 -915 -15z"></path></svg></a> &nbsp&nbsp
+          </div>
         </div>
 
         <!-- About -->
+        <!-- probaby needs a better conclusion -->
         <div id="about" class="container tab-pane fade"><br>
           <h2><b>About Me</b></h2>
-          <h3>There's nothing here, because CS majors are boring</h3>
+          <img class="img-fluid rounded mx-auto d-block" src="resources/clubdayphoto.jpg" alt="Sierra College Club Day, Fall 2022" width="741" height="307"><br>
+          <h3>This is a picture from Sierra College's 2022 Club Day. </h3>
+          <p>I started attending Sierra College as a full-time student in the summer of 2021.
+            In early spring 2022, I was approached by Sierra College's Young Developers club, who were looking for officers to lead the club.<br>
+            While I first joined as a standard officer, I quickly rose to president by the beginning of summer, and led 
+            lectures during club meetings, lecturing on various algorithms, techniques, and puzzles,
+            along with encouraging my classmates to participate in programming competitions.<br>
+            Spring 2023 is my last semester here. I will transfer to a University of California with an associate's degree,
+            and pursue my graduate degree at university.<br><br>
+
+            Despite all that I've learned at college, my greatest opportunity has been working with Rocklin's Code Ninjas team.
+            I first joined the team in the fall of 2021, as a recommendation from my friend.
+            Although it took me some time to realize it at first, my time at the code dojo was a huge eye-opener for me.
+            Here, I learned all about competitive programming, along with the way of thinking needed to problem-solve effectively.<br>
+            If Sierra College and my courses began my path in programming, Code Ninjas only added to my momentum.<br><br>
+
+            My second best advice for aspiring computer scientists is to "think like a computer".
+            Well, that's a strange statement- computers can't think! They're just programmed to execute certain routines,
+            but cannot make decisions with complete independence from humans. When I say "thinking like a computer", I mean that
+            you have to truly understand the flow and logic of code and algorithms.<br>
+            Say you attend a lecture of a computer science class. That lecture shows you an algorithm, and explains what it does. 
+            Then, on a homework assignment, you have to replicate that algorithm to solve a problem.<br>
+            That's completely fine. But what if that probem has multiple parts? Knowing how to link multiple algorithms together,
+            alongside having a mental outline of what the program's logic, is crucial to writing effective code.<br><br>
+
+            There's one thing that is even be more important than the flow of logic, and that is simply passion for programming.
+            You may be able to stuff a lot of knowledge in classes, but finding motivation outside of school will be difficult
+            if you don't have any desire to code.<br>
+            That is why, if you are an aspiring programmer, my greatest advice is to build some projects outside of school.
+            Courses will teach you knowledge, but you will have to find the passion to apply that knowledge by yourself.
+            Work on some personal projects- a to-do list is a very common project to begin with. While that is completely fine,
+            it is infinitely better to find a project you are interested in. For me, that is Discord bots and automation.
+            For you, it may be a game, a utility, an algorithm, or something else altogether.
+            But find something that you are interested in, and you will learn all the while you build your dream project.
+
+          </p>
         </div>
 
         <!-- Puzzles -->
@@ -94,7 +138,7 @@
               The answer of this puzzle is the sum of the valid inputs' case numbers.<br>
               For example, for the example input, the first and second inputs are valid, but the third and fourth are not, so I would add 1 and 2 to get a solution of 3.
             </p><br>
-            <h5>To solve this puzzle, use <a href="PuzzleInputs/FoursPuzzle.txt">this link</a> to get the large input set.</h5>
+            <h5>To solve this puzzle, use <a href="PuzzleInputs/FoursPuzzle.txt" target="_blank">this link</a> to get the large input set.</h5>
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
             <h5>{{response}}</h5><br>
 
@@ -103,7 +147,7 @@
             <h3><b>Power-up Maze</b></h3>
             <h5>
               I dreamed of the basic premise of this puzzle on the 24th of December, after reading about a puzzle with (possibly) a similar solution.
-              I later added onto it, while I was conscious.
+              I later added onto it, while I was awake.
             </h5>
             <p>
               A mouse is running through a maze, represented by a 2D grid, shown below. A # represents a wall, and a . represents an empty tile. 
@@ -120,7 +164,7 @@
             <p><pre>{{currentExplanation}}</pre></p>
             <p>Current second: {{index}}</p> <button @click="prev" :disabled='lowest'>Previous</button> <button @click="next" :disabled='highest'>Next</button><br><br>
 
-            <h5>To solve this puzzle, use <a href="PuzzleInputs/PowerupMaze.txt">this link</a> to get the large input set.</h5>
+            <h5>To solve this puzzle, use <a href="PuzzleInputs/PowerupMaze.txt" target="_blank">this link</a> to get the large input set.</h5>
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
             <h5>{{response}}</h5><br>
           </div>
