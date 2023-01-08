@@ -34,21 +34,21 @@ function createTab(hrefs, names, descriptions, difficulty){
 }
 
 function easy(){
-    const hrefs = ["Sample"]
+    const hrefs = ["sample"]
     const names = ["Sample Problem"]
     const desc = ["Description."]
     return createTab(hrefs, names, desc, "easy")
 }
 
 function medium(){
-    const hrefs = ["OddSum"]
+    const hrefs = ["oddsum"]
     const names = ["Odd Sum"]
     const desc = ["A puzzle inspired by a MATLAB class assignment."]
     return createTab(hrefs, names, desc, "medium")
 }
 
 function hard(){
-    const hrefs = ["FoursPuzzle", "PowerupMaze"]
+    const hrefs = ["fourspuzzle", "powerupmaze"]
     const names = ["Fours Puzze", "Power-up Maze"]
     const desc = ["My first puzzle, which came to me in a dream during 2022's Meta Hacker Cup.", 
     "Run through a maze, collecting power-ups to move faster!"]

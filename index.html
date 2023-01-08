@@ -27,7 +27,7 @@
           <a class="nav-link" data-bs-toggle="tab" href="#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#puzzles">Puzzles</a>
+          <a class="nav-link" data-bs-toggle="tab" href="#puzzles" id="puzzleTab">Puzzles</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" data-bs-toggle="tab" href="#projects">Projects</a>
@@ -43,7 +43,8 @@
           <img class="img-fluid rounded mx-auto d-block" src="resources/clubday2photo.jpg" alt="Sierra College Club Day 2, Fall 2022" width="621" height="441"><br>
           <h3>{{timeGreeting}} My name is Jason Feng, and this is my website. </h3>
           <h5>It is still under construction, but I will add new features soon.</h5><br>
-          <p><b>Check out my puzzles!</b> Most of these puzzles are original ones that come to me in dreams.</p><br>
+          <p><b><a href="#" @click="puzzleLink">Check out my puzzles!</a></b>
+            Most of these puzzles are original ones that come to me in dreams.</p><br>
           
           <div>
             <a title="LinkedIn" href="https://www.linkedin.com/in/jasonfeng365" target="_blank"><svg size="large" viewBox="2 2 20 20" fill="dimgray" width="48" height="48"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg></a> &nbsp&nbsp
@@ -174,7 +175,8 @@
         <!-- Projects -->
         <div id="projects" class="container tab-pane fade"><br>
           <h2><b>Projects</b></h2>
-          <h3>Here's where I put like 27 APIs</h3>
+          <h3>A list of my best projects.</h3><br>
+          <div v-html="allProjects"></div>
         </div>
       </div>
     </div>
@@ -182,6 +184,7 @@
 
 </body>
 <script src="js/home.js"></script>
+<script src="js/projects.js"></script>
 <script src="puzzles/fourspuzzle/fourspuzzle.js"></script>
 <script src="puzzles/powerupmaze/powerupmaze.js"></script>
 </html>

@@ -1,7 +1,14 @@
+const puzzleTab = document.querySelector("#puzzleTab")
+
 const home = new Vue({
     el: '#home',
     data: {
         timeGreeting:"Good ",
+    },
+    methods:{
+        puzzleLink(){
+            puzzleTab.click();
+        }
     },
     mounted: function() {
         try{
