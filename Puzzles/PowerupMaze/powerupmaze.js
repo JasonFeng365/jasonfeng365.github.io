@@ -8,7 +8,7 @@ function hashCode(s) {
 }
 
 const maze = new Vue({
-    el: '#PowerupMaze',
+    el: '#powerupmaze',
     data: {
         mazes:[],
         explanations:[],

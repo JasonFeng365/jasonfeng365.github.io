@@ -8,7 +8,7 @@ function hashCode(s) {
 const foursAnswer = 51; //change to correct value
 
 const fours = new Vue({
-    el: '#FoursPuzzle',
+    el: '#fourspuzzle',
     data: {
         input:"",
         response:"Enter your answer above.",
