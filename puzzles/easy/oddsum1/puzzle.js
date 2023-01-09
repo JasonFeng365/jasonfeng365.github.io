@@ -1,3 +1,5 @@
+const answer = 1595505692;
+
 function hashCode(s) {
     let h = 0
     for(let i = 0; i < s.length; i++)
@@ -5,17 +7,19 @@ function hashCode(s) {
     return h;
 }
 
-const foursAnswer = -2101304178; //change to correct value
-
-const fours = new Vue({
-    el: '#fourspuzzle',
+new Vue({
+    el: '#puzzle',
     data: {
         input:"",
         response:"Enter your answer above.",
+        visible:false,
     },
     methods: {
         submit(){
-            this.response = (hashCode(this.input.trim())==foursAnswer) ? "That's the correct answer!" : "Not quite. Try again."
+            this.response = (hashCode(this.input.trim())==answer) ? "That's the correct answer!" : "Not quite. Try again."
+        },
+        toggleHint(){
+            this.visible = !this.visible
         }
     },
 });

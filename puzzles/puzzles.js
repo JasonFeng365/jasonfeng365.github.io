@@ -34,17 +34,18 @@ function createTab(hrefs, names, descriptions, difficulty){
 }
 
 function easy(){
-    const hrefs = ["nothing"]
-    const names = ["Nothing here yet!"]
-    const desc = ["I don't have any easy puzzles yet, but please check out the Medium and Hard puzzles. Let me know if you have any puzzle suggestions!"]
+    const hrefs = ["oddsum1", "evensum1"]
+    const names = ["Odd Sum 1", "Even Sum 1"]
+    const desc = ["A puzzle inspired by a MATLAB class assignment.",
+    "A puzzle based off of the Odd Sum puzzle."]
     return createTab(hrefs, names, desc, "easy")
 }
 
 function medium(){
-    const hrefs = ["oddsum", "evensum"]
-    const names = ["Odd Sum", "Even Sum"]
-    const desc = ["A puzzle inspired by a MATLAB class assignment.",
-    "A puzzle based off of the Odd Sum puzzle."]
+    const hrefs = ["oddsum2", "evensum2"]
+    const names = ["Odd Sum 2", "Even Sum 2"]
+    const desc = ["An optimized variation of Odd Sum 1.",
+    "An optimized variation of Even Sum 1."]
     return createTab(hrefs, names, desc, "medium")
 }
 

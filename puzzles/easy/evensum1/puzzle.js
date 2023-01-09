@@ -1,4 +1,4 @@
-const answer = 1604; //change to correct value
+const answer = 1508820617;
 
 function hashCode(s) {
     let h = 0
@@ -12,11 +12,15 @@ new Vue({
     data: {
         input:"",
         response:"Enter your answer above.",
+        visible:false,
     },
     methods: {
         submit(){
             this.response = (hashCode(this.input.trim())==answer) ? "That's the correct answer!" : "Not quite. Try again."
         },
+        toggleHint(){
+            this.visible = !this.visible
+        }
     },
 });
  
