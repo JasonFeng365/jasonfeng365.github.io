@@ -40,24 +40,27 @@
         <!-- Home -->
         <div id="home" class="container tab-pane fade show active"><br>
           <h2><b>Home</b></h2>
-          <img class="img-fluid rounded mx-auto d-block" src="resources/clubday2photo.jpg" alt="Sierra College Club Day 2, Fall 2022" width="621" height="441"><br>
+          <img class="img-fluid rounded mx-auto d-block" src="resources/clubday2photo.jpg" alt="Sierra College Club Day 2" width="621" height="407"><br>
           <h3>{{timeGreeting}} My name is Jason Feng, and this is my website. </h3>
           <h5>It is still under construction, but I will add new features soon.</h5><br>
           <p><b><a href="#" @click="puzzleLink">Check out my puzzles!</a></b>
             Most of these puzzles are original ones that come to me in dreams.</p><br>
           
-          <div>
+          <!-- SVG icons -->
+          <div class="text-center">
             <a title="LinkedIn" href="https://www.linkedin.com/in/jasonfeng365" target="_blank"><svg size="large" viewBox="2 2 20 20" fill="dimgray" width="48" height="48"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg></a> &nbsp&nbsp
             <a title="GitHub" href="https://github.com/JasonFeng365" target="_blank"><svg size="large" viewBox="0 0 16 16" fill="dimgray" width="48" height="48"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a> &nbsp&nbsp
-            <a title="Project Euler" href="https://projecteuler.net/progress=fengster" target="_blank"><svg size="large" viewBox="0 0 1920 1920" fill="dimgray" width="48" height="48"><path transform="translate(0,1920) scale(1,-1)" d="M270 1881 c-128 -40 -232 -159 -247 -282 l-6 -49 928 0 928 0 -6 49 c-12 102 -87 205 -189 258 l-53 28 -665 2 c-366 1 -676 -2 -690 -6z M140 945 l0 -445 140 0 140 0 0 165 0 165 108 0 c186 0 278 38 335 138 72 129 34 312 -77 377 -66 38 -131 45 -396 45 l-250 0 0 -445z m429 254 c51 -18 77 -91 50 -141 -16 -29 -70 -48 -139 -48 l-60 0 0 100 0 100 59 0 c32 0 72 -5 90 -11z M990 945 l0 -445 380 0 380 0 0 44 c0 23 -3 71 -6 105 l-7 61 -233 0 -234 0 0 85 0 85 215 0 215 0 0 90 0 90 -215 0 -215 0 0 70 0 70 230 0 230 0 0 95 0 95 -370 0 -370 0 0 -445z M30 295 c0 -29 50 -115 90 -155 22 -22 63 -52 92 -67 l53 -28 680 0 680 0 53 28 c29 15 70 45 92 67 40 40 90 126 90 155 0 13 -100 15 -915 15 -815 0 -915 -2 -915 -15z"></path></svg></a> &nbsp&nbsp
-          </div>
+            <a title="Project Euler" href="https://projecteuler.net/progress=fengster" target="_blank"><svg size="large" viewBox="0 0 1920 1920" fill="dimgray" width="48" height="48"><path transform="translate(0,1920) scale(1,-1)" d="M270 1881 c-128 -40 -232 -159 -247 -282 l-6 -49 928 0 928 0 -6 49 c-12 102 -87 205 -189 258 l-53 28 -665 2 c-366 1 -676 -2 -690 -6z M140 945 l0 -445 140 0 140 0 0 165 0 165 108 0 c186 0 278 38 335 138 72 129 34 312 -77 377 -66 38 -131 45 -396 45 l-250 0 0 -445z m429 254 c51 -18 77 -91 50 -141 -16 -29 -70 -48 -139 -48 l-60 0 0 100 0 100 59 0 c32 0 72 -5 90 -11z M990 945 l0 -445 380 0 380 0 0 44 c0 23 -3 71 -6 105 l-7 61 -233 0 -234 0 0 85 0 85 215 0 215 0 0 90 0 90 -215 0 -215 0 0 70 0 70 230 0 230 0 0 95 0 95 -370 0 -370 0 0 -445z M30 295 c0 -29 50 -115 90 -155 22 -22 63 -52 92 -67 l53 -28 680 0 680 0 53 28 c29 15 70 45 92 67 40 40 90 126 90 155 0 13 -100 15 -915 15 -815 0 -915 -2 -915 -15z"></path></svg></a>
+          </div><br>
+          <div class="text-center">
+            <h6>jasonfeng365@gmail.com &nbsp &nbsp <a href="resources/Resume.pdf" target="_blank">Resume</a></h6>
+          </div><br><br>
         </div>
 
         <!-- About -->
-        <!-- probaby needs a better conclusion -->
         <div id="about" class="container tab-pane fade"><br>
           <h2><b>About Me</b></h2>
-          <img class="img-fluid rounded mx-auto d-block" src="resources/clubdayphoto.jpg" alt="Sierra College Club Day, Fall 2022" width="741" height="307"><br>
+          <img class="img-fluid rounded mx-auto d-block" src="resources/clubdayphoto.jpg" alt="Sierra College Club Day" width="741" height="307"><br>
           <h3>This is a picture from Sierra College's 2022 Club Day. </h3>
           <p>I started attending Sierra College as a full-time student in the summer of 2021.
             In early spring 2022, I was approached by Sierra College's Young Developers club, who were looking for officers to lead the club.<br>
@@ -66,37 +69,44 @@
             along with encouraging my classmates to participate in programming competitions.<br>
             Spring 2023 is my last semester here. I will transfer to a University of California with an associate's degree,
             and pursue my graduate degree at university.<br><br>
-
-
-            Despite all that I've learned at college, my greatest opportunity has been working with Rocklin's Code Ninjas team.
-            I first joined the team in the fall of 2021, as a recommendation from my friend.
-            Although it took me some time to realize it at first, my time at the code dojo was a huge eye-opener for me.
-            Here, I learned all about competitive programming, along with the way of thinking needed to problem-solve effectively.<br>
-            If Sierra College and my courses began my path in programming, Code Ninjas only added to my momentum.<br><br>
-
             
+            My programming pathway was a long one, with a rough start. My first language was HTML, of which I learned the basics at home.
+            I later attended a summer course over the summer of my fourth grade.
+            While I know many bright students who have good understanding of programming at a young age, I was not one of these.
+            I despised the class, completely shutting myself away from HTML, and it took me two years until I began to code again.<br>
+            Now in the sixth grade, my friend introduced me to Scratch, which was my first exposure to writing dynamic programs, rather than static HTML pages.
+            I enjoyed moving at my own pace, rather than a fast-moving week-long course, and I made many games, mostly platformers, inspired by the projects my friends have made.
+            While I liked makes games with drag-and-drop code, typed code was still difficult to me, and I exclusively coded using Scratch until high school.<br>
+            I took an information technology class in my freshman years. Here, I learned a lot about computer hardware, but I had not began coding yet.
+            It was not until my sophomore year, when I took the second information technology class, that I began typing code again.
+            Although I had no real experience writing code, by the end of the year, I was the farthest in the self-paced curriculum in the entire class.<br>
+            The COVID-19 pandemic began in my junior year. Due to this, I had a lot of time, and decided to prepare for my next school year by learning Java.
+            I took an online class from Udemy, and my interest in code bloomed as I solved puzzle after puzzle and created project after project.
+            Eventually, I spent two months during my last high school semester studying tirelessly to become Oracle certified, and reached my goal on April 8, 2021.
+            To this day, Java remains my favorite language.<br><br>
 
-            My second best advice for aspiring computer scientists is to "think like a computer".
-            Well, that's a strange statement- computers can't think! They're just programmed to execute certain routines,
-            but cannot make decisions with complete independence from humans. When I say "thinking like a computer", I mean that
-            you have to truly understand the flow and logic of code and algorithms.<br>
-            Say you attend a lecture of a computer science class. That lecture shows you an algorithm, and explains what it does. 
-            Then, on a homework assignment, you have to replicate that algorithm to solve a problem.<br>
-            That's completely fine. But what if that probem has multiple parts? Knowing how to link multiple algorithms together,
-            alongside having a mental outline of what the program's logic, is crucial to writing effective code.<br><br>
+            Despite all that I've learned from school, my greatest opportunity has been working with Rocklin's Code Ninjas team.
+            I first joined the team in the fall of 2021, as a recommendation from my friend.
+            Here in the code dojo, I learned more about competitive programming, along with the way of thinking needed to problem-solve effectively.<br>
+            If school and my courses began my path in programming, Code Ninjas only added to my momentum.<br><br>
 
-            There's one thing that is even be more important than the flow of logic, and that is simply passion for programming.
-            You may be able to stuff a lot of knowledge in classes, but finding motivation outside of school will be difficult
-            if you don't have any desire to code.<br>
-            That is why, if you are an aspiring programmer, my greatest advice is to build some projects outside of school.
-            Courses will teach you knowledge, but you will have to find the passion to apply that knowledge by yourself.
+            My journey in competitive programming began in high school, where I participated in HPE CodeWars in Spring 2021, my senior year.
+            At the time, I had used Java for slightly less than a year, and teamed up with my friends, two other Java users, to compete in CodeWars.
+            Although we scored only around average, this was my first exposure to competitive programming.<br>
+            I learned even more about competitions from my manager at Code Ninjas. My coworkers, my manager, and I partook in many competitions,
+            including the Google Code Jam and the Meta Hacker Cup. Besides competitions, we explored algorithms by solving various problems from Project Euler, Codility, and similar sites.<br><br>
+
+            My greatest advice for computer science students is to build some projects outside of school.
+            Courses in school will teach you knowledge and theory, but you will have to find the passion to apply that knowledge by yourself- you should never depend completely
+            on school for becoming a programmer.<br>
+            Take some self-paced online courses, and completely master one programming language- learning how to think like a programmer is far more important than learning different languages.
             Work on some personal projects- a to-do list is a very common project to begin with. While that is completely fine,
             it is infinitely better to find a project you are interested in. For me, that is Discord bots and automation.
-            For you, it may be a game, a utility, an algorithm, or something else altogether.
-            But find something that you are interested in, and you will learn all the while you build your dream project.
+            For you, it may be a game, a utility, an algorithm, or something else altogether.<br>
+            Regardless, find something that you are interested in, just as I have, and you will blaze ahead on your path as a programmer.
 
           </p>
-        </div>
+        </div><br>
 
         <!-- Puzzles -->
         <div id="puzzles" class="container tab-pane fade"><br>
@@ -180,7 +190,6 @@
           <h2><b>Projects</b></h2>
           <h3>A list of my best projects.</h3><br>
           <div v-html="allProjects"></div>
-          
         </div>
       </div>
     </div>
@@ -189,6 +198,6 @@
 </body>
 <script src="js/home.js"></script>
 <script src="js/projects.js"></script>
-<script src="puzzles/fourspuzzle/fourspuzzle.js"></script>
-<script src="puzzles/powerupmaze/powerupmaze.js"></script>
+<script src="puzzles/hard/fourspuzzle/fourspuzzle.js"></script>
+<script src="puzzles/hard/powerupmaze/powerupmaze.js"></script>
 </html>

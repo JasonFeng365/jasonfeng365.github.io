@@ -18,32 +18,33 @@ function createNav(hrefs, names, difficulty){
     return output + barSuffix
 }
 
-function createPuzzleNode(href, name, description){
-    return "<div id=\""+href+"\" class=\"container-fluid\"><br>\n<h3><b><a href=\""+href+"\">"+name+"</a></b></h3>\n<p>"+description+"</p>\n</div>\n"
+function createPuzzleNode(href, name, description, difficulty){
+    return "<div id=\""+href+"\" class=\"container-fluid\"><br>\n<h3><b><a href=\""+difficulty+"/"+href+"\">"+name+"</a></b></h3>\n<p>"+description+"</p>\n</div>\n"
 }
 
-function createAllNodes(hrefs, names, descriptions){
+function createAllNodes(hrefs, names, descriptions, difficulty){
     var output = ""
     for (var i = 0; i < hrefs.length; i++)
-        output+=createPuzzleNode(hrefs[i], names[i], descriptions[i])
+        output+=createPuzzleNode(hrefs[i], names[i], descriptions[i], difficulty)
     return output + "</div>\n"
 }
 
 function createTab(hrefs, names, descriptions, difficulty){
-    return createNav(hrefs, names, difficulty) + createAllNodes(hrefs, names, descriptions) + "\n"
+    return createNav(hrefs, names, difficulty) + createAllNodes(hrefs, names, descriptions, difficulty) + "\n"
 }
 
 function easy(){
-    const hrefs = ["sample"]
-    const names = ["Sample Problem"]
-    const desc = ["Description."]
+    const hrefs = ["nothing"]
+    const names = ["Nothing here yet!"]
+    const desc = ["I don't have any easy puzzles yet, but please check out the Medium and Hard puzzles. Let me know if you have any puzzle suggestions!"]
     return createTab(hrefs, names, desc, "easy")
 }
 
 function medium(){
-    const hrefs = ["oddsum"]
-    const names = ["Odd Sum"]
-    const desc = ["A puzzle inspired by a MATLAB class assignment."]
+    const hrefs = ["oddsum", "evensum"]
+    const names = ["Odd Sum", "Even Sum"]
+    const desc = ["A puzzle inspired by a MATLAB class assignment.",
+    "A puzzle based off of the Odd Sum puzzle."]
     return createTab(hrefs, names, desc, "medium")
 }
 
