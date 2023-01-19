@@ -28,7 +28,7 @@ function games(){
     const desc = "Computer games that I created over the years."
     const subHref = ["cam3", "cam4", "pyb", "destinycraft", "cam2"]
     const subNames = ["Cat and Mouse 3", "Cat and Mouse 4", "Pushing your Buttons", "DestinyCraft", "Cat and Mouse 2"]
-    const subText = ["Two-dimensional platformering fighter heavily inspired by Adobe Flash games of the past. Written in pure Java, using the Swing toolkit.",
+    const subText = ["Two-dimensional platforming fighter heavily inspired by Adobe Flash games of the past. Written in pure Java, using the Swing toolkit.",
     "Work-in-progress sequel/remake of Cat and Mouse 3, written in Unity. Features will include an overhauled equipment system, new story, quality-of-life improvements, and restyled UI.",
     "Simple platformer using Java Swing, with a twist: terrain can be modified. Written in pure Java, it is my first game outside of Scratch.",
     "Work-in-progress Minecraft mod that adds items from Destiny 2, along with their special effects.",

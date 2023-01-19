@@ -5,7 +5,7 @@ function hashCode(s) {
     return h;
 }
 
-const foursAnswer = -2101304178; //change to correct value
+const foursAnswer = -2101241776; //change to correct value
 
 const fours = new Vue({
     el: '#fourspuzzle',

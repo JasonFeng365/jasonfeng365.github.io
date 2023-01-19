@@ -34,10 +34,11 @@ function createTab(hrefs, names, descriptions, difficulty){
 }
 
 function easy(){
-    const hrefs = ["oddsum1", "evensum1"]
-    const names = ["Odd Sum 1", "Even Sum 1"]
+    const hrefs = ["oddsum1", "evensum1", "primeid"]
+    const names = ["Odd Sum 1", "Even Sum 1", "Prime ID"]
     const desc = ["A puzzle inspired by a MATLAB class assignment.",
-    "A puzzle based off of the Odd Sum puzzle."]
+    "A puzzle based off of the Odd Sum puzzle.",
+    "Find the prime factorization of a very large number."]
     return createTab(hrefs, names, desc, "easy")
 }
 
