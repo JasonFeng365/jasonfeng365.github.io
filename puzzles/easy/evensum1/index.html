@@ -11,8 +11,17 @@
 </head>
 <body>
     <div class="container mt-3">
+      
+      <!-- <div id="puzzles" class="container-fluid">
+        <div v-html="barEasy">
+      </div> -->
+
+
         <div id="puzzle" class="container-fluid"><br>
-            <h3><b>Even Sum 1</b></h3>
+          <div class="row">
+            <div class="col-sm-9 p-3"><h3><b>Even Sum 1</b></h3></div>
+            <div class="col-sm-3 p-3"><form action="../.."><button type="submit" class="btn btn-secondary">Back to Index</button></form></div>
+          </div>
             <h5>This puzzle is very similar in concept to Odd Sum.</h5>
             <p>
               For a positive integer <b>n</b>, its <b>even sum</b> is the sum of every even integer less than or equal to <b>n</b>.<br>
@@ -25,10 +34,14 @@
 
             <h5>To solve this puzzle, use <a href="input.txt" target="_blank">this link</a> to get the large input set.</h5>
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
-            <h5>{{response}}</h5><br>
-
+            <h5>{{response}}</h5><br><br>
+            <h6>Related puzzles:</h6>
+            <div class="row">
+              <div class="col-sm-3 p-3"><form action="../../medium/evensum2/"><button type="submit" class="btn btn-primary bg-opacity-50">Even Sum 2</button></form></div>
+            </div>
           </div>
     </div>
 </body>
 <script src="puzzle.js"></script>
+<!-- <script src="../../puzzles.js"></script> -->
 </html>

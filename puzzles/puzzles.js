@@ -1,3 +1,23 @@
+const hrefs1 = ["oddsum1", "evensum1", "primeid"]
+const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID"]
+const desc1 = ["A puzzle inspired by a MATLAB class assignment.",
+"A puzzle based off of the Odd Sum puzzle.",
+"Find the prime factorization of a very large number."]
+
+const hrefs2 = ["oddsum2", "evensum2", "cheesemaze"]
+const names2 = ["Odd Sum 2", "Even Sum 2", "Cheese Maze"]
+const desc2 = ["An optimized variation of Odd Sum 1.",
+"An optimized variation of Even Sum 1.",
+"A simpler version of Power-up Maze."]
+
+const hrefs3 = ["fourspuzzle", "powerupmaze"]
+const names3 = ["Fours Puzze", "Power-up Maze"]
+const desc3 = ["My first puzzle, which came to me in a dream during 2022's Meta Hacker Cup.", 
+"Run through a maze, collecting power-ups to move faster!"]
+
+
+
+
 const navPrefix = "<li class=\"nav-item\"><a class=\"nav-link\" href=\"#"
 const navSuffix = "</a></li>\n"
 const barSuffix = "</ul>\n</div>\n</nav>\n"
@@ -34,33 +54,36 @@ function createTab(hrefs, names, descriptions, difficulty){
 }
 
 function easy(){
-    const hrefs = ["oddsum1", "evensum1", "primeid"]
-    const names = ["Odd Sum 1", "Even Sum 1", "Prime ID"]
-    const desc = ["A puzzle inspired by a MATLAB class assignment.",
-    "A puzzle based off of the Odd Sum puzzle.",
-    "Find the prime factorization of a very large number."]
-    return createTab(hrefs, names, desc, "easy")
+    return createTab(hrefs1, names1, desc1, "easy")
 }
 
 function medium(){
-    const hrefs = ["oddsum2", "evensum2"]
-    const names = ["Odd Sum 2", "Even Sum 2"]
-    const desc = ["An optimized variation of Odd Sum 1.",
-    "An optimized variation of Even Sum 1."]
-    return createTab(hrefs, names, desc, "medium")
+    return createTab(hrefs2, names2, desc2, "medium")
 }
 
 function hard(){
-    const hrefs = ["fourspuzzle", "powerupmaze"]
-    const names = ["Fours Puzze", "Power-up Maze"]
-    const desc = ["My first puzzle, which came to me in a dream during 2022's Meta Hacker Cup.", 
-    "Run through a maze, collecting power-ups to move faster!"]
-    return createTab(hrefs, names, desc, "hard")
+    return createTab(hrefs3, names3, desc3, "hard")
 }
+
+function hrefsToBar(hrefs){
+    let array = []
+    for (let i = 0; i < hrefs.length; i)
+        array.push(hrefs[i])
+    return array
+}
+
+
 
 const puzzles = new Vue({
     el: '#puzzles',
     data: {
-        allPuzzles:easy() + medium() + hard()
+        allPuzzles:easy() + medium() + hard(),
+        barEasy:null,
+        barMedium:null,
+        barHard:null
+    },
+    mounted:function(){
+        this.barEasy = createNav(hrefs1, names1, "")
+        this.barEasy = this.barEasy.substring(this.barEasy.indexOf("<nav "))
     }
 });

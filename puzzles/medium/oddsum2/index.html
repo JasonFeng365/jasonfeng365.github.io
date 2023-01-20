@@ -12,7 +12,10 @@
 <body>
     <div class="container mt-3">
         <div id="puzzle" class="container-fluid"><br>
-            <h3><b>Odd Sum 2</b></h3>
+            <div class="row">
+                <div class="col-sm-9 p-3"><h3><b>Odd Sum 2</b></h3></div>
+                <div class="col-sm-3 p-3"><form action="../.."><button type="submit" class="btn btn-secondary">Back to Index</button></form></div>
+              </div>
             <h5>This puzzle is originally from a friend of mine's MATLAB assignment. I changed it to be more competition-like. Try and find the O(1) solution.</h5>
             <h5><a href="#" @click="toggleHint">Hint:</a><span v-if="visible"> don't use a loop.</span></h5>
             <p>

@@ -18,8 +18,8 @@ function section(href, name, desc, subHref, subNames, subText){
     return out
 }
 
-function getGitPage(url){
-    return "<a href=\""+url+"\" target=\"_blank\">GitHub Page</a>"
+function getLink(url, name){
+    return "<a href=\""+url+"\" target=\"_blank\">"+name+"</a>"
 }
 
 function games(){
@@ -27,7 +27,7 @@ function games(){
     const name = "Games"
     const desc = "Computer games that I created over the years."
     const subHref = ["cam3", "cam4", "pyb", "destinycraft", "cam2"]
-    const subNames = ["Cat and Mouse 3", "Cat and Mouse 4", "Pushing your Buttons", "DestinyCraft", "Cat and Mouse 2"]
+    const subNames = ["Cat and Mouse 3", "Cat and Mouse 4", "Pushing Your Buttons", "DestinyCraft", "Cat and Mouse 2"]
     const subText = ["Two-dimensional platforming fighter heavily inspired by Adobe Flash games of the past. Written in pure Java, using the Swing toolkit.",
     "Work-in-progress sequel/remake of Cat and Mouse 3, written in Unity. Features will include an overhauled equipment system, new story, quality-of-life improvements, and restyled UI.",
     "Simple platformer using Java Swing, with a twist: terrain can be modified. Written in pure Java, it is my first game outside of Scratch.",
@@ -57,7 +57,7 @@ function apis(){
     const desc = "REST APIs I created to simplify complex data."
     const subHref = ["classsearchapi"]
     const subNames = ["Sierra College Class Search API"]
-    const subText = ["Node.js REST API which returns the result of Sierra College's class search interface, as in JSON format. Although it is currently not hosted anywhere, I aim to find a host for it soon.<br>"+getGitPage("https://github.com/JasonFeng365/class-search-api")]
+    const subText = ["Free to use Node.js REST API which returns the result of Sierra College's class search interface, in JSON format.<br>"+getLink("https://va44m2xs5f.execute-api.us-west-1.amazonaws.com/dev", "Class Search API")+ " &nbsp &nbsp " +getLink("https://github.com/JasonFeng365/class-search-api", "GitHub Page")]
 
     return section(href, name, desc, subHref, subNames, subText)
 }
@@ -68,8 +68,8 @@ function assistants(){
     const desc = "Programs to automate simple tasks or add ease to tasks unable to be automated."
     const subHref = ["propagator", "taskmanager"]
     const subNames = ["Error Propagator", "Task Manager"]
-    const subText = ["Work-in-progress macro that propagates the error of variables, given an equation. It generates the equations, and automatically types them with Microsoft Word formatting.<br>"+getGitPage("https://github.com/JasonFeng365/PropagationOfError"),
-    "Macro that completes Among Us crewmate tasks automatically, reducing the need for user input. Remember: if you can code the cheat, you deserve to use it. (This is a joke.)"]
+    const subText = ["Work-in-progress macro that propagates the error of variables, given an equation. It generates the equations, and automatically types them with Microsoft Word formatting.<br>"+getLink("https://github.com/JasonFeng365/PropagationOfError", "GitHub Page"),
+    "Macro that completes Among Us crewmate tasks automatically, reducing the need for user input.<br>Remember: if you can code the cheat, you deserve to use it. (This is a joke.)"]
 
     return section(href, name, desc, subHref, subNames, subText)
 }
