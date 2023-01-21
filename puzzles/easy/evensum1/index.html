@@ -35,10 +35,11 @@
             <h5>To solve this puzzle, use <a href="input.txt" target="_blank">this link</a> to get the large input set.</h5>
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
             <h5>{{response}}</h5><br><br>
+
             <h6>Related puzzles:</h6>
-            <div class="row">
-              <div class="col-sm-3 p-3"><form action="../../medium/evensum2/"><button type="submit" class="btn btn-primary bg-opacity-50">Even Sum 2</button></form></div>
-            </div>
+            <a href="../../medium/evensum2/" class="btn btn-secondary">Even Sum 2</a>
+            <a href="../../easy/oddsum1/" class="btn btn-secondary">Odd Sum 1</a>
+            <a href="../../medium/oddsum2/" class="btn btn-secondary">Odd Sum 2</a>
           </div>
     </div>
 </body>

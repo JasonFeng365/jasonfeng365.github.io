@@ -1,19 +1,21 @@
-const hrefs1 = ["oddsum1", "evensum1", "primeid"]
-const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID"]
+const hrefs1 = ["oddsum1", "evensum1", "primeid", "mazefilling"]
+const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling"]
 const desc1 = ["A puzzle inspired by a MATLAB class assignment.",
 "A puzzle based off of the Odd Sum puzzle.",
-"Find the prime factorization of a very large number."]
+"Find the prime factorization of a very large number.",
+"Help some scientists prepare a maze for a mouse to run through."]
 
-const hrefs2 = ["oddsum2", "evensum2", "cheesemaze"]
-const names2 = ["Odd Sum 2", "Even Sum 2", "Cheese Maze"]
+const hrefs2 = ["oddsum2", "evensum2", "mazecleaning"]
+const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning"]
 const desc2 = ["An optimized variation of Odd Sum 1.",
 "An optimized variation of Even Sum 1.",
-"A simpler version of Power-up Maze."]
+"Clean the scientists' maze by flushing it with water."]
 
-const hrefs3 = ["fourspuzzle", "powerupmaze"]
-const names3 = ["Fours Puzze", "Power-up Maze"]
+const hrefs3 = ["fourspuzzle", /*"powerupmaze",*/ "cheesemaze"]
+const names3 = ["Fours Puzze", /*"Power-up Maze",*/ "Cheese Maze"]
 const desc3 = ["My first puzzle, which came to me in a dream during 2022's Meta Hacker Cup.", 
-"Run through a maze, collecting power-ups to move faster!"]
+// "The mouse runs through a maze, collecting power-ups to move faster!",
+"The mouse "]
 
 
 

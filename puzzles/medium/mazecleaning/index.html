@@ -7,36 +7,36 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     
-    <title>Cheese Maze</title>
+    <title>Maze Cleaning</title>
 </head>
 <body>
     <div class="container mt-3">
         <div id="puzzle" class="container-fluid"><br>
           <div class="row">
-            <div class="col-sm-9 p-3"><h3><b>Cheese Maze</b></h3></div>
+            <div class="col-sm-9 p-3"><h3><b>Maze Cleaning</b></h3></div>
             <div class="col-sm-3 p-3"><form action="../.."><button type="submit" class="btn btn-secondary">Back to Index</button></form></div>
           </div>
-            <h5>
-              This is a simpler variation of the Power-up Maze. <a href="../../hard/powerupmaze">Give that one a try</a> after you finish this one!
-            </h5>
+            <h5>Now that we have the volume of the maze, we need to pump water through the maze to clean it.</h5>
             <p>
-              A mouse is running through a maze, represented by a 2D grid, shown below. A # represents a wall, and a . represents an empty tile. 
-              Each second, it can move one tile upwards, leftwards, rightwards, or downwards on an empty space, but cannot go through walls. 
-              The mouse starts on the space marked A, and wants to move to the space marked B.<br><br>
-              Around the maze are one or more pieces of cheese marked P. The mouse has to collect every tile marked P in order to complete the maze.
-              Whenever the mouse moves over a space marked P, it collects the cheese. The mouse must collect every piece of cheese to finish the maze.<br><br>
-              Given a maze, return the least amount of time the mouse takes to reach point B, starting from point A.<br>
+              A maze, represented by a 2D grid, is given. A # represents a wall, and a . represents an empty tile.
+              Water must be pumped into the grid in order to clean it. It starts at the tile marked A.
+              Each second, the water flows one tile up, down, left, and right. Water is blocked by walls.
+              Determine how much time the water will take to completely fill the grid.<br><br>
               Here is an example, along with an explanation. Press the buttons to go forward or backward a move.
             </p><br>
 
             <pre>{{currentMaze}}</pre>
             <p>{{currentExplanation}}</p>
-            <p>Current second: {{secondArray[index]}}</p> <button @click="prev" :disabled='lowest'>Previous</button> <button @click="next" :disabled='highest'>Next</button><br><br>
+            <p>Current second: {{index}}</p> <button @click="prev" :disabled='lowest'>Previous</button> <button @click="next" :disabled='highest'>Next</button><br><br>
 
             <h5>To solve this puzzle, use <a href="input.txt" target="_blank">this link</a> to get the large input set.</h5>
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
             <h5>{{response}}</h5><br>
 
+            <h6>Related puzzles:</h6>
+            <a href="../../easy/mazefilling/" class="btn btn-secondary">Maze Filling</a>
+            <a href="../../hard/cheesemaze/" class="btn btn-secondary">Cheese Maze</a>
+            <!-- <a href="../../hard/powerupmaze/" class="btn btn-secondary">Power-up Maze</a> -->
           </div>
     </div>
 </body>
