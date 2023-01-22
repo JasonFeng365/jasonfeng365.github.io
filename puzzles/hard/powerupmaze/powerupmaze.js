@@ -1,4 +1,4 @@
-const mazeAnswer = 53; //change to correct value
+const mazeAnswer = 1605; //change to correct value
 
 function hashCode(s) {
     let h = 0
@@ -47,17 +47,18 @@ const maze = new Vue({
     },
     mounted: function() {
         this.mazes.push("# # # # # # #\n# A P . . B #\n# . # . # . #\n# P . . . . #\n# # # # # # #")
-        this.explanations.push("Here's the maze at the beginning. The mouse, marked M, starts on tile A.\nThe mouse needs to collect both powerups- there are many paths it can take.")
-        this.mazes.push("# # # # # # #\n# A P . . B #\n# M # . # . #\n# P . . . . #\n# # # # # # #")
-        this.explanations.push("The optimal path for the mouse to take is to collect the lower power-up first.\nIt starts moving downwards.")
-        this.mazes.push("# # # # # # #\n# A P . . B #\n# . # . # . #\n# M . . . . #\n# # # # # # #")
-        this.explanations.push("The mouse collects the lower power-up. It then moves towards the upper power-up.\nKeep in mind: the large input set has more than two power-ups.")
-        this.mazes.push("# # # # # # #\n# M P . . B #\n# . # . # . #\n# . . . . . #\n# # # # # # #")
-        this.explanations.push("Here, as the mouse has collected one power-up, it can move up to two steps in one second.\n ")
+        this.explanations.push("Here's the maze at the beginning. The mouse, marked M, starts on tile A. The mouse needs to collect both powerups- there are many paths it can take.")
+        this.mazes.push("# # # # # # #\n# A M . . B #\n# . # . # . #\n# P . . . . #\n# # # # # # #")
+        this.explanations.push("The optimal path is to collect the upper power-up first.")
+        this.mazes.push("# # # # # # #\n# A . . . B #\n# M # . # . #\n# P . . . . #\n# # # # # # #")
+        this.explanations.push("Upon collecting the first power-up, the mouse can move two steps at once.")
+        this.mazes.push("# # # # # # #\n# A . . . B #\n# . # . # . #\n# M . . . . #\n# # # # # # #")
+        this.explanations.push("The mouse then collects the second power-up. Note how the mouse only moved one step this time, because it needs to stop to collect the power-up.")
         this.mazes.push("# # # # # # #\n# A M . . B #\n# . # . # . #\n# . . . . . #\n# # # # # # #")
-        this.explanations.push("The mouse collects the second power-up.\nNotice that the mouse only moves one tile: as the mouse collects the powerup, it loses its remaining moves.")
+        this.explanations.push("Having collected all the power-ups, the mouse heads for the exit at B, three steps at a time.")
         this.mazes.push("# # # # # # #\n# A . . . M #\n# . # . # . #\n# . . . . . #\n# # # # # # #")
-        this.explanations.push("After the mouse has collected both power-ups, it is able to move three steps at once.\nIt can then move directly to the destination, thus resulting in a solution of 5 seconds.")
+        this.explanations.push("The mouse finishes the maze in five moves.")
+        
 
         //maybe looks better? idk
         for (var i = 0; i < this.mazes.length; ++i) this.mazes[i] = this.mazes[i].replaceAll(" ", "")

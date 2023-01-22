@@ -11,11 +11,11 @@ const desc2 = ["An optimized variation of Odd Sum 1.",
 "An optimized variation of Even Sum 1.",
 "Clean the scientists' maze by flushing it with water."]
 
-const hrefs3 = ["fourspuzzle", /*"powerupmaze",*/ "cheesemaze"]
-const names3 = ["Fours Puzze", /*"Power-up Maze",*/ "Cheese Maze"]
+const hrefs3 = ["fourspuzzle", "powerupmaze", "cheesemaze"]
+const names3 = ["Fours Puzze", "Power-up Maze", "Cheese Maze"]
 const desc3 = ["My first puzzle, which came to me in a dream during 2022's Meta Hacker Cup.", 
-// "The mouse runs through a maze, collecting power-ups to move faster!",
-"The mouse "]
+"The mouse runs through a maze, collecting power-ups to move faster!",
+"An easier variation of Power-up Maze."]
 
 
 
