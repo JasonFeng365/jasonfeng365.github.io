@@ -66,11 +66,27 @@ function assistants(){
     const href = "assistants"
     const name = "Assistants"
     const desc = "Programs to automate simple tasks or add ease to tasks unable to be automated."
-    const subHref = ["propagator", "taskmanager"]
-    const subNames = ["Error Propagator", "Task Manager"]
-    const subText = ["Work-in-progress macro that propagates the error of variables, given an equation. It generates the equations, and automatically types them with Microsoft Word formatting.<br>"+getLink("https://github.com/JasonFeng365/PropagationOfError", "GitHub Page"),
-    "Macro that completes Among Us crewmate tasks automatically, reducing the need for user input.<br>Remember: if you can code the cheat, you deserve to use it. (This is a joke.)"]
+    const subHref = ["listenerassistant", "copier", "propagator", "taskmanager", "emailsender"]
+    const subNames = ["Listener Assistant", "Special Characters Copier", "Error Propagator", "Task Manager", "Email Sender"]
+    const subText = ["A successor to the Special Characters Copier. Keypress listener made in Java that detects sequences of characters, and executes tasks depending on sequence entered- no mouse movement needed. WIll eventually be upgraded to automate various tasks at the press of a button.<br>"+getLink("https://github.com/JasonFeng365/Assistant", "GitHub Page"),
+    "Java Swing application that allows the user to copy any special character. I made this in 2021, when online physics class required Greek characters to be used.",
+    "Work-in-progress macro that propagates the error of variables, given an equation. It generates the equations, and automatically types them with Microsoft Word formatting.<br>"+getLink("https://github.com/JasonFeng365/PropagationOfError", "GitHub Page"),
+    "Macro that completes Among Us crewmate tasks automatically, reducing the need for user input.<br>Remember: if you can code the cheat, you deserve to use it. (This is a joke.)",
+    "Website made with AngularJS for Sierra College tutors to log information about tutoring sessions.<br>"+getLink("https://jasonfeng365.github.io/email-sender", "Website")
+]
+    return section(href, name, desc, subHref, subNames, subText)
+}
 
+function physical(){
+    const href = "physical"
+    const name = "Physical Projects"
+    const desc = "Real life projects, separate from code."
+    const subHref = ["motor", "arm", "charger"]
+    const subNames = ["Electric Motor", "Mechanical Arm Project", "Wind-up Phone Charger"]
+    const subText = ["Sierra College Principles of Physics: Electricity and Magnetism project. An electric motor that spins on 3.2 volts, made with only copper wire and iron nails.<br><br><video width=\"360\" height=\"640\" controls><source src=\"resources/motor.mp4\" type=\"video/mp4\"></video>",
+    "Middle school science project to construct a device to move an object on the ground. I disassembled remote-control cars and used their motors to create an arm, and attached that arm to another remote-control car. Working in tandem, my teammate and I were able to successfully move the object.",
+    "Middle school 20time project to create anything that benefits the community. I wired and soldered hand cranks on a circuit board to create a functional charger that still works to this day, 6 years later.<br><br><img class=\"img-fluid rounded d-block\" src=\"resources/charger.jpg\" width=\"582\" height=\"410\"><br>",
+]
     return section(href, name, desc, subHref, subNames, subText)
 }
 
@@ -81,6 +97,6 @@ const projects = new Vue({
         allProjects:null
     },
     mounted: function() {
-        this.allProjects = games()+bots()+apis()+assistants()
+        this.allProjects = games()+bots()+apis()+assistants()+physical()
     }
 });
