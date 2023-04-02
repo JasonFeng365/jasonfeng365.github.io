@@ -1,21 +1,29 @@
-const hrefs1 = ["oddsum1", "evensum1", "primeid", "mazefilling"]
-const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling"]
+const hrefs1 = ["oddsum1", "evensum1", "primeid", "mazefilling", "containedstring", "triplefourth1", "hiddenmessage"]
+const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling", "💭 Contained String", "(WIP) Triple Fourth 1", "(WIP) 💭 Hidden Message"]
 const desc1 = ["A puzzle inspired by a MATLAB class assignment.",
 "A puzzle based off of the Odd Sum puzzle.",
 "Find the prime factorization of a very large number.",
-"Help some scientists prepare a maze for a mouse to run through."]
+"Help some scientists prepare a maze for a mouse to run through.", 
+"Determine whether or not a string can be made from a sequence of letters.",
+"A puzzle based off of the Triple Tap / Fourth Time's the Charm perks from Destiny 2!", 
+"Look for a hidden message within a ton of sentences!"]
 
-const hrefs2 = ["oddsum2", "evensum2", "mazecleaning"]
-const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning"]
+const hrefs2 = ["oddsum2", "evensum2", "mazecleaning", "primerange1", "superstring1", "triplefourth2"]
+const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning", "Prime Range 1", "(WIP) 💭 Superstring 1", "(WIP) Triple Fourth 2"]
 const desc2 = ["An optimized variation of Odd Sum 1.",
 "An optimized variation of Even Sum 1.",
-"Clean the scientists' maze by flushing it with water."]
+"Clean the scientists' maze by flushing it with water.",
+"Find the amount of prime numbers in a range.",
+"Find the number of times a substring appears in a string... with a twist.",
+"An optimized variation of Triple Fourth 1."]
 
-const hrefs3 = ["fourspuzzle", "powerupmaze", "cheesemaze"]
-const names3 = ["Fours Puzze", "Power-up Maze", "Cheese Maze"]
+const hrefs3 = ["fourspuzzle", "powerupmaze", "cheesemaze", "primerange2", "superstring2"]
+const names3 = ["💭 Fours Puzze", "💭 Power-up Maze", "💭 Cheese Maze", "Prime Range 2", "(WIP) 💭 Superstring 2"]
 const desc3 = ["My first puzzle, which came to me in a dream during 2022's Meta Hacker Cup.", 
 "The mouse runs through a maze, collecting power-ups to move faster!",
-"An easier variation of Power-up Maze."]
+"An easier variation of Power-up Maze.", 
+"Find the amount of prime numbers in 100 thouand ranges!",
+"An optimized version of Superstring 1."]
 
 
 

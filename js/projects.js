@@ -42,7 +42,7 @@ function games(){
 function bots(){
     const href = "bots"
     const name = "Bots"
-    const desc = "Various Discord bots I've coded with the <a href=\"https://github.com/DV8FromTheWorld/JDA\" target=\"_blank\">Java Discord API 4.4.0</a>."
+    const desc = "Various Discord bots I've coded with the <a href=\"https://github.com/DV8FromTheWorld/JDA\" target=\"_blank\">Java Discord API 4.4</a>."
     const subHref = ["kirbylorebot", "sierracsbot", "tutorcenterbot"]
     const subNames = ["Kirby Lore Bot", "Sierra CS Bot", "Tutor Center Bot"]
     const subText = ["Multi-purpose Discord bot used by over 200 people. Features include image manipulation, an automatic information-sending system, reminders and scheduled message sending, weather information, and of course, 6,195 lines of Kirby lore.",
