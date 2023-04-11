@@ -1,4 +1,4 @@
-const answer = 1508820617;
+const answer = 51725;
 
 function hashCode(s) {
     let h = 0

@@ -1,5 +1,5 @@
 const hrefs1 = ["oddsum1", "evensum1", "primeid", "mazefilling", "containedstring", "triplefourth1", "hiddenmessage"]
-const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling", "💭 Contained String", "(WIP) Triple Fourth 1", "(WIP) 💭 Hidden Message"]
+const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling", "💭 Contained String", "Triple Fourth 1", "(WIP) 💭 Hidden Message"]
 const desc1 = ["A puzzle inspired by a MATLAB class assignment.",
 "A puzzle based off of the Odd Sum puzzle.",
 "Find the prime factorization of a very large number.",
@@ -8,8 +8,8 @@ const desc1 = ["A puzzle inspired by a MATLAB class assignment.",
 "A puzzle based off of the Triple Tap / Fourth Time's the Charm perks from Destiny 2!", 
 "Look for a hidden message within a ton of sentences!"]
 
-const hrefs2 = ["oddsum2", "evensum2", "mazecleaning", "primerange1", "superstring1", "triplefourth2"]
-const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning", "Prime Range 1", "(WIP) 💭 Superstring 1", "(WIP) Triple Fourth 2"]
+const hrefs2 = ["oddsum2", "evensum2", "mazecleaning", "primerange1", "triplefourth2", "superstring1"]
+const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning", "Prime Range 1", "Triple Fourth 2", "(WIP) 💭 Superstring 1"]
 const desc2 = ["An optimized variation of Odd Sum 1.",
 "An optimized variation of Even Sum 1.",
 "Clean the scientists' maze by flushing it with water.",

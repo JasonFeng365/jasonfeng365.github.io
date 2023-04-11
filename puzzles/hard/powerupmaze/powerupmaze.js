@@ -1,4 +1,4 @@
-const mazeAnswer = 1605; //change to correct value
+const mazeAnswer = 1605;
 
 function hashCode(s) {
     let h = 0

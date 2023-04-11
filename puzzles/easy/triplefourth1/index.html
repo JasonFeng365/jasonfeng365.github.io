@@ -17,17 +17,31 @@
             <div class="col-sm-9 p-3"><h3><b>Triple Fourth 1</b></h3></div>
             <div class="col-sm-3 p-3"><form action="../.."><button type="submit" class="btn btn-secondary">Back to Index</button></form></div>
           </div>
-            <h5>This puzzle is very similar in concept to Odd Sum.</h5>
+            <h5>This puzzle is based off of <a href="https://www.youtube.com/watch?v=PcCJ5HoC-1I">this video</a>.
+            Triple Tap and Fourth Time's the Charm are abilities in the videogame Destiny 2 that work very well together!</h5>
             <p>
-              For a positive integer <b>n</b>, its <b>even sum</b> is the sum of every even integer less than or equal to <b>n</b>.<br>
-              For example, given n=6, 12 should be returned (2 + 4 + 6), and given n=5, 6 should be returned (2 + 4).<br><br>
-              Given a list of positive integers, output the sum of their even sums. For example:<br>
-              3<br>4<br>5<br>6<br><br>
-              Given this list, 26 should be output. The even sum of 3 is 2, the even sum of 4 is 6, the even sum of 5 is 6, and the even sum of 6 is 12. Adding these together yields 26.<br>
-              The large input set has 100,000 integers, and will result in a sum that is very large. <b>To keep the output small, take the remainder of the output divided by 1000007 (10^6 + 7).</b> The maximum value of each n is 30,000.
+              Triple Tap is an ability that refunds bullets into a magazine. Every three shots, one extra bullet appears in the magazine.<br>
+              If you start with 2 bullets, you can take 2 shots- the ability does not activate.
+              However, if you start with 3 bullets, the ability activates once, allowing you to take four shots.
+              If you start with 5 bullets, you can take 7 shots! The ability activates once after 3 shots, which leaves three bullets in the magazine. It activates again after these three are spent, leaving one in the magazine. Finally, this bullet is used without activation, for a total of 7 shots.<br><br>
+
+              Fourth Time's the Charm is similar, but every four shots, two extra bullets appears in the magazine.<br>
+              If you start with 3 bullets, the ability does not activate, and you can take 3 shots.
+              If you start with 4 bullets, you can take 6 shots. The ability activates once all four shots are taken, leaving two bullets. These two are not enough to activate it again, so 6 is the maximum.
+              If you start with 6 bullets, you can take 10 shots at once! (For this reason, Fourth is very good in-game.) The ability activates once after 4 shots, which leaves 4 in the magazine. It activates again after these are spent, leaving 2. Finally, these are used up without activation, for a total of 10 shots.<br><br>
+
+              Interestingly, these abilities work together for a huge number of shots! If you start at 2 or less, the abilities do not activate. However, starting at 3 lets you shoot 7 times!<br>
+              Let's go through how starting with 5 bullets would work.<br>
+
+              <div class="tab-content" v-html="magTable"></div>
+
+              
+              Every time Triple is activated, the magazine gains a bullet. Every time Fourth is activated, the magazine gains two bullets. Note that the two can activate simultaneously, which adds three bullets at once. In this case, the total number of shots taken is 19.<br>
+              Starting with 3 bullets, 7 shots can be taken. With 5, 19 shots. With 10, 47. With 50, 287.
+              
             </p><br>
 
-            <h5>To solve this puzzle, use <a href="input.txt" target="_blank">this link</a> to get the large input set.</h5>
+            <h5>To solve this puzzle, find the number of shots which can be taken with 1000 bullets.</h5>
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
             <h5>{{response}}</h5><br><br>
 
