@@ -1,4 +1,4 @@
-const answer = 50773;
+const answer = -119797279;
 
 function hashCode(s) {
     let h = 0
@@ -12,6 +12,7 @@ new Vue({
     data: {
         input:"",
         response:"Enter your answer above.",
+        visible:false,
     },
     methods: {
         submit(){

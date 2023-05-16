@@ -1,21 +1,24 @@
-const hrefs1 = ["oddsum1", "evensum1", "primeid", "mazefilling", "containedstring", "triplefourth1", "hiddenmessage"]
-const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling", "💭 Contained String", "Triple Fourth 1", "(WIP) 💭 Hidden Message"]
+const hrefs1 = ["oddsum1", "evensum1", "primeid", "mazefilling", "containedstring", "triplefourth1", "hiddenmessage", "divrem1"]
+const names1 = ["Odd Sum 1", "Even Sum 1", "Prime ID", "Maze Filling", "💭 Contained String", "Triple Fourth 1", "💭 Hidden Message", "💭 Div Rem 1"]
 const desc1 = ["A puzzle inspired by a MATLAB class assignment.",
 "A puzzle based off of the Odd Sum puzzle.",
 "Find the prime factorization of a very large number.",
 "Help some scientists prepare a maze for a mouse to run through.", 
 "Determine whether or not a string can be made from a sequence of letters.",
 "A puzzle based off of the Triple Tap / Fourth Time's the Charm perks from Destiny 2!", 
-"Look for a hidden message within a ton of sentences!"]
+"Look for a hidden message within a ton of sentences!",
+"Find a number that divides some divisors- with remainders!"]
 
-const hrefs2 = ["oddsum2", "evensum2", "mazecleaning", "primerange1", "triplefourth2", "superstring1"]
-const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning", "Prime Range 1", "Triple Fourth 2", "(WIP) 💭 Superstring 1"]
+const hrefs2 = ["oddsum2", "evensum2", "mazecleaning", "primerange1", "triplefourth2", "superstring1", "waterfall", "divrem2"]
+const names2 = ["Odd Sum 2", "Even Sum 2", "Maze Cleaning", "Prime Range 1", "Triple Fourth 2", "💭 Superstring 1", "💭 Waterfall", "💭 Div Rem 2"]
 const desc2 = ["An optimized variation of Odd Sum 1.",
 "An optimized variation of Even Sum 1.",
 "Clean the scientists' maze by flushing it with water.",
 "Find the amount of prime numbers in a range.",
 "Find the number of times a substring appears in a string... with a twist.",
-"An optimized variation of Triple Fourth 1."]
+"An optimized variation of Triple Fourth 1.", 
+"Find the spots on a canyon where pouring water will result in a waterfall!",
+"An optimized variation of Div Rem 1."]
 
 const hrefs3 = ["fourspuzzle", "powerupmaze", "cheesemaze", "primerange2", "superstring2"]
 const names3 = ["💭 Fours Puzze", "💭 Power-up Maze", "💭 Cheese Maze", "Prime Range 2", "(WIP) 💭 Superstring 2"]
