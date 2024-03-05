@@ -6,7 +6,7 @@ const home = new Vue({
 		timeGreeting:"Good ",
 	},
 	methods:{
-		challenges(){
+		challengeClick(){
 			challengeTab.click();
 		}
 	},
