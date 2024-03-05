@@ -1,206 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-    <title>Jason Feng</title>
+		<!-- <link rel="stylesheet" href="style.css" /> -->
+
+		<title>Jason Feng</title>
 </head>
 <body>
 
-    <div class="container-fluid text-center p-5 bg-primary bg-opacity-25">
-      <h1><b>Jason Feng</b></h1>
-      <h2>Oracle Certified Java Developer</h2>
-    </div>
+		<div class="container-fluid text-center p-5 bg-primary bg-opacity-25">
+			<h1><b>Jason Feng</b></h1>
+			<h3>Competitive Programmer and Oracle Certified Java Developer</h3>
+		</div>
 
-    <div class="container mt-3"><br>
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs" role="tablist">
-        <li class="nav-item active">
-          <a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#puzzles" id="puzzleTab">Puzzles</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="tab" href="#projects">Projects</a>
-        </li>
-      </ul>
-    
-      <!-- Tab panes -->
-      <div class="tab-content">
-        
-        <!-- Home -->
-        <div id="home" class="container tab-pane fade show active"><br>
-          <h2><b>Home</b></h2>
-          <img class="img-fluid rounded mx-auto d-block" src="resources/clubday2photo.jpg" alt="Sierra College Club Day 2" width="621" height="407"><br>
-          <h3>{{timeGreeting}} My name is Jason Feng, and this is my website. </h3>
+		<div class="container mt-3"><br>
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs" role="tablist">
+				<li class="nav-item active">
+					<a class="nav-link active" data-bs-toggle="tab" href="#home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="tab" href="#scpe">SCPE</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="tab" href="#acpc">ACPC</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="tab" href="#icpc">ICPC</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="tab" href="#projects">Projects</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" data-bs-toggle="tab" href="#challenges" id="challengeTab">Challenges</a>
+				</li>
+			</ul>
+		
+			<!-- Tab panes -->
+			<div class="tab-content">
+				
+				<!-- Home -->
+				<div id="home" class="container tab-pane fade show active"><br>
+					<h2><b>Home</b></h2>
+					<img class="img-fluid rounded mx-auto d-block" src="resources/jason.png" width="621" height="407"><br>
+					<h3>{{timeGreeting}} My name is Jason Feng, and this is my website. </h3>
 
-          <h4><b><a href="https://jasonfeng365.github.io/catandmouse4">Play Cat and Mouse 4!</a></b></h4>
+					<h4><b><a href="https://jasonfeng365.github.io/catandmouse4">Play Cat and Mouse 4!</a></b></h4>
 
-          <!-- <h5>It is still under construction, but I will add new features soon.</h5><br> -->
-          <p><b><a href="#" @click="puzzleLink">Check out the puzzle catalog!</a></b>
-            These puzzles are original ones, many of which I dreamed of.</p><br>
-          
-          <!-- SVG icons -->
-          <div class="text-center">
-            <a title="LinkedIn" href="https://www.linkedin.com/in/jasonfeng365" target="_blank"><svg size="large" viewBox="2 2 20 20" fill="dimgray" width="48" height="48"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg></a> &nbsp&nbsp
-            <a title="GitHub" href="https://github.com/JasonFeng365" target="_blank"><svg size="large" viewBox="0 0 16 16" fill="dimgray" width="48" height="48"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a> &nbsp&nbsp
-            <a title="Project Euler" href="https://projecteuler.net/progress=fengster" target="_blank"><svg size="large" viewBox="0 0 1920 1920" fill="dimgray" width="48" height="48"><path transform="translate(0,1920) scale(1,-1)" d="M270 1881 c-128 -40 -232 -159 -247 -282 l-6 -49 928 0 928 0 -6 49 c-12 102 -87 205 -189 258 l-53 28 -665 2 c-366 1 -676 -2 -690 -6z M140 945 l0 -445 140 0 140 0 0 165 0 165 108 0 c186 0 278 38 335 138 72 129 34 312 -77 377 -66 38 -131 45 -396 45 l-250 0 0 -445z m429 254 c51 -18 77 -91 50 -141 -16 -29 -70 -48 -139 -48 l-60 0 0 100 0 100 59 0 c32 0 72 -5 90 -11z M990 945 l0 -445 380 0 380 0 0 44 c0 23 -3 71 -6 105 l-7 61 -233 0 -234 0 0 85 0 85 215 0 215 0 0 90 0 90 -215 0 -215 0 0 70 0 70 230 0 230 0 0 95 0 95 -370 0 -370 0 0 -445z M30 295 c0 -29 50 -115 90 -155 22 -22 63 -52 92 -67 l53 -28 680 0 680 0 53 28 c29 15 70 45 92 67 40 40 90 126 90 155 0 13 -100 15 -915 15 -815 0 -915 -2 -915 -15z"></path></svg></a>
-          </div><br>
-          <div class="text-center">
-            <h6>jasonfeng365@gmail.com &nbsp &nbsp <a href="resources/Resume.pdf" target="_blank">Resume</a></h6>
-          </div><br><br>
-        </div>
+					<p><b><a href="#" @click="challenges">Check out the challenge catalog!</a></b>
+						These puzzles are original ones, many of which appeared to me in dreams.</p><br>
+					
+					<!-- SVG icons -->
+					<div class="text-center">
+						<a title="LinkedIn" href="https://www.linkedin.com/in/jasonfeng365" target="_blank"><svg size="large" viewBox="2 2 20 20" fill="dimgray" width="48" height="48"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"></path></svg></a> &nbsp&nbsp
+						<a title="GitHub" href="https://github.com/JasonFeng365" target="_blank"><svg size="large" viewBox="0 0 16 16" fill="dimgray" width="48" height="48"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a> &nbsp&nbsp
+						<a title="Project Euler" href="https://projecteuler.net/progress=fengster" target="_blank"><svg size="large" viewBox="0 0 1920 1920" fill="dimgray" width="48" height="48"><path transform="translate(0,1920) scale(1,-1)" d="M270 1881 c-128 -40 -232 -159 -247 -282 l-6 -49 928 0 928 0 -6 49 c-12 102 -87 205 -189 258 l-53 28 -665 2 c-366 1 -676 -2 -690 -6z M140 945 l0 -445 140 0 140 0 0 165 0 165 108 0 c186 0 278 38 335 138 72 129 34 312 -77 377 -66 38 -131 45 -396 45 l-250 0 0 -445z m429 254 c51 -18 77 -91 50 -141 -16 -29 -70 -48 -139 -48 l-60 0 0 100 0 100 59 0 c32 0 72 -5 90 -11z M990 945 l0 -445 380 0 380 0 0 44 c0 23 -3 71 -6 105 l-7 61 -233 0 -234 0 0 85 0 85 215 0 215 0 0 90 0 90 -215 0 -215 0 0 70 0 70 230 0 230 0 0 95 0 95 -370 0 -370 0 0 -445z M30 295 c0 -29 50 -115 90 -155 22 -22 63 -52 92 -67 l53 -28 680 0 680 0 53 28 c29 15 70 45 92 67 40 40 90 126 90 155 0 13 -100 15 -915 15 -815 0 -915 -2 -915 -15z"></path></svg></a>
+					</div><br>
+					<div class="text-center">
+						<h6>jasonfeng365@gmail.com &nbsp &nbsp <a href="resources/Resume.pdf" target="_blank">Resume</a></h6>
+					</div><br><br>
+				</div>
+				
+				<div id="scpe" class="container tab-pane fade"><br>
+					<h2><b>Sierra Competitive Programming Exhibition</b></h2>
 
-        <!-- About -->
-        <div id="about" class="container tab-pane fade"><br>
-          <h2><b>About Me</b></h2>
-          <img class="img-fluid rounded mx-auto d-block" src="resources/clubdayphoto.jpg" alt="Sierra College Club Day"><br>
-          <h3>This is a picture from Sierra College's 2022 Club Day. </h3>
-          <p>I started attending Sierra College as a full-time student in the summer of 2021.
-            In early spring 2022, I was approached by Sierra College's Young Developers club, who were looking for officers to lead the club.<br>
-            While I first joined as a standard officer, I quickly rose to president by the beginning of summer, and led 
-            lectures during club meetings, lecturing on various algorithms, techniques, and puzzles,
-            along with encouraging my classmates to participate in programming competitions.<br>
-            Spring 2023 is my last semester here. I will transfer to a University of California with an associate's degree,
-            and pursue my graduate degree at university.<br><br>
-            
-            My programming pathway was a long one, with a rough start. My first language was HTML, of which I learned the basics at home.
-            I later attended a summer course over the summer of my fourth grade.
-            While I know many bright students who have good understanding of programming at a young age, I was not one of these.
-            I despised the class, completely shutting myself away from HTML, and it took me two years until I began to code again.<br>
-            Now in the sixth grade, my friend introduced me to Scratch, which was my first exposure to writing dynamic programs, rather than static HTML pages.
-            I enjoyed moving at my own pace, rather than a fast-moving week-long course, and I made many games, mostly platformers, inspired by the projects my friends have made.
-            While I liked makes games with drag-and-drop code, typed code was still difficult to me, and I exclusively coded using Scratch until high school.<br>
-            I took an information technology class in my freshman years. Here, I learned a lot about computer hardware, but I had not began coding yet.
-            It was not until my sophomore year, when I took the second information technology class, that I began typing code again.
-            Although I had no real experience writing code, by the end of the year, I was the farthest in the self-paced curriculum in the entire class.<br>
-            The COVID-19 pandemic began in my junior year. Due to this, I had a lot of time, and decided to prepare for my next school year by learning Java.
-            I took an online class from Udemy, and my interest in code bloomed as I solved puzzle after puzzle and created project after project.
-            Eventually, I spent two months during my last high school semester studying tirelessly to become Oracle certified, and reached my goal on April 8, 2021.
-            To this day, Java remains my favorite language.<br><br>
+					<p>I write the Sierra Competitive Programming Exhibition, a beginner-friendly contest for future contestants who want to explore competitive programming! Contests are hosted at Sierra College's campus, and are open to any current college or under student willing to learn.</p>
+					<p>I hosted the first ever SCPE in November 2023, with 10 problems I wrote myself. Contests are in-person, with an online option for people who cannot make it. Participation is completely free for everyone, and all current students are welcome to attend. Breakfast and lunch will be provided, and prizes are given out at the end of the contest, as well as a problem review session where I explain solutions to every single problem.</p>
+					<p>Unlike most other contests, I walk around the contest room and give hints to contestants, to help push them along the problem-solving process. The goal of the SCPE is for contestants to not necessarily participate for bragging rights or prizes, but rather to have fun and explore new approaches to problem solving.</p>
+					
+					<h4><b><a href="https://jasonfeng365.github.io/scpe">Register for the SCPE!</a></b></h4>
+					<br><br>
 
-            Despite all that I've learned from school, my greatest opportunity has been working with Rocklin's Code Ninjas team.
-            I first joined the team in the fall of 2021, as a recommendation from my friend.
-            Here in the code dojo, I learned more about competitive programming, along with the way of thinking needed to problem-solve effectively.<br>
-            If school and my courses began my path in programming, Code Ninjas only added to my momentum.<br><br>
+					<div class="text-center">
+						<img class="img-fluid rounded mx-auto d-block" src="resources/scpe.jpg" width="621" height="407">
+						<p>Winners of the first SCPE!</p><br>
+					</div>
 
-            My journey in competitive programming began in high school, where I participated in HPE CodeWars in Spring 2021, my senior year.
-            At the time, I had used Java for slightly less than a year, and teamed up with my friends, two other Java users, to compete in CodeWars.
-            Although we scored only around average, this was my first exposure to competitive programming.<br>
-            I learned even more about competitions from my manager at Code Ninjas. My coworkers, my manager, and I partook in many competitions,
-            including the Google Code Jam and the Meta Hacker Cup. Besides competitions, we explored algorithms by solving various problems from Project Euler, Codility, and similar sites.<br><br>
+				</div>
 
-            My greatest advice for computer science students is to build some projects outside of school.
-            Courses in school will teach you knowledge and theory, but you will have to find the passion to apply that knowledge by yourself- you should never depend completely
-            on school for becoming a programmer.<br>
-            Take some self-paced online courses, and completely master one programming language- learning how to think like a programmer is far more important than learning different languages.
-            Work on some personal projects- a to-do list is a very common project to begin with. While that is completely fine,
-            it is infinitely better to find a project you are interested in. For me, that is Discord bots and automation.
-            For you, it may be a game, a utility, an algorithm, or something else altogether.<br>
-            Regardless, find something that you are interested in, just as I have, and you will blaze ahead on your path as a programmer.
+				<div id="acpc" class="container tab-pane fade"><br>
+					<h2><b>Aggie Competitive Programming Contest</b></h2>
 
-          </p>
-        </div><br>
+					<p>When I was at Sierra College, I was invited to participate in the first ever Aggie Competitive Programming Contest, UC Davis's coding contest, in May 2023. This was my first experience with competitive programming at UC Davis, and I had a lot of fun meeting the organizers and contestants.</p>
+					<p>I was invited to join the ACPC team, an extension of the Davis Competitive Programming Club, in late 2023. Since then, I've been preparing my toughest problems to appear on 2024's ACPC.</p>
+					<p>Four of my dreams will appear in ACPC 2024. See if you can figure out which problems are mine!</p>
+					
+					<h4><b><a href="https://acpc-ucd.com/">Register for the ACPC!</a></b></h4>
+					<br><br>
 
-        <!-- Puzzles -->
-        <div id="puzzles" class="container tab-pane fade"><br>
-          <h2><b>Featured Puzzles</b></h2>
-          <img class="img-fluid rounded mx-auto d-block" src="resources/mathcenter.jpg" alt="Two Sums Problem" width="557" height="30"><br>
-          <h3>A various set of puzzles I've created, collected, and curated. I encourage you to solve these!</h3>
-          <h3><b>Check out my <a href="puzzles" target="_blank">full list of puzzles!</a></b></h3>
-          <h4>Many of these puzzles have two parts. The first parts are intended for beginners, and have smaller input sets with smaller numbers.
-            The second parts, with much larger input sets, will require optimization of the first solutions to have reasonable runtimes.
-          </h4>
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container-fluid">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="#fourspuzzle">Fours Puzzle</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#powerupmaze">Power-up Maze</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-          <div id="fourspuzzle" class="container-fluid"><br>
-            <h3><b>Fours Puzzle</b></h3>
-            <h5>
-              I participated in 2022's Meta Hacker Cup, making my way through the qualification and first rounds.
-              On the night of September 18th, I dreamed of a problem that would appear on Round 2: 
-              a puzzle involving the number 4, and four mathematical operations. Unfortunately, it didn't actually appear on the contest!
-            </h5>
-            <p>
-              Given a finite amount of the number 4, and the mathematical operations +, -, *, and ÷, determine whether it is possible or not to produce a result using those operations.<br><br>
-              
-              Input will be formatted as follows. The first line will be an integer number of how many inputs there will be. For each input, there will be two positive integers N and K separated by a space. The first integer N is how many 4’s you are allowed to use. The second integer K is the number to calculate.<br>
-              1 <= N <= 10<br>
-              0 <= K <= 1,000,000<br><br>
-              
-              Example input:<br>
-              4<br>
-              3 2<br>
-              5 1<br>
-              3 10<br>
-              1 0<br><br>
-              
-              In Case 1, we are given three 4s to get the number 2 as a result. We can do: <b>(4 + 4) / 4</b> to return the number 2.<br>
-              In Case 2, we are given five 4s to get the number 1. We can do: <b>4 / 4</b> to return the number 1. The number of 4s we use does not have to be exactly N, but has to be less or equal to N.<br>
-              In Case 3, we are given three 4s to get 10. 10 can be found with <b>4 + 4 + (4 + 4) / 4</b>; however, we print NO because we used more than three 4s.<br>
-              In Case 4, with only one 4, our only possible result is 4. Therefore, we cannot get a result of 0.<br><br>
+					<div class="text-center">
+						<img class="img-fluid rounded mx-auto d-block" src="resources/acpc.jpg" width="621" height="407">
+						<p>Jason competing at ACPC 2023</p><br>
 
-              The answer of this puzzle is the sum of the valid inputs' case numbers.<br>
-              For example, for the example input, the first and second inputs are valid, but the third and fourth are not, so I would add 1 and 2 to get a solution of 3.
-            </p><br>
-            <h5>To solve this puzzle, use <a href="puzzles/hard/fourspuzzle/input.txt" target="_blank">this link</a> to get the large input set.</h5>
-            <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
-            <h5>{{response}}</h5><br>
+						<img class="img-fluid rounded mx-auto d-block" src="resources/acpcwinners.jpg" width="621" height="407">
+						<p>Winners of the first ACPC!</p><br>
+					</div>
+					
+				</div>
+				
+				<div id="icpc" class="container tab-pane fade"><br>
+					<h2><b>International Collegiate Programming Contest</b></h2>
+					<h4>Spring 2023 - Mighty Polymorphers</h4>
+					<p>I first heard about the ICPC from my mentor, Lego Haryanto, who encouraged me to participate as a way of challenging myself. My teammates and I were Sierra College's first ever ICPC participants. We participated in the lower Division 2, where we scored <a href="http://acmicpc-pacnw.org/scoreboard/Spring2023/index2.html">22nd place</a> out of 53 teams across the whole Pacific Northwest.</p>
+					<p>My teammates were <a href="https://www.linkedin.com/in/sam-asbell-873757163">Sam Asbell</a> and <a href="https://www.linkedin.com/in/neildandekar">Neil Dandekar</a>, with coach <a href="https://www.linkedin.com/in/barry-brown-7b09805">Professor Barry Brown</a>.</p>
+					<div class="text-center">
+						<img class="img-fluid rounded mx-auto d-block" src="resources/polymorphers.jpg" width="621" height="407">
+						<p>Mighty Polymorphers and Professor Brown</p><br>
+					</div>
+					
 
-          </div>
-          <div id="powerupmaze" class="container-fluid"><br>
-            <h3><b>Power-up Maze</b></h3>
-            <h5>
-              I dreamed of the basic premise of this puzzle on the 24th of December, after reading about a puzzle with (possibly) a similar solution.
-              I later added onto it, while I was awake.
-            </h5>
-            <p>
-              A mouse is running through a maze, represented by a 2D grid, shown below. A # represents a wall, and a . represents an empty tile. 
-              Each second, it can move one tile upwards, leftwards, rightwards, or downwards on an empty space, but cannot go through walls. 
-              The mouse starts on the space marked A, and wants to move to the space marked B.<br><br>
-              Around the maze are one or more powerups marked P. The mouse has to collect every tile marked P in order to complete the maze.
-              Whenever the mouse moves over a space marked P, it can choose to collect the powerup. If it does, the space becomes an empty tile, and the mouse's current second ends.
-              On subsequent moves, the mouse is able to move an additional tile for every powerup collected.<br><br>
-              Given a maze, return the least amount of time the mouse takes to reach point B, starting from point A.<br>
-              Here is an example, along with an explanation. Press the buttons to go forward or backward a move.
-            </p><br>
+					<h4>Spring 2024 - Dream Demons</h4>
+					<p>I planned to participate in Division 1 in 2024, to further challenge myself in the higher division. Unfortunately, I was not able to participate with UC Davis in Division 1, due to some complications with my ICPC team.</p>
+					<p>I reached out to Sierra once again, with a team in Division 2. With the revival of Sierra's Computer Science Club, Sierra sent two teams this year: Dream Demons and RADAR.</p>
+					<p>With tremendous effort, my team was able to achieve <a href="http://acmicpc-pacnw.org/scoreboard/2023/index_D2.html">first place in California</a>, and <a href="http://acmicpc-pacnw.org/scoreboard/2023/group_California_-_D2.html">second place in the entire Pacific Northwest</a>.</p>
+					<p>My teammates were <a href="https://www.linkedin.com/in/neildandekar">Neil Dandekar</a> and <a href="https://www.linkedin.com/in/lucaslek">Lucas Lek</a>, with coach <a href="https://www.linkedin.com/in/barry-brown-7b09805">Professor Barry Brown</a>.</p>
+					<div class="text-center">
+						<img class="img-fluid rounded mx-auto d-block" src="resources/dreamdemons.jpg" width="621" height="407">
+						<p>Dream Demons</p><br>
 
-            <pre>{{currentMaze}}</pre>
-            <p>{{currentExplanation}}</p>
-            <p>Current second: {{index}}</p> <button @click="prev" :disabled='lowest'>Previous</button> <button @click="next" :disabled='highest'>Next</button><br><br>
+						<img class="img-fluid rounded mx-auto d-block" src="resources/sierrateams.jpg" width="621" height="407">
+						<p>Dream Demons, RADAR, and Professor Brown</p><br>
+					</div>
+					
+					
+					
+				</div>
 
-            <h5>To solve this puzzle, use <a href="puzzles/hard/powerupmaze/input.txt" target="_blank">this link</a> to get the large input set.</h5>
-            <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
-            <h5>{{response}}</h5><br>
-          </div>
-        </div>
-        
-        <!-- Projects -->
-        <div id="projects" class="container tab-pane fade"><br>
-          <h2><b>Projects</b></h2>
-          <h3>A list of my best projects.</h3><br>
-          <div v-html="allProjects"></div>
-          <br><br><br><br><br><br><br><br><br><br><br>
-        </div>
-      </div>
-    </div>
+				<!-- Projects -->
+				<div id="projects" class="container tab-pane fade"><br>
+					<h2><b>Projects</b></h2>
+					<h4>A list of my best projects.</h4><br>
+					<div v-html="allProjects"></div>
+				</div>
+				
+				<!-- Challenges -->
+				<div id="challenges" class="container tab-pane fade"><br>
+					<h2><b>Challenges</b></h2>
+
+					<p>Since September of 2022, I've been dreaming about coding problems. My first dream with a problem was in between rounds of the Meta Hacker Cup, and I had dreamed of a problem that would appear on the contest. Unfortunately, it didn't actually appear on MHC! Since then, with these dreams becoming more frequent, I've started writing down these problems.</p>
+					<p>These problems have made their appearances on SCPE, and will appear on ACPC.</p>
+
+					<h4><b><a href="challenges">Check out the challenge catalog!</a></b></h4>
+				</div>
+			</div>
+		</div>
 
 
 </body>
