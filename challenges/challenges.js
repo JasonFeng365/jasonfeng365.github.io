@@ -3,13 +3,12 @@ function convertToHref(name) {
 	return name.replaceAll(" ", "").toLowerCase()
 }
 
-const names1 = ["Max Multiset A", "Integral", "Riemann Sum", "Team Balance A", "💤 Contained String", "💤 Div Rem 1"]
+const names1 = ["Max Multiset A", "Integral", "Riemann Sum", "Team Balance A", "💤 Div Rem 1"]
 const desc1 = [
 	"From SCPE Fall 2023! Find the maximum subset of an array.",
 	"From SCPE Fall 2023! Compute the area under a polynomial.",
 	"From SCPE Fall 2023! Approximate the area under a polynomial.",
 	"From SCPE Fall 2023! Split a team into balanced subarrays.",
-	"Determine whether or not a string can be made from a sequence of letters.",
 	"Find a number that divides some divisors- with remainders!"
 ]
 
