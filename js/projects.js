@@ -26,12 +26,12 @@ function games(){
     const href = "games"
     const name = "Games"
     const desc = "Computer games that I created over the years."
-    const subHref = ["cam3", "cam4", "pyb", "destinycraft", "cam2"]
-    const subNames = ["Cat and Mouse 3", "Pushing Your Buttons", "DestinyCraft", "Cat and Mouse 4", "Cat and Mouse 2"]
-    const subText = ["Two-dimensional platforming fighter heavily inspired by Adobe Flash games of the past, written in two months for a 2022 summer game jam. Written in pure Java using the Swing toolkit, Cat and Mouse 3 boasts a completely original self-authored platforming engine.",
+    const subHref = ["cam4", "cam3", "pyb", "destinycraft", "cam2"]
+    const subNames = ["Cat and Mouse 4", "Cat and Mouse 3", "Pushing Your Buttons", "DestinyCraft", "Cat and Mouse 2"]
+    const subText = ["The sequel of Cat and Mouse 3, written in Unity, with an overhauled equipment system, new story, quality-of-life improvements, restyled UI, and much more.<br>"+getLink("https://jasonfeng365.github.io/catandmouse4", "Play Cat and Mouse 4!"),
+		"Two-dimensional platforming fighter heavily inspired by Adobe Flash games of the past, written in two months for a 2022 summer game jam. Written in pure Java using the Swing toolkit, Cat and Mouse 3 boasts a completely original self-authored platforming engine.",
     "Simple platformer using Java Swing, with a twist: terrain can be modified. Written in pure Java, it is my first game outside of Scratch. I used this game as an opportunity to gain experience with Java's toolkit.",
     "Work-in-progress Minecraft mod that adds items from Destiny 2, along with their special effects.",
-    "Work-in-progress sequel/remake of Cat and Mouse 3, written in Unity. Features will include an overhauled equipment system, new story, quality-of-life improvements, and restyled UI.",
     "The original Cat and Mouse computer game, created in Scratch, and based off of a real-life game by friends and I played from a young age."]
 
     return section(href, name, desc, subHref, subNames, subText)
@@ -57,7 +57,7 @@ function apis(){
     const desc = "REST APIs I created to simplify complex data."
     const subHref = ["classsearchapi"]
     const subNames = ["Sierra College Class Search API"]
-    const subText = ["Free to use Node.js REST API which returns the result of Sierra College's class search interface, in JSON format. This API will be integrated into my future projects.<br>"+getLink("https://va44m2xs5f.execute-api.us-west-1.amazonaws.com/dev", "Class Search API")+ " &nbsp &nbsp " +getLink("https://github.com/JasonFeng365/class-search-api", "GitHub Page")]
+    const subText = ["Free to use Node.js REST API which returns the result of Sierra College's class search interface, in JSON format. This API will be integrated into my future projects.<br>"+getLink("https://va44m2xs5f.execute-api.us-west-1.amazonaws.com/dev", "Class Search API") + " &nbsp &nbsp " +getLink("https://github.com/JasonFeng365/class-search-api", "GitHub Page")]
 
     return section(href, name, desc, subHref, subNames, subText)
 }
@@ -66,10 +66,10 @@ function assistants(){
     const href = "assistants"
     const name = "Assistants"
     const desc = "Programs to automate simple tasks or add ease to tasks unable to be automated."
-    const subHref = ["listenerassistant", "copier", "propagator", "taskmanager", "emailsender"]
+    const subHref = ["listenerassistant", "propagator", "taskmanager", "copier", "emailsender"]
     const subNames = ["Listener Assistant",  "Error Propagator", "Task Manager", "Special Characters Copier", "Email Sender"]
     const subText = ["A successor to the Special Characters Copier. Keypress listener made in Java that detects sequences of characters, and executes subroutines depending on sequence entered- no mouse movement needed. Automates various tasks at the press of a button.<br>"+getLink("https://github.com/JasonFeng365/Assistant", "GitHub Page"),
-    "Work-in-progress macro that propagates the error of variables, given an equation. It generates the equations, and automatically types them with Microsoft Word formatting.<br>"+getLink("https://github.com/JasonFeng365/PropagationOfError", "GitHub Page"),
+    "Macro that propagates the error of variables, given an equation. It generates the equations, and automatically types them with Microsoft Word formatting.<br>"+getLink("https://github.com/JasonFeng365/PropagationOfError", "GitHub Page")+"<br><br><video width=\"640\" height=\"360\" controls><source src=\"resources/propagatorinator.mp4\" type=\"video/mp4\"></video>",
     "Macro that completes Among Us crewmate tasks automatically, reducing the need for user input.<br>Remember: if you can code the cheat, you deserve to use it. (This is a joke.)",
     "Java Swing application that allows the user to copy any special character. I made this in 2021, when online physics class required Greek characters to be used.",
     "Website made with AngularJS for Sierra College tutors to log information about tutoring sessions.<br>"+getLink("https://jasonfeng365.github.io/email-sender", "Website")
