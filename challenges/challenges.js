@@ -3,30 +3,40 @@ function convertToHref(name) {
 	return name.replaceAll(" ", "").toLowerCase()
 }
 
-const names1 = ["Max Multiset A", "Integral", "Riemann Sum", "Team Balance A", "💤 Div Rem 1"]
+const names1 = ["Max Multiset A", "Integral", "Riemann Sum", "Team Balance A", "Clover Picking", "N-bonacci", "Trinomial A", "Tour Guide A", "💤 Div Rem 1"]
 const desc1 = [
 	"From SCPE Fall 2023! Find the maximum subset of an array.",
 	"From SCPE Fall 2023! Compute the area under a polynomial.",
 	"From SCPE Fall 2023! Approximate the area under a polynomial.",
 	"From SCPE Fall 2023! Split a team into balanced subarrays.",
+	"From SCPE Spring 2024! Get as much luck as possible from a field of clovers!",
+	"From SCPE Spring 2024! Determine if an integer exists in an N-bonacci sequence.",
+	"From SCPE Spring 2024! Factor a trinomial, where a = 1.",
+	"From SCPE Spring 2024! Help a tour guide lead a group of as many people as possible!",
 	"Find a number that divides some divisors- with remainders!"
 ]
 
-const names2 = ["Max Multiset B", "Team Balance B", "Parity Sum", "Maze Cleaning", "💤 Superstring 1", "💤 Div Rem 2"]
+const names2 = ["Max Multiset B", "Team Balance B", "Parity Sum", "Trinomial B", "Tour Guide B", "Triple Fourth", "Field of Flowers A", "Maze Cleaning", "💤 Superstring 1", "💤 Div Rem 2"]
 const desc2 = [
 	"From SCPE Fall 2023! Find the maximum subset of an array with given sizes.",
 	"From SCPE Fall 2023! Split a team into balanced subsets.",
 	"From SCPE Fall 2023! Find the sum of all odd or even integers less than given values.",
+	"From SCPE Spring 2024! Factor a trinomial, where a != 0.",
+	"From SCPE Spring 2024! Help the tour guide lead as many personal tours as possible!",
+	"From SCPE Spring 2024! A blast from the past, inspired by Destiny 2!",
+	"From SCPE Spring 2024! Take a picture of as many flowers as possible- while avoiding grass!",
 	"Clean the scientists' maze by flushing it with water.",
 	"An optimized variation of Div Rem 1.",
 
 ]
 
-const names3 = ["Max Multiset C", "Factor Mashup", "Buffet Raid", "💤 Superstring 2 (WIP)"]
+const names3 = ["Max Multiset C", "Factor Mashup", "Buffet Raid", "Field of Flowers B", "Jason Appleseed", "💤 Superstring 2 (WIP)"]
 const desc3 = [
 	"From SCPE Fall 2023! Find the maximum subset of given subarrays.",
 	"From SCPE Fall 2023! Find all integers less than or equal to a given integer with its prime factors being a subset of that integer's prime factors.",
 	"From SCPE Fall 2023! Eat all the food you can without being kicked out of a buffet!",
+	"From SCPE Spring 2024! Go through the flower field without stepping on any of the flowers!",
+	"From SCPE Spring 2024! And every seed I sow, will grow into a tree- the earth is good to me, Jason Appleseed!",
 	"An optimized version of Superstring 1."
 ]
 
