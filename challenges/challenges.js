@@ -8,7 +8,7 @@ const acpc2024descs = [
 	"Determine if droids can be salvaged from a clump of parts.",
 	"Determine how may ways a droid can be salvaged from a clump of parts!",
 	"After almost two years, Fours Puzzle makes its contest debut, with a fresh new look!",
-	"Determine how may ways a droid can be salvaged from a clump of parts!",
+	"Roll through a maze, collecting power-ups to ove faster!",
 ]
 
 const scpe2024names = ["Clover Picking", "N-bonacci", "Trinomial A", "Trinomial B", "Tour Guide A", "Tour Guide B", "Triple Fourth", "Field of Flowers A", "Field of Flowers B", "Jason Appleseed"]
