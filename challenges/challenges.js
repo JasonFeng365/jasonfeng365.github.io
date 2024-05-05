@@ -1,48 +1,51 @@
 function convertToHref(name) {
 	if (name.substring(0,2) == "💤") name = name.substring(3)
-	return name.replaceAll(" ", "").toLowerCase()
+	return name.replaceAll(" ", "-").toLowerCase()
 }
 
-const names1 = ["Max Multiset A", "Integral", "Riemann Sum", "Team Balance A", "Clover Picking", "N-bonacci", "Trinomial A", "Tour Guide A", "💤 Div Rem 1"]
-const desc1 = [
-	"From SCPE Fall 2023! Find the maximum subset of an array.",
-	"From SCPE Fall 2023! Compute the area under a polynomial.",
-	"From SCPE Fall 2023! Approximate the area under a polynomial.",
-	"From SCPE Fall 2023! Split a team into balanced subarrays.",
-	"From SCPE Spring 2024! Get as much luck as possible from a field of clovers!",
-	"From SCPE Spring 2024! Determine if an integer exists in an N-bonacci sequence.",
-	"From SCPE Spring 2024! Factor a trinomial, where a = 1.",
-	"From SCPE Spring 2024! Help a tour guide lead a group of as many people as possible!",
-	"Find a number that divides some divisors- with remainders!"
+const acpc2024names = ["💤 Droid Foundry A", "💤 Droid Foundry B", "💤 Fours Redux", "💤 Power-up Maze"]
+const acpc2024descs = [
+	"Determine if droids can be salvaged from a clump of parts.",
+	"Determine how may ways a droid can be salvaged from a clump of parts!",
+	"After almost two years, Fours Puzzle makes its contest debut, with a fresh new look!",
+	"Determine how may ways a droid can be salvaged from a clump of parts!",
 ]
 
-const names2 = ["Max Multiset B", "Team Balance B", "Parity Sum", "Trinomial B", "Tour Guide B", "Triple Fourth", "Field of Flowers A", "Maze Cleaning", "💤 Superstring 1", "💤 Div Rem 2"]
-const desc2 = [
-	"From SCPE Fall 2023! Find the maximum subset of an array with given sizes.",
-	"From SCPE Fall 2023! Split a team into balanced subsets.",
-	"From SCPE Fall 2023! Find the sum of all odd or even integers less than given values.",
-	"From SCPE Spring 2024! Factor a trinomial, where a != 0.",
-	"From SCPE Spring 2024! Help the tour guide lead as many personal tours as possible!",
-	"From SCPE Spring 2024! A blast from the past, inspired by Destiny 2!",
-	"From SCPE Spring 2024! Take a picture of as many flowers as possible- while avoiding grass!",
+const scpe2024names = ["Clover Picking", "N-bonacci", "Trinomial A", "Trinomial B", "Tour Guide A", "Tour Guide B", "Triple Fourth", "Field of Flowers A", "Field of Flowers B", "Jason Appleseed"]
+const scpe2024descs = [
+	"Get as much luck as possible from a field of clovers!",
+	"Determine if an integer exists in an N-bonacci sequence.",
+	"Factor a trinomial, where a = 1.",
+	"Factor a trinomial, where a != 0.",
+	"Help a tour guide lead a group of as many people as possible!",
+	"Help the tour guide lead as many personal tours as possible!",
+	"A blast from the past, inspired by Destiny 2!",
+	"Take a picture of as many flowers as possible- while avoiding grass!",
+	"Go through the flower field without stepping on any of the flowers!",
+	"And every seed I sow, will grow into a tree- the earth is good to me, Jason Appleseed!",
+]
+
+const scpe2023names = ["Max Multiset A", "Max Multiset B", "Max Multiset C", "Integral", "Riemann Sum", "Team Balance A", "Team Balance B", "Parity Sum", "Factor Mashup", "Buffet Raid"]
+const scpe2023descs = [
+	"Find the maximum subset of an array.",
+	"Find the maximum subset of an array with given sizes.",
+	"Find the maximum subset of given subarrays.",
+	"Compute the area under a polynomial.",
+	"Approximate the area under a polynomial.",
+	"Split a team into balanced subarrays.",
+	"Split a team into balanced subsets.",
+	"Find the sum of all odd or even integers less than given values.",
+	"Find all integers less than or equal to a given integer with its prime factors being a subset of that integer's prime factors.",
+	"Eat all the food you can without being kicked out of a buffet!",
+]
+
+const legacynames = ["Maze Cleaning", "💤 Div Rem 1", "💤 Div Rem 2", "💤 Cheese Maze"]
+const legacydescs = [
 	"Clean the scientists' maze by flushing it with water.",
+	"Find a number that divides some divisors- with remainders!",
 	"An optimized variation of Div Rem 1.",
-
+	"A mouse crawls through a maze, collecting as much cheese as it can!",
 ]
-
-const names3 = ["Max Multiset C", "Factor Mashup", "Buffet Raid", "Field of Flowers B", "Jason Appleseed", "💤 Superstring 2 (WIP)"]
-const desc3 = [
-	"From SCPE Fall 2023! Find the maximum subset of given subarrays.",
-	"From SCPE Fall 2023! Find all integers less than or equal to a given integer with its prime factors being a subset of that integer's prime factors.",
-	"From SCPE Fall 2023! Eat all the food you can without being kicked out of a buffet!",
-	"From SCPE Spring 2024! Go through the flower field without stepping on any of the flowers!",
-	"From SCPE Spring 2024! And every seed I sow, will grow into a tree- the earth is good to me, Jason Appleseed!",
-	"An optimized version of Superstring 1."
-]
-
-
-
-
 const navPrefix = "<li class=\"nav-item\"><a class=\"nav-link\" href=\"#"
 const navSuffix = "</a></li>\n"
 const barSuffix = "</ul>\n</div>\n</nav>\n"
@@ -51,16 +54,16 @@ function addToNav(href, name){
 	return navPrefix + href + "\">" + name + navSuffix
 }
 
-function getBar(difficulty){
+function getBar(barName, first){
 	let res = null
-	if (difficulty == "easy") res = "<div id=\"easy\" class=\"container tab-pane fade show active\"><br>\n"
-	else res = "<div id=\""+difficulty+"\" class=\"container tab-pane fade\"><br>\n"
+	if (first) res = "<div id=\""+barName+"\" class=\"container tab-pane fade show active\"><br>\n"
+	else res = "<div id=\""+barName+"\" class=\"container tab-pane fade\"><br>\n"
 	// res += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark sticky-top\">\n<div class=\"container-fluid\">\n<ul class=\"navbar-nav\">\n"
 	return res
 }
 
-function createNav(hrefs, names, difficulty){
-	return getBar(difficulty)
+function createNav(hrefs, names, difficulty, isFirst){
+	return getBar(difficulty, isFirst)
 
 	// var output = getBar(difficulty)
 	// for (var i = 0; i < hrefs.length; i++)
@@ -79,24 +82,39 @@ function createAllNodes(hrefs, names, descriptions, difficulty){
 	return output + "</div>\n"
 }
 
-function createTab(hrefs, names, descriptions, difficulty){
-	return createNav(hrefs, names, difficulty) + createAllNodes(hrefs, names, descriptions, difficulty) + "\n"
+function createTab(hrefs, names, descriptions, difficulty, isFirst){
+	return createNav(hrefs, names, difficulty, isFirst) + createAllNodes(hrefs, names, descriptions, difficulty) + "\n"
 }
 
-function easy(){
-	let hrefs1 = names1.map(convertToHref)
-	return createTab(hrefs1, names1, desc1, "easy")
+// function easy(){
+// 	let hrefs1 = names1.map(convertToHref)
+// 	return createTab(hrefs1, names1, desc1, "easy", true)
+// }
+
+// function medium(){
+// 	let hrefs2 = names2.map(convertToHref)
+// 	return createTab(hrefs2, names2, desc2, "medium", false)
+// }
+
+// function hard(){
+// 	let hrefs3 = names3.map(convertToHref)
+// 	return createTab(hrefs3, names3, desc3, "hard", false)
+// }
+
+function acpc2024(){
+	return createTab(acpc2024names.map(convertToHref), acpc2024names, acpc2024descs, "acpc2024", true)
+}
+function scpe2024(){
+	return createTab(scpe2024names.map(convertToHref), scpe2024names, scpe2024descs, "scpe2024", false)
+}
+function scpe2023(){
+	return createTab(scpe2023names.map(convertToHref), scpe2023names, scpe2023descs, "scpe2023", false)
+}
+function legacy(){
+	return createTab(legacynames.map(convertToHref), legacynames, legacydescs, "legacy", false)
 }
 
-function medium(){
-	let hrefs2 = names2.map(convertToHref)
-	return createTab(hrefs2, names2, desc2, "medium")
-}
 
-function hard(){
-	let hrefs3 = names3.map(convertToHref)
-	return createTab(hrefs3, names3, desc3, "hard")
-}
 
 function hrefsToBar(hrefs){
 	let array = []
@@ -110,6 +128,6 @@ function hrefsToBar(hrefs){
 const challenges = new Vue({
 	el: '#challenges',
 	data: {
-		allChallenges:easy() + medium() + hard(),
+		allChallenges:acpc2024()+scpe2024()+scpe2023()+legacy(),
 	},
 });

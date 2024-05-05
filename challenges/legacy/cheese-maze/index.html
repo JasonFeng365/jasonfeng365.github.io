@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+    <title>💤 Cheese Maze</title>
+</head>
+<body>
+    <div class="container mt-3">
+        <div id="puzzle" class="container-fluid"><br>
+          <div class="row">
+            <div class="col-sm-9 p-3"><h3><b>💤 Cheese Maze</b></h3></div>
+            <div class="col-sm-3 p-3"><form action="../.."><button type="submit" class="btn btn-secondary">Back to Index</button></form></div>
+          </div>
+            <h5>
+              This is a simpler variation of the Power-up Maze. <a href="../power-up-maze">Give that one a try</a> after you finish this one!
+            </h5>
+            <p>
+				Hilariously enough, Cheese Maze saved me during a contest that Lego hosted in 2023! I entered the contest with a meme team of my best friend and my mom, and was able to implement Cheese Maze in mere minutes after seeing one of the problems was very similar to it.<br><br>
+              A mouse is running through a maze, represented by a 2D grid, shown below. A # represents a wall, and a . represents an empty tile. 
+              Each second, it can move one tile upwards, leftwards, rightwards, or downwards on an empty space, but cannot go through walls. 
+              The mouse starts on the space marked A, and wants to move to the space marked B.<br><br>
+              Around the maze are one or more pieces of cheese marked P. The mouse has to collect every tile marked P in order to complete the maze.
+              Whenever the mouse moves over a space marked P, it collects the cheese. The mouse must collect every piece of cheese to finish the maze.<br><br>
+              Given a maze, return the least amount of time the mouse takes to reach point B, starting from point A.<br>
+              Here is an example, along with an explanation. Press the buttons to go forward or backward a move.
+            </p><br>
+
+            <pre>{{currentMaze}}</pre>
+            <p>{{currentExplanation}}</p>
+            <p>Current second: {{secondArray[index]}}</p> <button @click="prev" :disabled='lowest'>Previous</button> <button @click="next" :disabled='highest'>Next</button><br><br>
+
+            <h5>To solve this puzzle, use <a href="input.txt" target="_blank">this link</a> to get the large input set.</h5>
+            <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
+            <h5>{{response}}</h5><br>
+
+            <h6>Related challenges:</h6>
+			<a href="../maze-cleaning/" class="btn btn-secondary">Maze Cleaning</a>
+            <a href="../../acpc2024/power-up-maze/" class="btn btn-secondary">💤 Power-up Maze</a>
+          </div>
+    </div>
+</body>
+<script src="puzzle.js"></script>
+</html>
