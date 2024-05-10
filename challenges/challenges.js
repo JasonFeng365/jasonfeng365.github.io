@@ -39,11 +39,9 @@ const scpe2023descs = [
 	"Eat all the food you can without being kicked out of a buffet!",
 ]
 
-const legacynames = ["Maze Cleaning", "💤 Div Rem 1", "💤 Div Rem 2", "💤 Cheese Maze"]
+const legacynames = ["Maze Cleaning", "💤 Cheese Maze"]
 const legacydescs = [
 	"Clean the scientists' maze by flushing it with water.",
-	"Find a number that divides some divisors- with remainders!",
-	"An optimized variation of Div Rem 1.",
 	"A mouse crawls through a maze, collecting as much cheese as it can!",
 ]
 const navPrefix = "<li class=\"nav-item\"><a class=\"nav-link\" href=\"#"
