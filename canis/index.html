@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+	<link rel="shortcut icon" href="CANIS_square.png">
+	<link rel="stylesheet" href="style.css" />
+
+	<title>CANIS</title>
+</head>
+<body style="font-family:inter">
+
+<nav class="sticky-top navbar navbar-expand-sm bg-black navbar-dark">
+	<div class="container-fluid">
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+			<ul class="navbar-nav me-auto">
+				<li class="nav-item" onclick="customScroll('about')">
+					<a class="nav-link red-blue-shadow unselectable">What is CANIS?</a></li>
+					<li class="nav-item" onclick="customScroll('demo')">
+						<a class="nav-link red-blue-shadow unselectable">Demo</a></li>
+				<li class="nav-item" onclick="customScroll('features')">
+					<a class="nav-link red-blue-shadow unselectable">Features</a></li>
+				<li class="nav-item" onclick="customScroll('integrations')">
+					<a class="nav-link red-blue-shadow unselectable">Integrations</a></li>
+				<li class="nav-item" onclick="customScroll('dogma')">
+					<a class="nav-link red-blue-shadow unselectable">The CANIS Dogma</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div class="headergrad">
+	<br><br><br>
+	<div class="container text-light">
+
+		<div class="row text-light">
+			<div class="col-md-2"></div>
+			<div class="col-md-8">
+				<img class="img-fluid" src="CANIS.png"><br>
+			</div>
+			<div class="col-md-2">
+			</div>
+		</div>
+		<h2 class="text-center purple-shadow"><b>Contest Administration, Notifications, and Information System</b></h2>
+
+	</div>
+	<br><br><br><br>
+</div>
+<br><br><br><br>
+
+<div class="container text-light text-start">
+	<br><a class="anchor" id="about"></a><h2 class="text-center red-blue-shadow"><b>What is CANIS?</b></h2>
+	<p>
+		The Contest Administration, Notifications, and Information System is a
+		work-in-progress interface to simplify organization and logistics of competitive programming contests.
+		Built by a contest-writer for contest-writers, CANIS increases productivity for the whole team
+		with intuitive and powerful features.
+	</p>
+	<p>
+		CANIS is still in progress, but I hope to use it in 2025 to streamline administration for the
+		Sierra Competitive Programming Exhibition at Sierra College, as well as the
+		Aggie Competitive Programming Contest at UC Davis.
+	</p>
+	<h4 class="text-start purple-shadow"><b>By a contest-writer, for contest-writers</b></h4>
+	<p>
+		I enjoy the technical aspects of hosting contests, especially writing problems! But to me,
+		administration and ensuring that everyone's registration and attendance go smoothly are cumbersome.
+		I'm writing CANIS so my teams and I can spend more time in the future having fun writing problems,
+		instead of spending hours organizing sign-ups.
+	</p>
+
+
+
+	<br><a class="anchor" id="demo"></a><h2 class="text-center red-blue-shadow"><b>Demo</b></h2>
+	<h4 class="text-start purple-shadow"><b>Contest organization</b></h4>
+	<div class="text-center">
+		<div class="embed-responsive">
+			<video class="embed-responsive-item" controls>
+				<source src="canis-contests.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div><br>
+	<h4 class="text-start purple-shadow"><b>Contest creation and sharing</b></h4>
+	<div class="text-center">
+		<div class="embed-responsive loop">
+			<video class="embed-responsive-item" controls>
+				<source src="canis-sharing.mp4" type="video/mp4">
+			</video>
+		</div>
+	</div>
+
+
+
+
+	<br><a class="anchor" id="features"></a><h2 class="text-center red-blue-shadow"><b>Features</b></h2>
+	<p>
+		CANIS supports a plethora of tools to help your team efficiently organize your contest.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Live Contest Overview</b></h5>
+	<p>
+		While a contest is running, CANIS will process every new submission from the contest's page
+		and report submissions on a live-updating interface for easy processing. This allows administrators
+		to provide help to struggling contestants, along with handing out live prizes to contestants
+		who solve problems.
+	</p>
+	<p>
+		Requires <span class="red-blue-shadow">Codeforces</span> integration.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Adaptable Seating Chart</b></h5>
+	<p>
+		The Adaptable Seating Chart allows you to plan out your contest room to keep track of who sits where,
+		through a Fabric.js editor.
+		Selecting a contestant or team will cause the corresponding seat to light up, so you easily know
+		where to go.
+	</p>
+	<p>
+		Compatible with <span class="red-blue-shadow">Codeforces</span> and
+		<span class="red-blue-shadow">HackerRank</span> integrations, along with the
+		<span class="red-blue-shadow">Live Contest Overview</span> feature. Selecting a submission automatically
+		causes the submitter's seat to light up.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Information Rest API</b></h5>
+	<p>
+		Provide attendees with up-to-date information on the number of registered attendees, along with
+		the number of open spots remaining, from a Google Forms registration document.
+	</p>
+	<p>
+		This feature can either be made public for anyone to access, or can be set to require authorization
+		through an API key.
+	</p>
+	<p>
+		Requires <span class="red-blue-shadow">Google Forms</span> integration.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Contest Sharing</b></h5>
+	<p>
+		Share your contests with your team, using just your teammates' emails.
+		Set up permissions to enable or disable teammates changing settings.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Pre-Contest Notifications</b></h5>
+	<p>
+		Notify contestants with scheduled emails, along with information about their
+		registration status. Automatically email contestants when their registration
+		is processed and confirmed, or when contestants are waitlisted.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Post-Contest Analytics</b></h5>
+	<p>
+		Automatically generate an analysis of contestants, including data such as
+		attendance versus registration rate and solves per problem.
+	</p>
+
+
+
+	<br><a class="anchor" id="integrations"></a><h2 class="text-center red-blue-shadow"><b>Integrations</b></h2>
+	<p>
+		CANIS seamlessly integrates with external services as a hub for other applications.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Google Forms</b></h5>
+	<p>
+		Automatically process new sign-ups to your contest, registering contestants based on some condition.
+	</p>
+	<p>
+		Enables the <span class="red-blue-shadow">Information Rest API</span>.
+	</p>
+	<h5 class="text-start purple-shadow"><b>Codeforces</b></h5>
+	<p>
+		Get a live report of submissions as people submit problems. This feature works for both public and group contests.
+		Private contests require a Codeforces key and secret for access.
+	</p>
+	<p>
+		Uses the <a href="https://github.com/JasonFeng365/CodeforcesAPI" class="red-blue-shadow nav-item">Codeforces Java API</a>.
+	</p>
+	<h5 class="text-start purple-shadow"><b>HackerRank</b></h5>
+	<p>
+		Just like Codeforces, Get a live report of submissions as people submit problems.
+		This feature works for both public and group contests.
+	</p>
+
+
+
+
+	<br><a class="anchor" id="dogma"></a><h2 class="text-center red-blue-shadow"><b>The CANIS Dogma</b></h2>
+	<p>
+		I founded CANIS upon a simple dogma (get the pun?). I'll follow through on these ideas all throughout development.
+	</p>
+	<p>
+		To me, CANIS is a learning opportunity to get familiar with software development. But to you,
+		I hope that CANIS can alleviate some of the burden of contest organization.
+	</p>
+	<h4 class="text-start purple-shadow"><b>Simple</b></h4>
+	<p>
+		CANIS must be easy and intuitive to use. I wrote CANIS to make contest administration easier,
+		not harder. Features should be easy to enable and configure, and integrations should be
+		as simple as pasting in an API key and changing some settings.
+	</p>
+	<h4 class="text-start purple-shadow"><b>Powerful</b></h4>
+	<p>
+		Despite its simplicity, CANIS will not lose power. Integrations and features will offer powerful
+		functionality to let you easily organize your contest.
+	</p>
+	<h4 class="text-start purple-shadow"><b>Free</b></h4>
+	<p>
+		The spirit of CANIS is to help people host fun contests to advance critical thinking and problem solving skills.
+		Charging for it wouldn't be fair, as it would reduce the amount of fellow contest-writers able to benefit from it.
+		Anyways, CANIS costs me between very little and nothing, and I have no intentions to make money from it.
+	</p>
+</div>
+<br><br>
+
+<script>
+	function customScroll(section) {
+		document.getElementById(section).scrollIntoView(true)
+	}
+</script>
+
+
+</body>
+</html>

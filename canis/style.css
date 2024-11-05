@@ -1,0 +1,85 @@
+@font-face {
+	font-family: "inter";
+	src: url(Inter-Regular.ttf);
+	font-display: swap;
+}
+
+p {
+	font-size: 20px;
+}
+
+body::after {
+	content: "";
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	background: rgb(34,34,34);
+	background: linear-gradient(90deg, rgba(34,34,34,1) 0%, rgba(48,48,48,1) 47%, rgba(48,48,48,1) 53%, rgba(34,34,34,1) 100%);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+
+.headergrad {
+	background: rgb(107,65,255);
+	background: linear-gradient(225deg, rgba(107,65,255,1) 0%, rgba(255,179,102,1) 50%, rgba(107,65,255,1) 100%);
+}
+
+
+a {
+	color: #ffaa40;
+	text-decoration:none;
+	transition: .2s;
+}
+
+a:hover {
+	color: #ff6640;
+	transition: .2s;
+}
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -75px;
+    visibility: hidden;
+}
+
+.red-blue-shadow {
+	text-shadow: 1px 0px .3em #8040FF, -1px -0px .3em #FF0000, 0 0 0.9em #0000FF;
+}
+
+.purple-shadow {
+	text-shadow: 1px 0px .3em #8040FF, -1px -0px .3em #8040FF, 0 0 0.9em #8040FF;
+}
+
+.nav-item {
+	cursor: pointer;
+}
+
+.unselectable {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+span {
+	font-size: 20px;
+	position: relative;
+	offset-position: center;
+}
+.span-header {
+	text-shadow: 1px 0px .3em red, -1px -0px .3em blue, 0 0 0.9em #8040FF;
+	line-height: 44px;
+	padding: 10px 18px;
+	padding-top: 50px;
+}
+
+.text-gray {
+	color: #c0c0c0;
+}
