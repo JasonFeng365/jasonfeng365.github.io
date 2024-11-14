@@ -35,6 +35,7 @@
             <p>Current second: {{secondArray[index]}}</p> <button @click="prev" :disabled='lowest'>Previous</button> <button @click="next" :disabled='highest'>Next</button><br><br>
 
             <h5>To solve this puzzle, use <a href="input.txt" target="_blank">this link</a> to get the large input set.</h5>
+			The large input set is a 23 x 23 grid.
             <input v-model="input" placeholder="Enter your answer here.">  <button @click="submit" type="button" class="btn btn-primary">Submit</button><br>
             <h5>{{response}}</h5><br>
 
