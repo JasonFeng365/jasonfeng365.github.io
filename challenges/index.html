@@ -1,36 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-
-		<title>All Challenges</title>
-		
+	<meta charset="UTF-8">
+	<title>Challenges - SCRIBE</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
 
-	<div class="container-fluid text-center p-5 bg-success bg-opacity-25">
-		<h1><b>All Challenges</b></h1>
-		<h3>The full set of challenges I've created. I encourage you to give these a try!</h3>
-		<h4>Challenges will be uploaded publicly here after their appearance on a contest.</h4>
-	</div>
-	<br>
+<div id="app" class="container py-5">
+	<h1 class="mb-4">SCRIBE Read-Only Catalog</h1>
 
-	<div class="container mt-3" id="challenges"><br>
-		<ul class="nav nav-tabs" role="tablist">
-			<li class="nav-item active"><a class="nav-link active" data-bs-toggle="tab" href="#acpc2024">ACPC 2024</a></li>
-			<li class="nav-item active"><a class="nav-link" data-bs-toggle="tab" href="#scpe2024">SCPE 2024</a></li>
-			<li class="nav-item active"><a class="nav-link" data-bs-toggle="tab" href="#scpe2023">SCPE 2023</a></li>
-			<li class="nav-item active"><a class="nav-link" data-bs-toggle="tab" href="#legacy">Legacy</a></li>
-		</ul>
-		<div class="tab-content" v-html="allChallenges"></div>
+	<!-- https://github.com/JasonFeng365/SCRIBE -->
+	<h2 class="mb-4">Specialty Challenge Repository In-Browser Editor</h2>
+	<p class="mb-4"><b>Clone <a href="https://github.com/JasonFeng365/SCRIBE">SCRIBE</a> from GitHub to organize your problems!</b></p>
+
+	<!-- Filters -->
+	<div class="mb-3">
+		<div class="d-flex align-items-center mt-2">
+			<div class="form-check form-switch me-3 mb-0">
+				<input class="form-check-input" type="checkbox" id="nameToggle" v-model="nameFilterEditingEnabled">
+				<label class="form-check-label" for="nameToggle">Filter by name</label>
+			</div>
+			<div v-if="nameFilterEditingEnabled" class="form-check form-switch mb-0">
+				<input class="form-check-input" type="checkbox" id="nameValueToggle" v-model="nameFilterValue">
+				<label class="form-check-label" for="nameValueToggle"></label>
+				<span v-if="nameFilterValue" class="badge bg-success ms-2">Include</span>
+				<span v-if="!nameFilterValue" class="badge bg-success ms-2">Exclude</span>
+			</div>
+		</div>
+		<input type="text" class="form-control" id="nameFilter" v-model="nameFilter" :disabled="!nameFilterEditingEnabled">
+
+
+		
+		<div class="d-flex align-items-center mt-2">
+			<div class="form-check form-switch me-3 mb-0">
+				<input class="form-check-input" type="checkbox" id="editToggle" v-model="tagsFilterEditingEnabled">
+				<label class="form-check-label" for="editToggle">Filter by tags + show tags</label>
+			</div>
+			<div v-if="tagsFilterEditingEnabled" class="form-check form-switch mb-0">
+				<input class="form-check-input" type="checkbox" id="tagsValueToggle" v-model="tagsFilterValue">
+				<label class="form-check-label" for="tagsValueToggle"></label>
+				<span v-if="tagsFilterValue" class="badge bg-success ms-2">Includes all</span>
+				<span v-if="!tagsFilterValue" class="badge bg-success ms-2">Excludes all</span>
+			</div>
+		</div>
+		<input type="text" class="form-control" id="tagsFilter" v-model="tagsFilter" :disabled="!tagsFilterEditingEnabled">
 	</div>
+
+	<!-- Sorting -->
+	<div class="mb-3 d-flex align-items-center">
+		<button 
+			class="btn me-2"
+			:class="sortBy === 'path' ? 'btn-primary' : 'btn-outline-primary'"
+			@click="sortBy = 'path'; sortAsc = true"
+		>
+			Sort by Path
+		</button>
+		<button 
+			class="btn me-2"
+			:class="sortBy === 'name' ? 'btn-primary' : 'btn-outline-primary'"
+			@click="sortBy = 'name'; sortAsc = true"
+		>
+			Sort by Name
+		</button>
+		<button 
+			class="btn me-2"
+			:class="sortBy === 'difficulty' ? 'btn-primary' : 'btn-outline-primary'"
+			@click="sortBy = 'difficulty'; sortAsc = true"
+		>
+			Sort by Difficulty
+		</button>
+		<button 
+			class="btn me-2"
+			:class="sortBy === 'creation' ? 'btn-primary' : 'btn-outline-primary'"
+			@click="sortBy = 'creation'; sortAsc = true"
+		>
+			Sort by Creation
+		</button>
+		<button class="btn btn-outline-secondary" @click="sortAsc = !sortAsc">
+			<span v-if="sortAsc">&#8593; Ascending</span>
+			<span v-else>&#8595; Descending</span>
+		</button>
+	</div>
+
+	<div class="mb-3">
+		<strong>Items found:</strong> {{ filterItems().length }}
+	</div>
+	
+	
+	<!-- Content -->
+	<ul class="list-group">
+		<li v-for="item in filterItems()" :key="item.id" class="list-group-item d-flex justify-content-between align-items-center">
+			<div class="w-100">
+				<div @click="item.expanded = !item.expanded; lastActive = item;" style="cursor:pointer;">
+					{{ getPathWithoutName(item) }}/<b>{{ item.name }}</b>
+					<span class="badge bg-success ms-2">{{ item.creation }}</span>
+					<span class="badge bg-info ms-2">{{ item.difficulty }}</span>
+					<span v-if="item.tags.includes('dream')" class="badge bg-light ms-2">💤</span>
+				</div>
+				<div v-if="item.expanded" class="mt-2 ms-3 border p-2 rounded" style="transition: all 0.3s ease-in-out;">
+					<div class="mb-2">
+						<label class="form-label">Creation Timestamp:</label>
+						<input type="text" class="form-control" @click="lastActive = item" v-model="item.creation" readonly>
+					</div>
+					<div class="mb-2">
+						<label class="form-label">Description:</label>
+						<textarea style="field-sizing: content;" class="form-control" @click="lastActive = item" v-model="item.description" readonly></textarea>
+					</div>
+					
+					<label class="form-label">Link:</label>
+					<div class="input-group mb-2">
+						<input type="text" class="form-control" @click="lastActive = item" v-model="item.link" readonly>
+						<button v-if="item.link" class="btn btn-outline-secondary" type="button" @click="openLink(item.link)">Open in new tab</button>
+					</div>
+					<div class="mb-2">
+						<label class="form-label">Difficulty:</label>
+						<input type="number" class="form-control" @click="lastActive = item" v-model.number="item.difficulty" readonly>
+					</div>
+					<div class="mb-2" v-if="tagsFilterEditingEnabled">
+						<label class="form-label">Tags:</label>
+						<div class="mt-2 border p-2 rounded">
+							<span v-for="(tag, index) in item.tags" :key="index" class="badge bg-secondary me-1 mb-1">{{ tag }}</span>
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+		</li>
+	</ul>
 
 </div>
-</body>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
 <script src="challenges.js"></script>
+</body>
 </html>

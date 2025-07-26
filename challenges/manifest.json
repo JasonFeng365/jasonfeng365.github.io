@@ -1,0 +1,583 @@
+[
+	{
+		"creation": "2023-03-31",
+		"description": "Determine if droids can be salvaged from a clump of parts.\n\nDroid Foundry A came to me in a dream in my last semester at Sierra College. I showed the puzzle - then named Contained String - to some of my classmates.\nInterestingly, I found a very similar problem to this on LeetCode, with the only difference being that Contained String had multiple queries, while the LeetCode version had only a single query.",
+		"difficulty": 2,
+		"link": "https://codeforces.com/group/ANhuR0iBIH/contest/522146/problem/E",
+		"name": "Droid Foundry A",
+		"path": "ACPC 2024/Droid Foundry A",
+		"tags": [
+			"dream",
+			"greedy",
+			"subsequence"
+		]
+	},
+	{
+		"creation": "2023-03-31",
+		"description": "Determine how many ways a droid can be salvaged from a clump of parts!\n\n\nDroid Foundry B was one of the last problems added to the ACPC 2024 problem set. It bridges the gap in difficulty from the earlier and the later problems.\nThis problem began as a very classical problem. Only five days before the ACPC, one of our teammates noticed that a simple Google search output the solution to that problem. I quickly modified the problem statement to ensure that contestants wouldn't be able to copy-paste. That's not the spirit of the contest!\n",
+		"difficulty": 5,
+		"link": "https://codeforces.com/group/ANhuR0iBIH/contest/522146/problem/F",
+		"name": "Droid Foundry B",
+		"path": "ACPC 2024/Droid Foundry B",
+		"tags": [
+			"dream",
+			"dp",
+			"3-dim",
+			"subsequence"
+		]
+	},
+	{
+		"creation": "2022-09-18",
+		"description": "After almost two years of waiting, my beloved Fours Puzzle made it to the big screen!\n\nI participated in 2022's Meta Hacker Cup, making my way through the qualification and first rounds. On the night of September 18th, I dreamed of a problem that would appear on Round 2: a puzzle involving the number 4, and four mathematical operations. Unfortunately, it didn't actually appear on the contest!\nFours was my first ever problem, dreamed 20 months prior to the ACPC. I'm very happy the ACPC team and I could finally make my dreams come true!",
+		"difficulty": 6,
+		"link": "https://codeforces.com/group/ANhuR0iBIH/contest/522146/problem/H",
+		"name": "Fours Redux",
+		"path": "ACPC 2024/Fours Redux",
+		"tags": [
+			"dream",
+			"preprocessing",
+			"brute force",
+			"strings",
+			"implementation",
+			"adhoc"
+		]
+	},
+	{
+		"creation": "2022-12-24",
+		"description": "My beloved second magnum opus! Given a grid with scattered power-ups, navigate start to exit while collecting every powerup in the least moves. Collecting a powerup lets you travel farther within a single move.\n\nPower-up Maze is my second ever challenge, which came to me a dream on Christmas Eve 2022. I dreamed of the basic premise of this puzzle on the 24th of December, after reading about a puzzle with (possibly) a similar solution. The first and current iteration of the problem involved the power-ups increasing the tiles you can move on a single turn. I once simplified this problem into a similar legacy problem - Cheese Maze - of simply collecting all powerups with no speed increase.\nHilariously enough, Cheese Maze saved me during a contest that Lego hosted in 2023! I entered the contest with a meme team of my best friend and my mom, and was able to implement Cheese Maze in mere minutes after seeing one of the problems was very similar to it.",
+		"difficulty": 10,
+		"link": "https://codeforces.com/group/ANhuR0iBIH/contest/522146/problem/J",
+		"name": "Power-up Maze",
+		"path": "ACPC 2024/Power-up Maze",
+		"tags": [
+			"dream",
+			"2d grid",
+			"bfs",
+			"dp",
+			"dijkstra's",
+			"bitmask",
+			"advent-esque"
+		]
+	},
+	{
+		"creation": "2024-01-01",
+		"description": "Treatment Plans if Oneirophages wrote it!\n\nWhat a nice new year's present this problem was! I initially dreamed this problem as a doctor prescribing treatment plans for patients, with \"paths\" of medicines where certain medicines need prerequisites to be taken as well. I proposed this problem for ACPC 2024 where it was well-received by the team, but we ultimately agreed that I shouldn't write the whole contest (and we had a lot of graph problems already).\nWe instead saved it for the next year, ACPC 2025, and I adapted the theme to feasting on tasty dreams in the spirit of a Pokémon-themed contest. Plus, it wouldn't be Jason of me to not write a problem about dream-eating.",
+		"difficulty": 4,
+		"link": "https://codeforces.com/group/Agsm1DY0x3/contest/600925/problem/F",
+		"name": "Odyssey of the Dream-Eater",
+		"path": "ACPC 2025/Odyssey of the Dream-Eater",
+		"tags": [
+			"dream",
+			"preprocessing",
+			"bfs",
+			"dfs",
+			"binary search",
+			"treeset"
+		]
+	},
+	{
+		"creation": "2024-03-31",
+		"description": "Got too lazy to manually convert Markiplier to LameTeX, here's a problem so you can solve it for me :trollge:\n\nAs of 2025, this is my only ACPC problem not originating from a dream. Instead, it's based on a script I wrote during preparations for ACPC 2024. My markup language of choice is Markdown, which is conveniently used by HackerRank, but not by Codeforces' Polygon. But instead of manually translating my problem statements and formatting, why not make a program to do it for me?\n\"Never spend 6 minutes doing something by hand when you can spend 6 hours failing to automate it.\" - zhuowei",
+		"difficulty": 1,
+		"link": "https://codeforces.com/group/Agsm1DY0x3/contest/600925/problem/B",
+		"name": "PokéTeX",
+		"path": "ACPC 2025/PokéTeX",
+		"tags": [
+			"strings",
+			"practical",
+			"regex"
+		]
+	},
+	{
+		"creation": "2024-10-22",
+		"description": "Make a rectangle's area as large as possible by increasing sidelengths up to a limit!\n\nACPC preparation is a lot of fun, where our team challenges each other by proposing quite difficult problems. This has the unfortunate side effect of not having many problems on the simpler side. Slowbro Resolution and PokéTeX were my answers to that, having some simpler problems to start, and letting the team ramp up from there.\nThis problem has intentionally low constraints, to allow linear-time and even n^2 time solutions to pass. As the first problem in a contest sorted by difficulty, I want to make sure that participants are able to solve this one.",
+		"difficulty": 1,
+		"link": "https://codeforces.com/group/Agsm1DY0x3/contest/600925/problem/A",
+		"name": "Slowbro Resolution",
+		"path": "ACPC 2025/Slowbro Resolution",
+		"tags": [
+			"dream",
+			"geometry"
+		]
+	},
+	{
+		"creation": "2025-02-21",
+		"description": "From DCPC Max Flow problemset. Mmm, delicious!",
+		"difficulty": 8,
+		"link": "https://www.hackerrank.com/contests/dcpc-max-flow-problemset/challenges/dcpc-bing-chilling",
+		"name": "Bing Chilling",
+		"path": "DCPC/Bing Chilling",
+		"tags": [
+			"flow",
+			"bipartite matching"
+		]
+	},
+	{
+		"creation": "2025-02-20",
+		"description": "From DCPC binary exponentiation problemset. Implementation of the powmod function. Make sure it has good time complexity! Implementation practice.",
+		"difficulty": 3,
+		"link": "https://www.hackerrank.com/contests/dcpc-binary-exponentiation-problemset/challenges/dcpc-powmod",
+		"name": "powmod",
+		"path": "DCPC/powmod",
+		"tags": [
+			"binary exponentiation",
+			"mod"
+		]
+	},
+	{
+		"creation": "2025-03-29",
+		"description": "From a guest greedy lecture. Pretty classical problem, give it a go!",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/jasons-catalog/challenges/refueling",
+		"name": "Refueling Stops",
+		"path": "DCPC/Refueling Stops",
+		"tags": [
+			"greedy",
+			"binary search",
+			"frid"
+		]
+	},
+	{
+		"creation": "2025-02-20",
+		"description": "From DCPC Max Flow problemset. I had to hurriedly write all these problems after staying up way too late every day of the previous week and getting badly sick afterwards. Whoops!",
+		"difficulty": 9,
+		"link": "https://www.hackerrank.com/contests/dcpc-max-flow-problemset/challenges/dcpc-wheres-my-water-b",
+		"name": "Where's My Water B",
+		"path": "DCPC/Where's My Water B",
+		"tags": [
+			"max flow",
+			"min cut"
+		]
+	},
+	{
+		"creation": "2023-09-19",
+		"description": "SCPE/ACPC sample problem. Make sure your code is fast!",
+		"difficulty": 0,
+		"link": "https://www.hackerrank.com/contests/scpe-practice-problems/challenges/scpe-gcf",
+		"name": "GCF",
+		"path": "Samples/GCF",
+		"tags": [
+			"sample"
+		]
+	},
+	{
+		"creation": "2023-09-19",
+		"description": "SCPE/ACPC sample problem. Array practice!",
+		"difficulty": 0,
+		"link": "https://www.hackerrank.com/contests/scpe-practice-problems/challenges/scpe-median",
+		"name": "Median",
+		"path": "Samples/Median",
+		"tags": [
+			"sample"
+		]
+	},
+	{
+		"creation": "2023-09-19",
+		"description": "SCPE/ACPC sample problem. Careful of overflow!",
+		"difficulty": 0,
+		"link": "https://www.hackerrank.com/contests/scpe-practice-problems/challenges/scpe-product",
+		"name": "Product",
+		"path": "Samples/Product",
+		"tags": [
+			"sample"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Given an array of foods representing the **fullness** `F` you would get, determine the most full you can get without eating more than two in a row.\n\nBuffet Raid is a classic decision tree problem that draws inspiration from LeetCode House Robber.",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-buffet-raid",
+		"name": "Buffet Raid",
+		"path": "SCPE F2023/Buffet Raid",
+		"tags": [
+			"dp",
+			"1-dim"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Find all positive integers less than or equal to `n` with prime factors that are a subset of the set of `n`'s prime factors.\n\nThis is one of my favorite problems of all time! If I had known that I'd be writing UC Davis's ACPC, I might've saved this problem for that contest.\nBesides prime factorization, there are multiple approaches to take to find the integers that have prime factors that are subsets of the given integer's prime factors. Try to find the fastest one!",
+		"difficulty": 5,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-factor-mashup",
+		"name": "Factor Mashup",
+		"path": "SCPE F2023/Factor Mashup",
+		"tags": [
+			"recursion",
+			"dfs",
+			"backtracking",
+			"factorization"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Given a polynomial and a range, find the area under the polynomial under the range.\n\nMany contests will have problems that are purely implementation. Problems like these provide the entire algorithm, but it is up to the programmer to implement a correct solution in a fast time.\nA good example of this is Problem G: Fading Wind from the Spring 2023 PacNW ICPC. There, the algorithm is given, and the programmer must implement an accurate solution while making sure to follow the algorithm exactly as specified.",
+		"difficulty": 2,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-integral",
+		"name": "Integral",
+		"path": "SCPE F2023/Integral",
+		"tags": [
+			"implementation",
+			"arrays",
+			"math"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Given a list of integers, find the sum of the multiset that results in the largest sum.\n\nDuring the SCPE, every single team was able to solve this problem!",
+		"difficulty": 1,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-max-multiset-a",
+		"name": "Max Multiset A",
+		"path": "SCPE F2023/Max Multiset A",
+		"tags": [
+			"dream",
+			"greedy"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Given a list of integers `arr` and a list of lengths `lens`, output the **max multiset sum** from `arr` with each length `L` in `lens`.\n\nMax Multiset B adds on to the concept of a maximum multiset from Max Multiset A, with two new twists. Two different techniques must be used in tandem to solve this problem.",
+		"difficulty": 3,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-max-multiset-b",
+		"name": "Max Multiset B",
+		"path": "SCPE F2023/Max Multiset B",
+		"tags": [
+			"queries",
+			"greedy",
+			"prefix sum",
+			"sorting",
+			"preprocessing"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Given a list of integers `arr`, for each integer pair `a` and `b` in list `ranges`, output the **max multiset sum** of the **subarray**.\n\nMax Multiset C is conceptually very simple, but requires usage of a specific technique to pass the runtime.",
+		"difficulty": 3,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-max-multiset-c",
+		"name": "Max Multiset C",
+		"path": "SCPE F2023/Max Multiset C",
+		"tags": [
+			"queries",
+			"greedy",
+			"prefix sum",
+			"preprocessing"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Determine the sum of a sequence of positive odd or even integers.\n\nParity Sum is a very interesting problem! I drew inspiration from two of my previous problems, which in turn drew inspiration from an old for-loop assignment.\nThere are multiple much better ways to compute the sums of integers up to a point. See if you can find one of the ways here!",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-parity-sum",
+		"name": "Parity Sum",
+		"path": "SCPE F2023/Parity Sum",
+		"tags": [
+			"sta",
+			"math",
+			"dp"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Given a polynomial and a range, approximate the area under the polynomial under the range.\n\nIn addition to being a pure implementation problem like Integral, this problem shows some rounding errors form floating-point numbers. I was lucky that Lego was able to catch this bug before I put the problem on the contest- the testcases initially had this rounding error too!\nBe careful with the for loop on this problem. The challenge review shows a few ways to circumvent the rounding errors.",
+		"difficulty": 3,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-riemann-sum",
+		"name": "Riemann Sum",
+		"path": "SCPE F2023/Riemann Sum",
+		"tags": [
+			"implementation",
+			"arrays",
+			"math",
+			"floats"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Split a sports team into two balanced parts, without selecting players in any order.\n\nTeam Balance A is a pretty standard problem where there's an easy solution in O(n^2), but just a few adjustments brings that down to O(n).",
+		"difficulty": 2,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-team-balance-a",
+		"name": "Two Teams A",
+		"path": "SCPE F2023/Two Teams A",
+		"tags": [
+			"preprocessing",
+			"arrays"
+		]
+	},
+	{
+		"creation": "2023-08-29",
+		"description": "Split a sports team into two balanced parts.\n\nTeam Balance B is a brute-force problem, and is meant as an introduction to subsets.",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-fall-2023/challenges/scpe-team-balance-b",
+		"name": "Two Teams B",
+		"path": "SCPE F2023/Two Teams B",
+		"tags": [
+			"bitmask",
+			"brute force",
+			"dp",
+			"subset sum"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "Clover Picking's \"Step 1 is be lucky\" is a running joke with my friends, and I incorporated it here with picking clovers. This problem's one-pass solution may be easier to implement than its double loop solution.",
+		"difficulty": 1,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-clover-picking",
+		"name": "Clover Picking",
+		"path": "SCPE S2024/Clover Picking",
+		"tags": [
+			"arrays",
+			"accumulation",
+			"one-pass"
+		]
+	},
+	{
+		"creation": "2024-03-23",
+		"description": "This problem was initially a sliding window on a grid- however, I changed it because it did not fit in with problems of similar difficulty. Maybe a variation on the original idea might find its way onto a future contest.",
+		"difficulty": 6,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-field-of-flowers-a",
+		"name": "Field of Flowers A",
+		"path": "SCPE S2024/Field of Flowers A",
+		"tags": [
+			"arrays",
+			"sliding window",
+			"hashmap"
+		]
+	},
+	{
+		"creation": "2024-03-23",
+		"description": "Problems with this technique are pretty common- good to get some practice during the SCPE!",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-field-of-flowers-b",
+		"name": "Field of Flowers B",
+		"path": "SCPE S2024/Field of Flowers B",
+		"tags": [
+			"dp",
+			"1-dim",
+			"mod"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "A problem with this technique has not yet appeared on the SCPE. It's a very common technique that should be taught in lower-division courses- you'll need to apply that technique to this problem!",
+		"difficulty": 8,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-jason-appleseed",
+		"name": "Jason Appleseed",
+		"path": "SCPE S2024/Jason Appleseed",
+		"tags": [
+			"binary search",
+			"implementation",
+			"greedy"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "N-bonacci is an array problem or recursively, but the array solution is fine to use. I have not thought much about it, but a prefix sum might be able to speed up the runtime- let me know if anyone can figure that out!",
+		"difficulty": 2,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-n-bonacci",
+		"name": "N-bonacci",
+		"path": "SCPE S2024/N-bonacci",
+		"tags": [
+			"brute force",
+			"prefix sum"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "Tour Guide A's inputs have an interesting property, in that there's no need to covert each time into seconds to compare two times: comparing the two strings yields the same result.",
+		"difficulty": 5,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-tour-guide-a",
+		"name": "Tour Guide A",
+		"path": "SCPE S2024/Tour Guide A",
+		"tags": [
+			"greedy",
+			"interval scheduling",
+			"sorting"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "Tour Guide B can be done in a simple one-pass.... after a little preprocessing.",
+		"difficulty": 6,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-tour-guide-b",
+		"name": "Tour Guide B",
+		"path": "SCPE S2024/Tour Guide B",
+		"tags": [
+			"greedy",
+			"interval scheduling",
+			"sorting"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "This is an interesting problem, solvable in square root time- however, I kept the constraints low for contestants who didn't know that optimization. Of course, the solutions stream goes over that.",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-trinomial-a",
+		"name": "Trinomial A",
+		"path": "SCPE S2024/Trinomial A",
+		"tags": [
+			"factoring",
+			"math",
+			"algebra"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "Trinomial B is a little trickier than Trinomial A, but is solvable using the same \"technique\" as Trinomial A.",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-trinomial-b",
+		"name": "Trinomial B",
+		"path": "SCPE S2024/Trinomial B",
+		"tags": [
+			"factoring",
+			"math",
+			"algebra"
+		]
+	},
+	{
+		"creation": "2024-03-07",
+		"description": "Since I was hesitant to put a completely videogame-based problem into the SCPE, I changed the problem a little, while keeping the same idea of \"how far can I go, starting with some value\". But as a little reference to Destiny 2, I made the problem about a crow.",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2024/challenges/scpe-triple-fourth",
+		"name": "Triple Fourth",
+		"path": "SCPE S2024/Triple Fourth",
+		"tags": [
+			"sta",
+			"math",
+			"dp",
+			"memoization"
+		]
+	},
+	{
+		"creation": "2024-08-16",
+		"description": "Having eaten your fill at the buffet, you get ready to leave. But it'd be funnier to intentionally get kicked out!",
+		"difficulty": 1,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-buffet-raid-passe",
+		"name": "Buffet Raid Passe",
+		"path": "SCPE S2025/Buffet Raid Passe",
+		"tags": [
+			"array",
+			"brute force"
+		]
+	},
+	{
+		"creation": "2025-04-17",
+		"description": "Determine if each pair of circles overlap at some point(s).",
+		"difficulty": 2,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-circle-intersection",
+		"name": "Circle Intersection",
+		"path": "SCPE S2025/Circle Intersection",
+		"tags": [
+			"geometry",
+			"math",
+			"euclidean distance"
+		]
+	},
+	{
+		"creation": "2025-04-17",
+		"description": "https://github.com/UCD-193AB-ws24/CycleGuardFrontend",
+		"difficulty": 3,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-cycleguard",
+		"name": "CycleGuard",
+		"path": "SCPE S2025/CycleGuard",
+		"tags": [
+			"hashmap",
+			"queries",
+			"updates"
+		]
+	},
+	{
+		"creation": "2025-04-17",
+		"description": "Short, sweet, and elegant problem. Lots more mathy than I'm usually familiar with!\n\nChallenge: what if subsets of the array are not guaranteed to be coprime?",
+		"difficulty": 6,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-eulers-multiples-redux",
+		"name": "Euler's Multiples Redux",
+		"path": "SCPE S2025/Euler's Multiples Redux",
+		"tags": [
+			"principle of inclusion and exclusion",
+			"pie",
+			"math",
+			"subsets",
+			"bitmask",
+			"backtracking"
+		]
+	},
+	{
+		"creation": "2024-10-15",
+		"description": "What a good book this is - and a nice dream to remind me of it!",
+		"difficulty": 5,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/mr-terupts-dollar-words",
+		"name": "Mr. Terupt's Dollar Words",
+		"path": "SCPE S2025/Mr. Terupt's Dollar Words",
+		"tags": [
+			"dream",
+			"dp",
+			"subset sum",
+			"2-dim"
+		]
+	},
+	{
+		"creation": "2025-02-03",
+		"description": "Though this started as finding the depth of some function calls i.e. foo(bar(a, b), sta(f(b))), that proved to be a pain to write a generator. So instead we'll stick with sentences cause I'm tired and lazy.",
+		"difficulty": 1,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-phrase-nesting",
+		"name": "Phrase Nesting",
+		"path": "SCPE S2025/Phrase Nesting",
+		"tags": [
+			"one-pass",
+			"parentheses",
+			"stack",
+			"accumulation"
+		]
+	},
+	{
+		"creation": "2023-11-05",
+		"description": "p1*i1 + p2*i2, prime and integers, to make a given n. Nice dream of mine!",
+		"difficulty": 1,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-prime-equivalence",
+		"name": "Prime Equivalence",
+		"path": "SCPE S2025/Prime Equivalence",
+		"tags": [
+			"dream",
+			"sta",
+			"math"
+		]
+	},
+	{
+		"creation": "2024-06-14",
+		"description": "Multiple ways to solve this problem, though some are cooler than others.",
+		"difficulty": 4,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-rivers-in-the-sierras",
+		"name": "Rivers in the Sierras",
+		"path": "SCPE S2025/Rivers in the Sierras",
+		"tags": [
+			"bfs",
+			"dfs",
+			"memoization",
+			"dp"
+		]
+	},
+	{
+		"creation": "2025-02-20",
+		"description": "Max flow! SCPE S2025 is full of references.",
+		"difficulty": 8,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/dcpc-wheres-my-water-a",
+		"name": "Where's My Water",
+		"path": "SCPE S2025/Where's My Water",
+		"tags": [
+			"max flow"
+		]
+	},
+	{
+		"creation": "2025-04-17",
+		"description": "Pretty fun ad-hoc one! A spiritual sequel to SCPE S2024 Tour Guide A/B.",
+		"difficulty": 5,
+		"link": "https://www.hackerrank.com/contests/scpe-spring-2025/challenges/scpe-writing-tour-guide",
+		"name": "Writing Tour Guide",
+		"path": "SCPE S2025/Writing Tour Guide",
+		"tags": [
+			"implementation",
+			"two-pointers",
+			"set",
+			"pigeonhole principle",
+			"sorting"
+		]
+	}
+]
