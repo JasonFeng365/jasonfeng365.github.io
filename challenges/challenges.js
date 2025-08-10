@@ -95,6 +95,19 @@ const vue = createApp({
 	mounted() {
 		this.vue = this
 
+		const urlParams = new URLSearchParams(window.location.search);
+		if (urlParams.has('name')) {
+			this.nameFilter = urlParams.get('name');
+			this.nameFilterEditingEnabled = true;
+			this.nameFilterValue = true;
+		}
+		if (urlParams.has('tags')) {
+			this.tagsFilter = urlParams.get('tags');
+			this.tagsFilterEditingEnabled = true;
+			this.tagsFilterValue = true;
+		}
+
+
 		fetch('manifest.json')
 			.then(response => response.json())
 			.then(data => {
