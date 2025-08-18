@@ -111,7 +111,8 @@ const vue = createApp({
 		fetch('manifest.json')
 			.then(response => response.json())
 			.then(data => {
-				this.items = data;
+				this.totalProblems = data.totalProblems
+				this.items = data.problems;
 				this.items.forEach(item => {
 					item.tagsText = item.tags.join(", ")
 					item.previousVersion = JSON.parse(JSON.stringify(item));
