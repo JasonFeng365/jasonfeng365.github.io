@@ -151,6 +151,30 @@
 			]
 		},
 		{
+			"creation": "2025-05-25",
+			"description": "Surely staying in my hotel room and writing problems during NAC 2025 instead of socializing and building connections was a good idea?",
+			"difficulty": 5,
+			"link": "https://www.acmicpc.net/problem/34782",
+			"name": "Bouquet of Balloons",
+			"path": "PacNW 2025/Bouquet of Balloons",
+			"tags": [
+				"sorting",
+				"greedy"
+			]
+		},
+		{
+			"creation": "2025-08-02",
+			"description": "I know what it's like to be a CSE major. To study so desperately, yet to get cooked nonetheless. It's frightening, turns the legs to jelly. I ask you to what end? Dread it. Run from it. Circuitry arrives all the same. And now it's here. Or should I say, I am.\n\nSolidarity is an homage to my time with Sierra College's circuitry family, the Happy Cats. Though it certainly wasn't easy, studying under Professor Pattengale made me a better student, and I'm thankful for the opportunity to have taken his course. Pattengale is not just a professor or instructor, but also a true teacher who runs his classes with not only technical expertise, but integrity, confidence, and a questionable sense of humor.",
+			"difficulty": 4,
+			"link": "https://www.acmicpc.net/problem/34801",
+			"name": "Solidarity of the Happy Cats",
+			"path": "PacNW 2025/Solidarity of the Happy Cats",
+			"tags": [
+				"adjacency matrix",
+				"adhoc"
+			]
+		},
+		{
 			"creation": "2023-09-19",
 			"description": "SCPE/ACPC sample problem. Make sure your code is fast!",
 			"difficulty": 0,
@@ -582,5 +606,5 @@
 			]
 		}
 	],
-	"totalProblems": 113
+	"totalProblems": 134
 }
