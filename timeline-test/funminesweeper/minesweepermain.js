@@ -90,9 +90,9 @@ let MinesweeperMain_maximizers =
 
 function genBoard() {
 	let config = {
-		"width": 16,
+		"width": 9,
 		"height": 16,
-		"mines": 40,
+		"mines": 22,
 		"blocks": 0,
 		"iterations": 3,
 		"seed": null,
