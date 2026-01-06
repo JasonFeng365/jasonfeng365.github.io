@@ -74,11 +74,15 @@
                             'number': cell.number
                         }"
                         @click="leftClick(rowIndex, cellIndex)"
+						@mousedown="console.log('mousedown on', rowIndex, cellIndex)"
+						@mouseup="console.log('mouseup on', rowIndex, cellIndex)"
                         @contextmenu.prevent="toggleFlag(rowIndex, cellIndex)"
                     >
-					<div class="ignoremouse">
-						{{ getIcon(cell, rowIndex, cellIndex) }}
-					</div>
+						<div class="ignoremouse" :style="{
+							color: numberColor[cell.number]
+						}">
+							{{ getIcon(cell, rowIndex, cellIndex) }}
+						</div>
                     </div>
                 </div>
             <!-- </div> -->
@@ -98,17 +102,21 @@
                 gameStarted: false,
                 gameOver: false,
 				clickable: false,
+				numberColor: ["#000000", "#66a4dd", "#50a050", "#c67", "#b7d", "#a90", "#5aa", "#999", "#ccc"]
             },
             mounted() {
                 this.restartGame();
             },
             methods: {
 				getIcon(cell, r, c) {
-					if (r==this.rows>>1 && c==this.cols>>1) {
-						return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : 'x'
-					}
+					// if (r==this.rows>>1 && c==this.cols>>1) {
+					// 	return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : 'x'
+					// }
 					return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : ''
 				},
+				// getNumberColor(number) {
+
+				// },
                 restartGame() {
                     this.gameOver = false;
                     this.gameStarted = true;

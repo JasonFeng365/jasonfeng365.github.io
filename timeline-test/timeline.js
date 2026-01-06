@@ -356,6 +356,10 @@ const vue = new Vue({
 			return makeCarousel(this.selectedEntry)
 		}
 
+	},
+	mounted: function() {
+		console.log("In mounted")
+		console.log(genBoard())
 	}
 });
 
