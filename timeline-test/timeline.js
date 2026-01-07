@@ -83,7 +83,8 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#007bff', date: '2025-07', caption: 'SCRIBE', urls: [{url: "https://github.com/JasonFeng365/SCRIBE", title: "GitHub repo"}], title: 'Local problemsetting problem organizer', description: "", imageUrls: [] },
 
 			// UCLA
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-10', end: '2025-12', caption: 'eSIM Parser', urls: [], title: 'Local web interface for editing eSIM .der files', description: "", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-10', end: 'present', caption: 'eSIM Parser', urls: [], title: 'Local web interface for editing eSIM .der files', description: "", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-1', end: 'present', caption: 'GenValGen', urls: [], title: '', description: "", imageUrls: [] },
 		],
 	}
 ];
@@ -358,7 +359,6 @@ const vue = new Vue({
 	},
 	mounted: function() {
 		console.log("In mounted")
-		console.log(genBoard())
 	}
 });
 

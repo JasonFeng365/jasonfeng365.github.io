@@ -1,0 +1,67 @@
+.background-element {
+	position: fixed;
+	z-index: -1;
+	/* opacity: .7; */
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cell-container {
+	width: 5rem;
+	height: 5rem;
+	/* border: 10px solid black; */
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 2rem;
+	background-color: transparent;
+}
+
+.cell {
+	width: 4.7rem;
+	height: 4.7rem;
+	background-color: #333;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	border-radius: 8%;
+	opacity: .6;
+}
+
+.cell.revealed {
+	background-color: #000;
+}
+.cell.flag {
+	background-color: #512222;
+}
+.cell.mine {
+	/* background-color: #ff4444; */
+}
+.cell.number {
+	color: #333;
+}
+
+
+.mouse-cursor-gradient-tracking {
+  --size: 0px;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, purple, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+  z-index: -2;
+  opacity: .7;
+}
+
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 200px;
+}
