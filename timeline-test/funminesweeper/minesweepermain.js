@@ -88,11 +88,11 @@ let MinesweeperMain_maximizers =
 
 
 
-function genBoard() {
+function genBoard(configParams) {
 	let config = {
-		"width": 9,
-		"height": 16,
-		"mines": 22,
+		"width": configParams["width"],
+		"height": configParams["height"],
+		"mines": configParams["mines"],
 		"blocks": 0,
 		"iterations": 3,
 		"seed": null,
@@ -103,6 +103,7 @@ function genBoard() {
 		"verbose2": false,
 		"maxSelectIndex": 0
 	}
+	console.log(config)
     const MAX_FREES_AMOUNT = 20;
 
 

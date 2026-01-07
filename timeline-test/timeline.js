@@ -56,13 +56,12 @@ const timelines = [
 		name: 'Experience',
 		backgroundColor: '#a19ed9', intervalColor: 'orange', pointColor: 'gray',
 		entries: [
-			{ type: 'interval', backgroundColor: 'black', start: '2021-09', end: '2025-09', caption: 'Code Ninjas', urls: [], title: 'Competitive Programming Sensei', description: "", imageUrls: [] },
+			{ type: 'interval', backgroundColor: 'black', start: '2021-09', end: '2025-09', caption: 'Code Ninjas', urls: [], title: 'Competitive Programming Sensei', description: "Throughout my time at Sierra College, I worked part-time at the Rocklin Dojo to teach drag-and-drop and JavaScript game development to elementary and middle schoolers, as well as Unity and competitive programming to our more advanced high schoolers. Our students would go on to achieve high placements at Hewlett-Packard CodeWars, winning trophies for our Dojo in the 2025 season.\n\nI'm very thankful to have worked under my employer and my mentor, legendary ICPC world finalist Lego Haryanto, who introduced me to the world of competitive programming. He's very passionate about competitive programming and gave me the experience needed to lead and problemset for Sierra's and Davis's contests.", imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2022-01', end: '2023-05', caption: 'Sierra College Tutor Center', urls: [], title: 'Peer Tutor/Academic Support Peer', description: "", imageUrls: [] },
 			{ type: 'interval', backgroundColor: 'green', start: '2025-06', end: '2025-09', caption: 'AgScout', urls: [], title: 'Android Development Intern', description: 'Developed automatic file uploader for resumable overnight transfers from Android to Google Cloud Bucket', imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#022851', start: '2024-07', end: '2025-02', caption: 'LEPS', urls: [], title: 'Embedded Systems Intern / Research Assistant - Laboratory for Embedded and Programmable Systems', description: 'Refined Qt signal processing GUI for medical fetal oximetry systems', imageUrls: [] },
 
-
-			{ type: 'interval', backgroundColor: '#C74634', start: '2026-06', end: '2026-09', caption: 'Oracle', urls: [], title: 'Software Engineering Intern', description: "", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#C74634', start: '2026-06', end: '2026-09', caption: 'Oracle', urls: [], title: 'Software Engineering Intern', description: "I'll be joining Oracle's Fusion team as an intern during Summer 2026, after a round of interviews from November-December 2025. Looking forward to contributing to and learning from Oracle!", imageUrls: [] },
 
 			
 		],

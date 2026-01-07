@@ -15,10 +15,12 @@
     <style>
 
 		.background-element {
-			position: fixed; /* Positions the element relative to its parent wrapper */
-			width: 100%;
-			height: 100%;
-			z-index: -1; /* Sends this element behind elements with a z-index of 0 or higher */
+			position: fixed;
+			z-index: -1;
+			
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
 		}
 
         .cell {
@@ -72,8 +74,8 @@
             <!-- <div class="d-flex justify-content-center mb-3">
                 <button @click="restartGame" class="btn btn-primary">Restart</button>
             </div> -->
-            <!-- <div class="text-center"> -->
-			<div>
+            <div>
+			<!-- <div> -->
                 <div 
                     v-for="(row, rowIndex) in grid" 
                     :key="rowIndex" 
@@ -108,12 +110,33 @@
     <!-- Vue and Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script>
+		function getWindowSizeInRem() {
+			// Get the computed font size of the root HTML element in pixels
+			// This value is 1rem
+			const rootFontSizePixels = parseFloat(getComputedStyle(document.documentElement).fontSize);
+
+			// Get the current viewport width and height in pixels
+			const windowWidthPixels = window.innerWidth;
+			const windowHeightPixels = window.innerHeight;
+
+			// Convert pixels to rem
+			const windowWidthRem = windowWidthPixels / rootFontSizePixels;
+			const windowHeightRem = windowHeightPixels / rootFontSizePixels;
+
+			return {
+				width: windowWidthRem,
+				height: windowHeightRem
+			};
+		}
+
+
         new Vue({
             el: '#app',
             data: {
-                rows: 9,
-                cols: 16,
+                rows: 0,
+                cols: 0,
                 mines: 22,
+				difficulty: 5,
                 grid: [],
                 gameStarted: false,
                 gameOver: false,
@@ -121,9 +144,26 @@
 				numberColor: ["#000000", "#66a4dd", "#50a050", "#c67", "#b7d", "#a90", "#5aa", "#999", "#ccc"]
             },
             mounted() {
-                this.restartGame();
+				let resizeTimer;
+				const vue = this;
+				window.addEventListener('resize', function() {
+					clearTimeout(resizeTimer); // Clear the previous timer
+					resizeTimer = setTimeout(function() {
+						vue.onWindowResize()
+					}, 300);
+				});
+
+                // this.restartGame();
+				this.onWindowResize()
             },
             methods: {
+				onWindowResize() {
+					const rem = getWindowSizeInRem();
+					this.rows = Math.floor(rem.height/5)
+					this.cols = Math.floor(rem.width/5)
+
+					this.restartGame()
+				},
 				getIcon(cell, r, c) {
 					// if (r==this.rows>>1 && c==this.cols>>1) {
 					// 	return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : 'x'
@@ -136,12 +176,18 @@
                 restartGame() {
                     this.gameOver = false;
                     this.gameStarted = true;
+					this.mines = Math.floor(this.rows * this.cols * this.difficulty / 64)
                     this.grid = this.generateGrid();
 					this.clickable = true;
                 },
                 generateGrid() {
-					const ms = genBoard();
-					console.log(ms)
+					const curConfig = {
+						"width": this.rows,
+						"height": this.cols,
+						"mines": this.mines
+					}
+					console.log(curConfig)
+					const ms = genBoard(curConfig);
 					const mined = ms._mined
 					const dug = ms._dug
 
