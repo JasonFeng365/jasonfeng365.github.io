@@ -53,7 +53,7 @@
 				<div class="cell" 
 						:class="{
 							'revealed': cell.revealed,
-							'flag': cell.flag,
+							'flag': cell.flag || (cell.revealed && cell.mine),
 							'mine': cell.mine,
 							'number': cell.number,
 							'flag-success': cell.mine && won,
@@ -74,7 +74,8 @@
 </div>
 
 
-<div id="app" v-cloak v-if="false">
+<!-- <div id="app" v-cloak v-if="false"> -->
+<div id="app" v-cloak>
 
 	
 

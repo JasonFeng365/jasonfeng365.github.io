@@ -113,10 +113,17 @@ new Vue({
 			this.restartGame()
 		},
 		getIcon(cell, r, c) {
+			if (cell.revealed) {
+				if (cell.mine) return '💣'
+				// return ''
+				if (cell.number) return cell.number
+				return ""
+			}
+			if (cell.flag) return '🚩'
 			// if (r==this.rows>>1 && c==this.cols>>1) {
 			// 	return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : 'x'
 			// }
-			return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : ''
+			// return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : ''
 		},
 		// getNumberColor(number) {
 
@@ -326,7 +333,6 @@ new Vue({
 				for (let col = 0; col < this.cols; col++) {
 					if (this.grid[row][col].mine) {
 						this.grid[row][col].revealed = true;
-						this.grid[row][col].mine = true; // Ensure mine is visible
 					}
 				}
 			}

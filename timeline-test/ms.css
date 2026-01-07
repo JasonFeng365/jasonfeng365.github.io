@@ -51,6 +51,7 @@
 }
 
 
+/* https://www.30secondsofcode.org/css/s/mouse-cursor-gradient-tracking/ */
 .mouse-cursor-gradient-tracking {
   --size: 0px;
   content: '';
