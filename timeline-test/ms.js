@@ -18,6 +18,45 @@ function getWindowSizeInRem() {
 }
 
 
+var count = 200;
+var defaults = {
+  origin: { y: 0.7 }
+};
+
+function fire(particleRatio, opts) {
+  confetti({
+    ...defaults,
+    ...opts,
+    particleCount: Math.floor(count * particleRatio)
+  });
+}
+
+function celebrate() {
+	fire(0.25, {
+		spread: 26,
+		startVelocity: 55,
+	});
+	fire(0.2, {
+		spread: 60,
+	});
+	fire(0.35, {
+		spread: 100,
+		decay: 0.91,
+		scalar: 0.8
+	});
+	fire(0.1, {
+		spread: 120,
+		startVelocity: 25,
+		decay: 0.92,
+		scalar: 1.2
+	});
+	fire(0.1, {
+		spread: 120,
+		startVelocity: 45,
+	});
+}
+
+
 new Vue({
 	el: '#ms',
 	data: {
@@ -29,6 +68,7 @@ new Vue({
 		gameStarted: false,
 		gameOver: false,
 		clickable: false,
+		won: false,
 		numberColor: ["#000000", "#66a4dd", "#50a050", "#c67", "#b7d", "#a90", "#5aa", "#999", "#ccc"]
 	},
 	mounted() {
@@ -87,6 +127,7 @@ new Vue({
 			this.mines = Math.floor(this.rows * this.cols * this.difficulty / 64)
 			this.grid = this.generateGrid();
 			this.clickable = true;
+			this.won = false;
 		},
 		generateGrid() {
 			const curConfig = {
@@ -291,7 +332,7 @@ new Vue({
 			}
 		},
 		toggleFlag(row, col) {
-			if (this.gameStarted && !this.grid[row][col].revealed) {
+			if (this.gameStarted && !this.gameOver && !this.grid[row][col].revealed) {
 				this.grid[row][col].flag = !this.grid[row][col].flag;
 				this.checkWin();
 			}
@@ -311,6 +352,17 @@ new Vue({
 			if (revealed === this.rows * this.cols - this.mines) {
 				this.gameOver = true;
 				console.log('Congratulations! You won!');
+
+				this.won = true;
+
+				for (let row = 0; row < this.rows; row++) {
+					for (let col = 0; col < this.cols; col++) {
+						if (this.grid[row][col].mine) {
+							this.grid[row][col].flag = true;
+						}
+					}
+				}
+				celebrate()
 			}
 
 			// if (revealed + flagged === this.mines + (this.rows * this.cols - this.mines)) {

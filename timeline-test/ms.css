@@ -31,13 +31,17 @@
 	cursor: pointer;
 	border-radius: 8%;
 	opacity: .6;
+  	/* transition: 0.2s ease; */
 }
 
 .cell.revealed {
 	background-color: #000;
 }
 .cell.flag {
-	background-color: #512222;
+	background-color: #522;
+}
+.cell.flag-success {
+	background-color: #242;
 }
 .cell.mine {
 	/* background-color: #ff4444; */
