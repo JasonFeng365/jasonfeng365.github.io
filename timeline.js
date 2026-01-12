@@ -86,7 +86,7 @@ const timelines = [
 
 			// UCLA
 			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-10', end: 'present', caption: 'eSIM Parser', urls: [], title: 'Local web interface for editing eSIM .der files', description: "Open-source tool for researchers to parse and edit eSIM profiles.", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-1', end: 'present', caption: 'GenValGen', urls: [], title: 'LLM-generated inputs for differential testing', description: "Possible UCLA capstone project!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'GenValGen', urls: [], title: 'LLM-generated inputs for differential testing', description: "Possible UCLA capstone project!", imageUrls: [] },
 		],
 	}
 ];
@@ -242,8 +242,8 @@ const vue = new Vue({
 			const date = new Date(startYear);
 			date.setTime(startYear.getTime() + i * step);
 			i++
-			if (date < earliest) continue;
 			if (date > latest) break;
+			if (date < earliest) continue;
 			
 			// const monthLabel = `${months[date.getMonth()]} ${date.getFullYear()}`;
 			const monthLabel = `${date.getFullYear()}`;
@@ -258,7 +258,6 @@ const vue = new Vue({
 		},
 
 		genFormattedDate(date, includeDay) {
-			// console.log(date)
 			if (date=="present") return date
 
 			const options = {month: 'long', year: 'numeric', timeZone: 'UTC' }
