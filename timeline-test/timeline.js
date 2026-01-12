@@ -1,7 +1,7 @@
 const timelines = [
 	{
 		name: 'Academia',
-		backgroundColor: '#b49ed980', intervalColor: 'brown', pointColor: 'white',
+		backgroundColor: '#b49ed940', intervalColor: 'brown', pointColor: 'white',
 		entries: [
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2021-06', end: '2023-05', caption: 'Sierra College', urls: [], title: 'Computer Science, A.S.', description: "Associate's for transfer to UC Davis through TAG program.", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2023/0.jpg"] },
 			// { type: 'point', backgroundColor: '#FFFFFF', date: '2022-05', caption: 'Email Sender', urls: [], title: 'Automation for Sierra\'s Tutor Center', description: "", imageUrls: [] },
@@ -17,7 +17,8 @@ const timelines = [
 
 
 
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-09', end: 'present', caption: 'UCLA', urls: [], title: 'Computer Science, M.S.', description: "Pursuing Master's in computer science.", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-09', end: 'present', caption: 'UCLA', urls: [], title: 'Computer Science, M.S.', description: "Pursuing Master's in computer science. Estimated graduation: June 2027", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [], title: 'Intern', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: [] },
 			// { type: 'point', backgroundColor: '#FFD100', date: '2023-05', caption: 'Sierra College', urls: [], title: 'Computer Science, A.S.', description: 'Associate\'s for transfer to UC Davis through TAG program', imageUrls: [] },
 			
 	// 	],
@@ -53,41 +54,39 @@ const timelines = [
 	},
 	{
 		name: 'Experience',
-		backgroundColor: '#a19ed980', intervalColor: 'orange', pointColor: 'gray',
+		backgroundColor: '#a19ed940', intervalColor: 'orange', pointColor: 'gray',
 		entries: [
-			{ type: 'interval', backgroundColor: 'black', start: '2021-09', end: '2025-09', caption: 'Code Ninjas', urls: [], title: 'Competitive Programming Sensei', description: "Throughout my time at Sierra College, I worked part-time at the Rocklin Dojo to teach drag-and-drop and JavaScript game development to elementary and middle schoolers, as well as Unity and competitive programming to our more advanced high schoolers. Our students would go on to achieve high placements at Hewlett-Packard CodeWars, winning trophies for our Dojo in the 2025 season.\n\nI'm very thankful to have worked under my employer and my mentor, legendary ICPC world finalist Lego Haryanto, who introduced me to the world of competitive programming. He's very passionate about competitive programming and gave me the experience needed to lead and problemset for Sierra's and Davis's contests.", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#AF2124', start: '2022-01', end: '2023-05', caption: 'Sierra College Tutor Center', urls: [], title: 'Peer Tutor/Academic Support Peer', description: "", imageUrls: [] },
-			{ type: 'interval', backgroundColor: 'green', start: '2025-06', end: '2025-09', caption: 'AgScout', urls: [], title: 'Android Development Intern', description: 'Developed automatic file uploader for resumable overnight transfers from Android to Google Cloud Bucket', imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#022851', start: '2024-07', end: '2025-02', caption: 'LEPS', urls: [], title: 'Embedded Systems Intern / Research Assistant - Laboratory for Embedded and Programmable Systems', description: 'Refined Qt signal processing GUI for medical fetal oximetry systems', imageUrls: [] },
+			{ type: 'interval', backgroundColor: 'black', start: '2021-09', end: '2025-09', caption: 'Code Ninjas', urls: [{url: "https://www.codeninjas.com/ca-rocklin", title: "Code Ninjas Rocklin"}], title: 'Competitive Programming Sensei', description: "Throughout my time at Sierra College, I worked part-time at the Rocklin Dojo to teach drag-and-drop and JavaScript game development to elementary and middle schoolers, as well as Unity and competitive programming to our more advanced high schoolers. Our students would go on to achieve high placements at Hewlett-Packard CodeWars, winning trophies for our Dojo in the 2025 season.\n\nI'm very thankful to have worked under my employer and my mentor, legendary ICPC world finalist Lego Haryanto, who introduced me to the world of competitive programming. He's very passionate about competitive programming and gave me the experience needed to lead and problemset for Sierra's and Davis's contests.", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#AF2124', start: '2022-01', end: '2023-05', caption: 'Sierra College Tutor Center', urls: [{url: "https://www.sierracollege.edu/academics/academic-support/tutoring/", title: "Sierra College Tutor Center"}], title: 'Peer Tutor/Academic Support Peer', description: "I tutored Sierra College's introductory programming courses in Java in my second through my fourth semesters, providing free guidance to any student in those courses. Though helping out my peers in their coursework was lots of fun, I shifted my main focus to club leadership in 2022 while continuing to tutor on the side.", imageUrls: [] },
 
+			{ type: 'interval', backgroundColor: '#022851', start: '2024-07', end: '2025-02', caption: 'LEPS', urls: [{url: "https://engineering.ucdavis.edu/news/ece-lab-develops-fetal-oximetry-device-prevent-unnecessary-c-sections", title: "ECE Lab Develops Fetal Oximetry Device to Prevent Unnecessary C-sections"}, {url: "https://leps.sf.ucdavis.edu/", title: "Laboratory for Embedded and Programmable Systems"}], title: 'Embedded Systems Intern / Research Assistant - Laboratory for Embedded and Programmable Systems', description: "I was given the opportunity to intern and assist in research at LEPS for my exemplary performance in the Embedded Systems course. My teammate Andrew Hoang and I were chosen by our TA, Lambert Lihe, to assist in laboratory work over the summer and fall.\n\nOver the summer, Andrew and I prototyped a low-latency message-passing interface using AWS cloud sockets to stream data from a QT desktop application to an iPhone app.\n\nAndrew and I spent more time in the laboratory throughout Fall 2024, where we worked closely with Lambert to maintain a QT desktop application for transabdominal fetal oxiometry. We worked to generalize a version of the application to function as a signal reader, using Fourier transforms to measure frequencies from a sensor.", imageUrls: [] },
+			{ type: 'interval', backgroundColor: 'green', start: '2025-06', end: '2025-09', caption: 'AgScout', urls: [{url: "https://agscout.ai/", title: "AgScout"}], title: 'Android Development Intern', description: 'Over my summer between undergraduate and graduate studies, I joined AgScout as a mobile development intern, where I developed an automatic file uploader for resumable overnight transfers. With up to 300GB of data across 6 devices at a time, data must be transferred reliably and efficiently, and the limited resources of an Android phone meant working with limited constraints while working to maximize reliability and throughput.', imageUrls: [] },
 
 			{ type: 'interval', backgroundColor: '#d18147', start: '2025-09', end: 'present', caption: 'ICPC', urls: [], title: 'Pacific Northwest Regionals Judge', description: "Starting from 2025's Pacific Northwest regional contest, I'm now serving the prestigious International Collegiate Programming Contest as a problemsetter, judge, and livestream commentator. I'll be dedicating my hardest problems to ICPC for the foreseeable future!", imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#C74634', start: '2026-06', end: '2026-09', caption: 'Oracle', urls: [], title: 'Software Engineering Intern', description: "I'll be joining Oracle's Fusion team as an intern during Summer 2026, after a round of interviews from November-December 2025. Looking forward to contributing to and learning from Oracle!", imageUrls: [] },
-
-			
 		],
 	},
 	{
 		name: 'Projects',
-		backgroundColor: '#a19ed980', intervalColor: 'blue', pointColor: 'black',
+		backgroundColor: '#a19ed940', intervalColor: 'blue', pointColor: 'black',
 		entries: [
 			// Sierra
-			{ type: 'interval', backgroundColor: '#efb6d4', start: '2021-06', end: '2023-09', caption: 'Kirby Lore Bot', urls: [], title: 'Multi-purpose Discord bot', description: 'Java Swing implementation of a 2D side-scrolling beat-em-up ', imageUrls: [] },
-			{ type: 'interval', backgroundColor: 'lightblue', start: '2022-05', end: '2022-08', caption: 'Cat and Mouse 3', urls: [], title: 'Cat and Mouse 3', description: 'Java Swing implementation of a 2D side-scrolling beat-em-up ', imageUrls: [] },
-			{ type: 'interval', backgroundColor: 'lightblue', start: '2023-05', end: '2023-08', caption: 'Cat and Mouse 4', urls: [], title: 'Cat and Mouse 4', description: 'Fullstack Java Spring app for automating UC Davis and Sierra College contests', imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#efb6d4', start: '2021-02', end: '2023-09', caption: 'Kirby Lore Bot', urls: [], title: 'Multi-purpose Discord bot', description: "The best way to learn programming is to make something cool, whether that be an algorithm, a game, or a tool. In my case, I found my start in Java with Kirby Lore Bot, a multipurpose bot that has grown far beyond its initial goal of spamming Kirby lore.\n\nThe bot was born on February 2021, written in Java using Java-Discord API 4. Its initial purpose was to send Kirby lore (trivia scraped from Kirby wikis) when requested. It soon grew to a much more powerful multi-purpose tool though, handling role assignments in school computer science Discord servers, sending notification messages once somebody submitted to SCPE, and even reporting Advent of Code leaderboard information with timestamps and scores. I maintain the bot to this day, where it lurks in UC Davis's competitive programming club's server, among many other servers.\n\nKirby Lore Bot is hosted for $1 a month on Sparked Host.", imageUrls: [] },
+			{ type: 'interval', backgroundColor: 'lightblue', start: '2022-05', end: '2022-08', caption: 'Cat and Mouse 3', urls: [], title: 'Cat and Mouse 3', description: 'Java Swing implementation of a 2D side-scrolling beat-em-up platformer game.', imageUrls: [] },
+			{ type: 'interval', backgroundColor: 'lightblue', start: '2023-05', end: '2023-08', caption: 'Cat and Mouse 4', urls: [], title: 'Cat and Mouse 4', description: 'Unity implementation of a 2D side-scrolling beat-em-up platformer game.', imageUrls: [] },
 
-			{ type: 'point', backgroundColor: '#d18147', date: '2022-09-18', caption: 'Fours Redux', urls: [], title: 'Start of problemsetting!', description: "", imageUrls: [] },
+			{ type: 'point', backgroundColor: '#d18147', date: '2022-09-18', caption: 'Fours Redux', urls: [{url:"https://jasonfeng365.github.io/challenges/?name=fours%20redux", name:"Fours Redux"}], title: 'Start of problemsetting!', description: "I started building a contest problem repository on this fateful day, when I discovered Fours Redux! By now, I have over 130 contest problems of varying difficulty and algorithms, across six contests.", imageUrls: [] },
 
 			// Davis
-			{ type: 'interval', backgroundColor: '#8040FF', start: '2024-07', end: '2025-04', caption: 'CANIS', urls: [], title: 'Contest Administration, Notifications, and Information System', description: 'Fullstack Java Spring app for automating UC Davis and Sierra College contests', imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#FF9617', start: '2025-01', end: '2025-06', caption: 'CycleGuard', urls: [], title: 'Gamified smart helmet and mobile app', description: 'Cross-platform Flutter app with smart helmet interface', imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#8040FF', start: '2024-07', end: '2025-04', caption: 'CANIS', urls: [{url: "https://canis.jasonfeng365.top/", title: "CANIS"}], title: 'Contest Administration, Notifications, and Information System', description: "The Contest Administration, Notifications, and Information System has been both the most daunting and the greatest project I've taken on. Built by a contest-writer for contest-writers, CANIS simplifies monitoring of contestants during large contests, bringing attention to contestants who may be stuck and need a little hint, along with reporting on submission statuses and keeping a live-updating scoreboard.\n\nI was inspired by UC Davis's ACPC to make CANIS. ACPC organizers bring a balloon to contestants who solve a problem successfully. There was no automation on those first two contests, so an unfortunate contest organizer had to sit and constantly refresh Codeforces to retrieve submission status and manually record it into a spreadsheet. CANIS completely eliminates all of that; with a Spring server constantly polling Codeforces (or platform of choice) and pushing submissions to client devices, all an organizer has to do is to filter by new accepted submissions, see the team and team number pre-loaded into the system, and deliver a balloon to the happy contestants. CANIS runs on a server and is able to push to multiple clients at a time through the Live Contest Overview system, through STOMP JS sockets, so multiple organizers can process submissions in parallel.\n\nCANIS is aimed at educational school contests where organizers are able to gently nudge contestants in the right direction. As such, the integrated Alerts system allows admins to set up custom notifications that appear when contestants meet some threshold. For example, organizers may want to be alerted by any contestant that hasn't made a successful submission in 20 minutes since the contest began; maybe this contestant wasn't able to set up correctly, or may not know how to read standard input. Or, organizers may want to be alerted to teams that haven't made an AC in the past 45 minutes, who may need some help getting unstuck. Alerts is for helping orgainzers to identify who may need help, and to deliver that assistance promptly.\n\nCANIS's integration begins even before the contest starts with its Signups feature, where an admin can configure a Google Form to be parsed by the system. By reading responses to a configured form, CANIS detects how many people are signed up for the contest, including how many people signed up solo or as a team. This information is visible on the interface and can be exposed as a public REST API, allowing contestants to know if there's still remaining space to sign up.\n\nCANIS is truly a project born out of passion. So far, I've used it to faciliate UC Davis's and Sierra College's contests. One day, I hope it reaches out to more schools to help organizers around the world nurture the art of competitive programming!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#FF9617', start: '2025-01', end: '2025-06', caption: 'CycleGuard', urls: [{url: "https://github.com/UCD-193AB-ws24/CycleGuardFrontend", title: "Frontend Code"}, {url: "https://github.com/UCD-193AB-ws24/CycleGuardBackend", title: "Backend Code"}], title: 'Gamified smart helmet and mobile app', description: "Computer Science and Engineering majors at UC Davis end off their undergraduate with a two-quarter capstone project. My team of three other passionate peers and I developed CycleGuard, a cross-platform gamified fitness app interfacing with a custom-made smart helmet. CycleGuard tracks a user's location through the helmet's integrated GPS, logs the user's past trips, distance, and time, and estimates calories burned. We added multiplayer features so multiple users can join a team (\"pack\") and work together to team goals, and achievements to earn through consistent exercise, to help motivate users to bicycle more.\n\nI was in charge of developing a backend server for our application. I hosted a Spring server on Google Cloud Run, providing an HTTPS endpoint and scaling, and used AWS DynampDB for persistent NoSQL storage of Java objects. I helped with the Flutter frontend as well, with my first foray into mobile development.\n\nMy teammates were Andrew Hoang, Shanu Kota, and Ian O'Connell. I had a ton of fun working together with such a dedicated team!", imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#022851', start: '2024-01', end: '2024-06', caption: 'Build Your Own Labyrinth', urls: [], title: 'UC Davis Embedded Systems final project', description: '2.5D isomorphic maze game with C engine and AWS IoT integration.', imageUrls: [] },
-			{ type: 'point', backgroundColor: '#31c766', date: '2025-06', caption: 'SeleneHR', urls: [{url: "https://github.com/JasonFeng365/selenehr", title: "GitHub repo"}], title: 'Command-line macros for HackerRank problemsetting', description: "", imageUrls: [] },
-			{ type: 'point', backgroundColor: '#007bff', date: '2025-07', caption: 'SCRIBE', urls: [{url: "https://github.com/JasonFeng365/SCRIBE", title: "GitHub repo"}], title: 'Local problemsetting problem organizer', description: "", imageUrls: [] },
+			{ type: 'point', backgroundColor: '#31c766', date: '2025-06', caption: 'SeleneHR', urls: [{url: "https://github.com/JasonFeng365/selenehr", title: "GitHub repo"}], title: 'Command-line macros for HackerRank problemsetting', description: "To faciliate problemsetting and contest administration with HackerRank, I developed some Selenium scripts to interface with HackerRank for uploading and updating problem statements and testcases. During ICPC NAC, I pulled these scripts together to fully make a command-line tool for contest preparation.", imageUrls: [] },
+			{ type: 'point', backgroundColor: '#007bff', date: '2025-07', caption: 'SCRIBE', urls: [{url: "https://github.com/JasonFeng365/SCRIBE", title: "GitHub repo"}], title: 'Local problemsetting problem organizer', description: "Eventually, my contest problem repo got too long to effectively manage! I wrote SCRIBE to orgnize everything by concepts (algorithms, approaches) and statuses (finished, writing generator, writing solution). It boasts integration with SeleneHR for easy uploading to HackerRank.", imageUrls: [] },
 
 			// UCLA
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-10', end: 'present', caption: 'eSIM Parser', urls: [], title: 'Local web interface for editing eSIM .der files', description: "", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-1', end: 'present', caption: 'GenValGen', urls: [], title: '', description: "", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-10', end: 'present', caption: 'eSIM Parser', urls: [], title: 'Local web interface for editing eSIM .der files', description: "Open-source tool for researchers to parse and edit eSIM profiles.", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-1', end: 'present', caption: 'GenValGen', urls: [], title: 'LLM-generated inputs for differential testing', description: "Possible UCLA capstone project!", imageUrls: [] },
 		],
 	}
 ];
@@ -251,35 +250,11 @@ const vue = new Vue({
 			const percent = ((date - earliest) / totalDuration) * 100;
 			axisLabels.push({ label: monthLabel, percent });
 		}
-
-		// // Add unique dates as additional labels
-		// uniqueDates.forEach(date => {
-		// 	const monthLabel = `${months[date.getMonth()]} ${date.getFullYear()}`;
-		// 	const percent = ((date - earliest) / totalDuration) * 100;
-		// 	axisLabels.push({ label: monthLabel, percent });
-		// });
-
-		// Deduplicate and sort
-		const uniqueLabels = [...new Set(axisLabels.map(l => l.label))].map(label => {
-			const percent = axisLabels.find(l => l.label === label).percent;
-			return { label, percent };
-		});
-
 		// Update the axis labels in the DOM
 		const axisLabelsDiv = document.querySelector('.timeline-axis-labels');
-		axisLabelsDiv.innerHTML = uniqueLabels
+		axisLabelsDiv.innerHTML = axisLabels
 			.map(label => `<div style="position: absolute; left: ${label.percent}%;">${label.label}</div>`)
 			.join('');
-		},
-
-		toggleSelect(entry) {
-			if (entry.type === 'interval') {
-				// entry.selected = !entry.selected;
-				console.log('Selected interval:', entry.start, entry.end);
-			} else {
-				// Handle point selection logic
-				console.log('Selected point:', entry.date);
-			}
 		},
 
 		genFormattedDate(date, includeDay) {
