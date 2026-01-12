@@ -1,0 +1,262 @@
+  .timeline-scroll-container {
+    display: flex;
+	flex-direction: column;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem;
+  }
+
+  .timeline-container {
+	/* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    /* position: relative; */
+    min-width: 100%;
+    height: 2.5rem;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin-top: 0.2rem;
+    padding: 0.2rem;
+
+	backdrop-filter: blur(3px);
+	-webkit-backdrop-filter: blur(3px);
+  }
+
+  .org-label {
+	position: absolute;
+    font-weight: bold;
+    font-size: 1.2rem;
+    min-width: 150px;
+    z-index: 1;
+  }
+
+  .timeline-events {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+ 
+  .timeline-event,
+  .timeline-event-point {
+    position: absolute;
+    /* top: 0%; */
+    background-color: red;
+	border-style: solid;
+	border-color: white;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    border-radius: .5rem;
+    /* white-space: nowrap; */
+    font-size: 0.9rem;
+    transition: transform 0.2s, opacity 0.2s;
+    opacity: 0.9;
+  }
+
+  .timeline-event-point {
+	opacity: .8;
+  }
+
+.timeline-event-point:hover,
+.timeline-event-point.selected {
+	transform: scale(1.2);
+	opacity: 1;
+}
+
+.timeline-event-point span {
+	font-size: 0.7rem;
+	color: white;
+	white-space: nowrap;
+}
+
+  .timeline-event:hover,
+  .timeline-event.selected {
+    /* transform: scaleY(1.3); */
+	transform: scale(1.03);
+    opacity: 1;
+  }
+
+  .timeline-axis {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-top: 0.5rem;
+  }
+
+  .timeline-axis-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ccc;
+  }
+
+  .timeline-axis-labels {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    font-size: 0.8rem;
+    color: white;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+
+    .dropdown {
+      /* position: relative;
+      display: inline-block; */
+    }
+
+    .dropdown-content {
+      position: absolute;
+      top: auto;
+      background: white;
+      min-width: 160px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: all 0.3s;
+      pointer-events: none;
+      border-radius: 0.5rem;
+	  z-index: 2;
+    }
+
+    .dropdown:hover .dropdown-content {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .dropdown-content a {
+      color: #374151;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-content a:hover {
+      background: #f3f4f6;
+    }
+
+	.popover{
+    max-width: 30rem; /* Max Width of the popover (depending on the container!) */
+}
+
+/* .interval-label:hover,
+.interval-label.selected {
+	transform: scaleY(.769);
+} */
+
+.interval-label {
+	overflow: hidden;
+	white-space: nowrap;
+	/* display: inline-block; */
+}
+
+.future-overlay {
+  position: absolute;
+    top: 0; /* Align to the top of the container */
+	/* width: 50%; */
+    right: 0; /* Align to the right side initially */
+    height: 100%; /* Cover the full height of the container */
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black background */
+    z-index: 10; /* Ensure it is above other content */
+	pointer-events: none;
+}
+
+.overall-container {
+	position: relative;
+}
+
+.ignoremouse {
+	pointer-events: none;
+	user-select: none;
+}
+
+
+[v-cloak] {
+	display: none;
+}
+
+.name-title-noclick {
+	position: relative;
+	background-color: #000;
+	display: flex;
+	flex-direction: column; /* Stacks the child elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+.name-title {
+	position: relative;
+	background-image: linear-gradient(to bottom, #000,rgba(255, 255, 255, 0));
+	height: 100vh;
+}
+
+.signaturePath {
+	filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, .8)) drop-shadow(0px 0px 50px rgba(255, 255, 255, .1));
+}
+
+.popover {
+    background: #343a40;
+}
+
+.glow-icpc {
+	--glowcolor: #ff9d57;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-ucla {
+	--glowcolor: #78c5ff;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-davis {
+	--glowcolor: #5d91ff;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-sierra {
+	--glowcolor: #AF2124;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-oracle {
+	--glowcolor: #C74634;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.btn {
+	border: none;
+}
+
+.button-banner {
+	position: relative;
+	background-image: linear-gradient(to right, #00000000, #222 20%, #222 80%, #00000000);
+	opacity: .7;
+	height: 2.3rem;
+
+	transition: transform 0.2s, opacity 0.2s;
+	padding: 5px 20px;
+}
+
+.button-banner:hover {
+	transform: scale(1.05);
+	opacity: 1;
+}
+
+
+.icon-button {
+	opacity: .8;
+	transition: transform 0.2s, filter 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+	transform: scale(1.05);
+	opacity: 1;
+	filter: brightness(140%) contrast(140%);
+}
