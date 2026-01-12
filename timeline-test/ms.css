@@ -1,6 +1,6 @@
 .background-element {
 	position: fixed;
-	z-index: -1;
+	/* z-index: -1; */
 	/* opacity: .7; */
 	
 	top: 50%;
@@ -21,6 +21,7 @@
 	background-color: transparent;
 }
 
+
 .cell {
 	width: 4.7rem;
 	height: 4.7rem;
@@ -31,8 +32,15 @@
 	cursor: pointer;
 	border-radius: 8%;
 	opacity: .6;
-  	/* transition: 0.2s ease; */
+  	transition: transform 0.1s, opacity 0.1s, background-color 0.1s;
 }
+
+.cell:hover {
+	opacity: .8;
+	transform: scale(1.05);
+}
+
+
 
 .cell.revealed {
 	background-color: #000;
@@ -62,7 +70,7 @@
   height: var(--size);
   background: radial-gradient(circle closest-side, purple, transparent);
   transform: translate(-50%, -50%);
-  transition: width 0.2s ease, height 0.2s ease;
+  transition: width 0.5s ease, height 0.5s ease;
   z-index: -2;
   opacity: .7;
 }

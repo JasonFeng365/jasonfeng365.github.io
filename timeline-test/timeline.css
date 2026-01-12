@@ -178,3 +178,77 @@
 [v-cloak] {
 	display: none;
 }
+
+.name-title-noclick {
+	position: relative;
+	background-color: #000;
+	display: flex;
+	flex-direction: column; /* Stacks the child elements vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+.name-title {
+	position: relative;
+	background-image: linear-gradient(to bottom, #000,rgba(255, 255, 255, 0));
+	height: 100vh;
+}
+
+.signaturePath {
+	filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, .8)) drop-shadow(0px 0px 50px rgba(255, 255, 255, .1));
+}
+
+.popover {
+    background: #343a40;
+}
+
+.glow-icpc {
+	--glowcolor: #ff9d57;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-ucla {
+	--glowcolor: #2774AE;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-davis {
+	--glowcolor: #022851;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.glow-oracle {
+	--glowcolor: #C74634;
+	text-shadow: 0px 0px 5px var(--glowcolor), 0px 0px 20px var(--glowcolor);
+}
+
+.btn {
+	border: none;
+}
+
+.button-banner {
+	position: relative;
+	background-image: linear-gradient(to right, #00000000, #222 20%, #222 80%, #00000000);
+	opacity: .8;
+	height: 2.3rem;
+
+	transition: transform 0.2s, opacity 0.2s;
+	padding: 5px 20px;
+}
+
+.button-banner:hover {
+	transform: scale(1.05);
+	opacity: 1;
+}
+
+
+.icon-button {
+	opacity: .8;
+	transition: transform 0.2s, filter 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+	transform: scale(1.05);
+	opacity: 1;
+	filter: brightness(140%) contrast(140%);
+}

@@ -1,7 +1,7 @@
 const timelines = [
 	{
 		name: 'Academia',
-		backgroundColor: '#b49ed9', intervalColor: 'brown', pointColor: 'white',
+		backgroundColor: '#b49ed980', intervalColor: 'brown', pointColor: 'white',
 		entries: [
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2021-06', end: '2023-05', caption: 'Sierra College', urls: [], title: 'Computer Science, A.S.', description: "Associate's for transfer to UC Davis through TAG program.", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2023/0.jpg"] },
 			// { type: 'point', backgroundColor: '#FFFFFF', date: '2022-05', caption: 'Email Sender', urls: [], title: 'Automation for Sierra\'s Tutor Center', description: "", imageUrls: [] },
@@ -24,7 +24,7 @@ const timelines = [
 	// },
 	// {
 	// 	name: 'Competitive Programming',
-	// 	backgroundColor: '#b49ed9', intervalColor: 'pink', pointColor: 'white',
+	// 	backgroundColor: '#b49ed980', intervalColor: 'pink', pointColor: 'white',
 	// 	entries: [
 			// Sierra and SCPE
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2022-06', end: '2023-05', caption: 'Sierra CS Club', urls: [{url: "https://jasonfeng365.github.io/scpe/", title: "Sierra Competitive Programming Exhibition"}, {url: "https://jasonfeng365.github.io/challenges/?name=scpe", title: "Original SCPE Problems"}, {url: "https://jasonfeng365.github.io/scpe/past-events/", title: "SCPE Past Events and Gallery"}], title: 'Co-President and Competitive Programming Advisor', description: "I was the founder and problemsetter for the Sierra Competitive Programming Exhibition, a beginner-friendly contest for future contestants who want to explore competitive programming! Contests are hosted at Sierra College's campus, and are open to any current college or under student willing to learn. As of the 2023-2025 season, we've hosted 4 SCPE events with 30 original problems.\n\nI hosted the first ever SCPE in November 2023, with 10 problems I wrote myself. Contests are in-person, with an online option for people who cannot make it. Participation is completely free for everyone, and all current students are welcome to attend. Breakfast and lunch will be provided, and prizes are given out at the end of the contest, as well as a problem review session where I explain solutions to every single problem.\n\nUnlike most other contests, I walk around the contest room and give hints to contestants, to help push them along the problem-solving process. The goal of the SCPE is for contestants to not necessarily participate for bragging rights or prizes, but rather to have fun and explore new approaches to problem solving.", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2025/0.jpg", "https://jasonfeng365.github.io/scpe/past-events/f2023/3.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/5.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/7.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/9.jpg", "https://jasonfeng365.github.io/scpe/past-events/f2024/11.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/2.jpg", "images/academia/scpe-goofy.jpg"] },
@@ -32,10 +32,10 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#AF2124', date: '2023-11-04', caption: 'SCPE Fall 2023', urls: [{url: "https://www.hackerrank.com/contests/scpe-fall-2023/challenges", title: "SCPE Fall 2023 Problemset"}], title: 'Lead Organizer + Sole Problemsetter', description: "Our first ever SCPE was a huge success! Over 30 participants took part in the contest, with 64 total problem submissions. This was a huge opportunity for contestants to practice their critical thinking and problem-solving skills, along with being a huge opportunity for Sierra’s Coding Club officers to practice leadership.\n\nAll 10 problems are originals written by myself over the course of around 5 months. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2023/1.jpg","https://jasonfeng365.github.io/scpe/past-events/f2023/4.jpg"] },
 			{ type: 'point', backgroundColor: '#AF2124', date: '2024-04-06', caption: 'SCPE Spring 2024', urls: [{url: "https://www.hackerrank.com/contests/scpe-spring-2024/challenges", title: "SCPE Spring 2024 Problemset"}], title: 'Lead Organizer + Sole Problemsetter', description: "With a larger and more organized officer team, we were able to divide work between multiple team members. Everyone's teamwork was critical to getting our second contest running smoothly. Even with a minor mishap of donuts not showing up, SCPE 2 overall went great, and all contestants went home with new experience, free food, and a cool SCPE badge!\n\nSCPE Spring 2024 has 10 new original problems, and two \"extra credit\" problems returning from SCPE Fall 2023. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2024/0.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/4.jpg"] },
 			{ type: 'point', backgroundColor: '#AF2124', date: '2024-11-23', caption: 'SCPE Fall 2024', urls: [{url: "https://www.hackerrank.com/contests/pre-scpe-fall-24/challenges", title: "SCPE Fall 2024 Problemset"}], title: 'Advisor', description: "This semester, the problemset was longer with many more problems focused on beginners. This allowed participants to finish multiple problems, rather than getting stuck on the second or third problem. Club officers sourced problems from HackerRank and other sites, ensuring a stable problemset with a smooth difficulty slope.", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2024/1.jpg", "https://jasonfeng365.github.io/scpe/past-events/f2024/2.jpg"] },
-			{ type: 'point', backgroundColor: '#AF2124', date: '2025-04-26', caption: 'SCPE Spring 2025', urls: [{url: "https://www.hackerrank.com/contests/scpe-spring-2025/challenges", title: "SCPE Spring 2025 Problemset"}], title: 'Sole Problemsetter', description: "Interestingly enough, my last SCPE welcomed many special guests from all around California to participate virtually. A UCLA CS graduate joined us in-person to represent SoCal. Multiple competitive programmers from UC Davis participated virtually, including one of my ICPC teammates who solved the whole problemset. Finally, we welcomed competitive programming legend Nick Wu to compete virtually, who finished the entire set in 20 minutes!\n\nSCPE Spring 2025 has 10 new original problems, and one \"extra credit\" problem returning from SCPE Spring 2024. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2025/4.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2025/1.jpg"] },
+			{ type: 'point', backgroundColor: '#AF2124', date: '2025-04-26', caption: 'SCPE Spring 2025', urls: [{url: "https://www.hackerrank.com/contests/scpe-spring-2025/challenges", title: "SCPE Spring 2025 Problemset"}], title: 'Sole Problemsetter', description: "Interestingly enough, my last SCPE welcomed many special guests from all around California to participate virtually. A UCLA CS graduate joined us in-person to represent SoCal. Multiple competitive programmers from UC Davis participated virtually, including one of my ICPC teammates who solved the whole problemset. Finally, we welcomed competitive programming legend Nick Wu to compete virtually, who finished the entire set in 20 minutes!\n\nIn the coming years, Sierra's Computer Science Club officers will be taking over SCPE problemsetting and hosting. Look forward to contests in the coming years!\n\nSCPE Spring 2025 has 10 new original problems, and one \"extra credit\" problem returning from SCPE Spring 2024. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2025/4.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2025/1.jpg"] },
 
 			// Davis, DCPC, ACPC
-			{ type: 'interval', backgroundColor: '#022851', start: '2024-09', end: '2025-06', caption: 'DCPC', urls: [{url: "https://engineering.ucdavis.edu/news/coding-community-algorithm-davis-competitive-programming-club", title: "Coding with a Community: The Algorithm of the Davis Competitive Programming Club"}, {url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc", title: "Original ACPC Problems"}], title: 'Vice President + ACPC Problemsetter/System Ops', description: "", imageUrls: ["images/academia/acpc2025_team.jpg", "images/academia/acpc2024_team.jpg", "images/academia/acpc2023_competing.jpg", "images/academia/dcpc_lecture.jpg" ] },
+			{ type: 'interval', backgroundColor: '#022851', start: '2024-09', end: '2025-06', caption: 'DCPC', urls: [{url: "https://engineering.ucdavis.edu/news/coding-community-algorithm-davis-competitive-programming-club", title: "Coding with a Community: The Algorithm of the Davis Competitive Programming Club"}, {url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc", title: "Original ACPC Problems"}], title: 'Vice President + ACPC Problemsetter/System Ops', description: "I led Davis Competitive Programming Club as an active and welcoming Vice President during the 2024-2025 academic year, during which I taught competitive programming topics such as bitmask, dynamic programming, max-flow, and Z-algorithm. DCPC's weekly 2-hour meetings", imageUrls: ["images/academia/acpc2025_team.jpg", "images/academia/acpc2024_team.jpg", "images/academia/acpc2023_competing.jpg", "images/academia/dcpc_lecture.jpg" ] },
 			{ type: 'point', backgroundColor: '#022851', date: '2024-05-04', caption: 'ACPC 2024', urls: [{url: "https://codeforces.com/group/ANhuR0iBIH/contest/522146", title: "ACPC 2024 Problemset"}, {url: "https://photos.google.com/share/AF1QipMQl6XctF6R_k60AzSZIVFW3ji94XsoM6oJ6a6VahiAbLr-xEUAnP8GBcE8xiXN-A?key=WmJtLThyVzdUakNXR1RtYzlYQVVydG5HZjEyY05B", title: "ACPC 2024 Gallery"}], title: 'Problemsetter', description: "", imageUrls: [] },
 			{ type: 'point', backgroundColor: '#022851', date: '2025-04-06', caption: 'ACPC 2025', urls: [{url: "https://codeforces.com/group/Agsm1DY0x3/contest/600925", title: "ACPC 2025 Problemset"}, {url: "https://photos.google.com/share/AF1QipNcQu1fv5a55btmyhCqp0H_3xRwW50jAdwla-4qwvd6dukpyhVGqo3LaJ2cYG5ABA?key=WENrckE4OWZHdDFOVVdvTmNxX21VQzRFcHlSMHF3", title: "ACPC 2025 Gallery"}], title: 'Lead Problemsetter and System Ops', description: "", imageUrls: [] },
 			{ type: 'point', backgroundColor: '#022851', date: '2026-05-30', caption: 'ACPC 2026', urls: [{url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}], title: 'Problemsetter and System Ops', description: "We're planning for ACPC 2026 to take place in May. As before, I'll be dedicating some of my problems to the contest, and will be on-site running system ops with CANIS. Stay tuned for the official contest announcement!", imageUrls: [] },
@@ -53,7 +53,7 @@ const timelines = [
 	},
 	{
 		name: 'Experience',
-		backgroundColor: '#a19ed9', intervalColor: 'orange', pointColor: 'gray',
+		backgroundColor: '#a19ed980', intervalColor: 'orange', pointColor: 'gray',
 		entries: [
 			{ type: 'interval', backgroundColor: 'black', start: '2021-09', end: '2025-09', caption: 'Code Ninjas', urls: [], title: 'Competitive Programming Sensei', description: "Throughout my time at Sierra College, I worked part-time at the Rocklin Dojo to teach drag-and-drop and JavaScript game development to elementary and middle schoolers, as well as Unity and competitive programming to our more advanced high schoolers. Our students would go on to achieve high placements at Hewlett-Packard CodeWars, winning trophies for our Dojo in the 2025 season.\n\nI'm very thankful to have worked under my employer and my mentor, legendary ICPC world finalist Lego Haryanto, who introduced me to the world of competitive programming. He's very passionate about competitive programming and gave me the experience needed to lead and problemset for Sierra's and Davis's contests.", imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2022-01', end: '2023-05', caption: 'Sierra College Tutor Center', urls: [], title: 'Peer Tutor/Academic Support Peer', description: "", imageUrls: [] },
@@ -69,7 +69,7 @@ const timelines = [
 	},
 	{
 		name: 'Projects',
-		backgroundColor: '#a19ed9', intervalColor: 'blue', pointColor: 'black',
+		backgroundColor: '#a19ed980', intervalColor: 'blue', pointColor: 'black',
 		entries: [
 			// Sierra
 			{ type: 'interval', backgroundColor: '#efb6d4', start: '2021-06', end: '2023-09', caption: 'Kirby Lore Bot', urls: [], title: 'Multi-purpose Discord bot', description: 'Java Swing implementation of a 2D side-scrolling beat-em-up ', imageUrls: [] },
@@ -227,9 +227,12 @@ const vue = new Vue({
 		const uniqueDates = [...new Set(dates)].sort((a, b) => a - b);
 
 		// Generate 10 evenly spaced labels
-		const earliest = uniqueDates[0];
+		const earliest = new Date(uniqueDates[0]);
 		const latest = Math.max(...uniqueDates);
 		const totalDuration = latest - earliest;
+
+		const startYear = new Date()
+		startYear.setFullYear(uniqueDates[0].getFullYear())
 
 		// One year
 		const step = 31536000000;
@@ -237,14 +240,16 @@ const vue = new Vue({
 		const axisLabels = [];
 		let i=0;
 		while (1) {
-			const date = new Date(earliest);
-			date.setTime(earliest.getTime() + i * step);
+			const date = new Date(startYear);
+			date.setTime(startYear.getTime() + i * step);
+			i++
+			if (date < earliest) continue;
 			if (date > latest) break;
 			
-			const monthLabel = `${months[date.getMonth()]} ${date.getFullYear()}`;
+			// const monthLabel = `${months[date.getMonth()]} ${date.getFullYear()}`;
+			const monthLabel = `${date.getFullYear()}`;
 			const percent = ((date - earliest) / totalDuration) * 100;
 			axisLabels.push({ label: monthLabel, percent });
-			i++;
 		}
 
 		// // Add unique dates as additional labels
@@ -338,7 +343,7 @@ const vue = new Vue({
 			const timeframe = this.genTimeframeText(entry)
 
 			const res = `
-			<div class="card card-body">
+			<div class="card card-body bg-secondary border-light text-light">
 				<h5 class="card-title">${entry.caption}</h5>
 				<h6 class="card-title">${entry.title}</h6>
 				<p class="card-text">${timeframe}</p>

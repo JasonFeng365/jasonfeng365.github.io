@@ -1,3 +1,6 @@
+const MAX_DIFFICULTY = 12
+
+
 function getWindowSizeInRem() {
 	// Get the computed font size of the root HTML element in pixels
 	// This value is 1rem
@@ -63,7 +66,7 @@ new Vue({
 		rows: 0,
 		cols: 0,
 		mines: 22,
-		difficulty: 5,
+		difficulty: 4,
 		grid: [],
 		gameStarted: false,
 		gameOver: false,
@@ -107,7 +110,7 @@ new Vue({
 	methods: {
 		onWindowResize() {
 			const rem = getWindowSizeInRem();
-			this.rows = Math.floor(rem.height/5)
+			this.rows = Math.floor(rem.height/5)-1
 			this.cols = Math.floor(rem.width/5)
 
 			this.restartGame()
@@ -253,7 +256,7 @@ new Vue({
 
 			const dir = [1,0,-1,0,1];
 			while (cur.length>0) {
-				await this.delay(70)
+				await this.delay(40)
 				let nxt = [];
 				for (const coords of cur) {
 					const r = coords[0];
@@ -343,6 +346,18 @@ new Vue({
 				this.checkWin();
 			}
 		},
+		getRemainingMinesCount() {
+			let flagged = 0;
+
+			for (let row = 0; row < this.rows; row++) {
+				for (let col = 0; col < this.cols; col++) {
+					const cell = this.grid[row][col];
+					if (cell.flag) flagged++;
+				}
+			}
+
+			return this.mines - flagged;
+		},
 		checkWin() {
 			let revealed = 0;
 			let flagged = 0;
@@ -357,7 +372,10 @@ new Vue({
 
 			if (revealed === this.rows * this.cols - this.mines) {
 				this.gameOver = true;
-				console.log('Congratulations! You won!');
+				// console.log('Congratulations! You won!');
+
+				this.difficulty++;
+				if (this.difficulty>MAX_DIFFICULTY) this.difficulty = MAX_DIFFICULTY;
 
 				this.won = true;
 
