@@ -123,14 +123,7 @@ new Vue({
 				return ""
 			}
 			if (cell.flag) return '🚩'
-			// if (r==this.rows>>1 && c==this.cols>>1) {
-			// 	return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : 'x'
-			// }
-			// return cell.flag ? '🚩' : cell.revealed ? cell.mine ? '💣' : cell.number?cell.number:'' : ''
 		},
-		// getNumberColor(number) {
-
-		// },
 		restartGame() {
 			this.gameOver = false;
 			this.gameStarted = true;
@@ -165,17 +158,6 @@ new Vue({
 					grid[row][col].revealed = dug[row][col];
 				}
 			}
-
-			// // Place mines
-			// let minesPlaced = 0;
-			// while (minesPlaced < this.mines) {
-			//     const row = Math.floor(Math.random() * this.rows);
-			//     const col = Math.floor(Math.random() * this.cols);
-			//     if (!grid[row][col].mine) {
-			//         grid[row][col].mine = true;
-			//         minesPlaced++;
-			//     }
-			// }
 
 			// Calculate numbers
 			for (let row = 0; row < this.rows; row++) {
@@ -295,8 +277,6 @@ new Vue({
 		chord(row, col) {
 			let flagCount = 0;
 
-			// console.log("Chord on", row, col, this.grid[row][col])
-
 			// Check the 3x3 area around the clicked cell
 			for (let i = -1; i <= 1; i++) {
 				for (let j = -1; j <= 1; j++) {
@@ -307,7 +287,6 @@ new Vue({
 						flagCount++;
 				}
 			}
-			// console.log(this.grid[row][col].number, flagCount)
 
 			if (this.grid[row][col].number != flagCount) return;
 
