@@ -11,7 +11,7 @@ const timelines = [
 
 
 			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-09', end: 'present', caption: 'UCLA', urls: [], title: 'Computer Science, M.S.', description: "Pursuing Master's in computer science. Estimated graduation: June 2027", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [], title: 'Intern', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [], title: 'Problemsetter/Interview Prep', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: [] },
 			
 	// 	],
 	// },
