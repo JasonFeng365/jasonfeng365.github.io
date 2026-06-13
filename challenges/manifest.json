@@ -102,6 +102,45 @@
 			]
 		},
 		{
+			"creation": "2024-04-08",
+			"description": "A Curiously Perfect Circle aka. \"Iris Scanner\" was revealed to me in a dream during the Spring 2024 contest season. Though it took two years to find its way onto a contest, it remains one of my favorite problems to date.\n\njasonfeng365 is on ACPC team, therefore ACPC must contain a 2D grid problem",
+			"difficulty": 5,
+			"link": "https://codeforces.com/group/7voJiqlljS/contest/695483/problem/G",
+			"name": "A Curiously Perfect Circle",
+			"path": "ACPC 2026/A Curiously Perfect Circle",
+			"tags": [
+				"dream",
+				"grid",
+				"geometry",
+				"distance",
+				"sorting",
+				"intervals"
+			]
+		},
+		{
+			"creation": "2024-08-12",
+			"description": "B on ACPC 2026 is a simple enough problem to ease in beginners.",
+			"difficulty": 1,
+			"link": "https://codeforces.com/group/7voJiqlljS/contest/695483/problem/B",
+			"name": "Not Even Close",
+			"path": "ACPC 2026/Not Even Close",
+			"tags": [
+				"two pointers",
+				"loops"
+			]
+		},
+		{
+			"creation": "2024-02-12",
+			"description": "That Stacks originally had some extra complexity in that there would be multiple types of gems, but the bag would only accept a pair of complementary gems, in the vein of complementary colors. I proposed that problem for ACPC 2024, but that unnecessary addition didn't add much to the problem, and the idea was scrapped. We brought the problem back this year and only kept the core algorithm, without the complementary part.\n\n(The complementary gems part would only be multiplying the final answer of That Stacks by the number of complementary pairs.)",
+			"difficulty": 4,
+			"link": "https://codeforces.com/group/7voJiqlljS/contest/695483/problem/E",
+			"name": "That Stacks",
+			"path": "ACPC 2026/That Stacks",
+			"tags": [
+				"1-dim dp"
+			]
+		},
+		{
 			"creation": "2025-02-21",
 			"description": "From DCPC Max Flow problemset. Mmm, delicious!",
 			"difficulty": 8,
@@ -154,9 +193,9 @@
 			"creation": "2025-05-25",
 			"description": "Surely staying in my hotel room and writing problems during NAC 2025 instead of socializing and building connections was a good idea?",
 			"difficulty": 5,
-			"link": "https://www.acmicpc.net/problem/34782",
+			"link": "https://pnw.na.icpc.global/problems/2025/solutions/A-Bouquetofballoons-1/A-Bouquetofballoons-1.pdf",
 			"name": "Bouquet of Balloons",
-			"path": "PacNW 2025/Bouquet of Balloons",
+			"path": "ICPC PacNW 2025/Bouquet of Balloons",
 			"tags": [
 				"sorting",
 				"greedy"
@@ -166,9 +205,9 @@
 			"creation": "2025-08-02",
 			"description": "I know what it's like to be a CSE major. To study so desperately, yet to get cooked nonetheless. It's frightening, turns the legs to jelly. I ask you to what end? Dread it. Run from it. Circuitry arrives all the same. And now it's here. Or should I say, I am.\n\nSolidarity is an homage to my time with Sierra College's circuitry family, the Happy Cats. Though it certainly wasn't easy, studying under Professor Pattengale made me a better student, and I'm thankful for the opportunity to have taken his course. Pattengale is not just a professor or instructor, but also a true teacher who runs his classes with not only technical expertise, but integrity, confidence, and a questionable sense of humor.",
 			"difficulty": 4,
-			"link": "https://www.acmicpc.net/problem/34801",
+			"link": "https://pnw.na.icpc.global/problems/2025/solutions/K-Solidarityofthehappycats-2/K-Solidarityofthehappycats-2.pdf",
 			"name": "Solidarity of the Happy Cats",
-			"path": "PacNW 2025/Solidarity of the Happy Cats",
+			"path": "ICPC PacNW 2025/Solidarity of the Happy Cats",
 			"tags": [
 				"adjacency matrix",
 				"adhoc"
@@ -606,5 +645,5 @@
 			]
 		}
 	],
-	"totalProblems": 134
+	"totalProblems": 148
 }

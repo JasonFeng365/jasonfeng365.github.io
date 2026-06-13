@@ -3,15 +3,10 @@ const timelines = [
 		name: 'Academia',
 		backgroundColor: '#b49ed940', intervalColor: 'brown', pointColor: 'white',
 		entries: [
+			// School
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2021-06', end: '2023-05', caption: 'Sierra College', urls: [], title: 'Computer Science, A.S.', description: "Associate's for transfer to UC Davis through TAG program.\n\nA.S. in Computer Science, Mathematics, Physics, Natural Science", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2023/0.jpg"] },
-			
-
 			{ type: 'interval', backgroundColor: '#022851', start: '2023-09', end: '2025-06', caption: 'UC Davis', urls: [{url: "https://cs.ucdavis.edu/news/outstanding-senior-spotlight-jason-feng", title: "Outstanding Senior Spotlight: Jason Feng"}], title: 'Computer Science and Engineering, B.S.', description: "Bachelor's in Computer Science and Engineering. Graduated with highest honors, 4.0 GPA.\n\nSole recipient of CSE 2025 Outstanding Senior award; I'm not CSE Major, I'm Major CSE", imageUrls: ["images/academia/ceremony_all.jpg", "images/academia/ceremony_picture.jpg", "images/academia/ceremony_ghosal.jpg", "images/academia/ceremony_mom.jpg", "images/academia/ceremony_plaque.jpg"] },
-
-
-
 			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-09', end: 'present', caption: 'UCLA', urls: [], title: 'Computer Science, M.S.', description: "Pursuing Master's in computer science. Estimated graduation: June 2027", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [{url: "https://docs.google.com/presentation/d/14G1quUAdxqM_lkIW0Nk3DzFlp1egsCYCdX4JGLUii8Q/edit", title: "Concurrency, presented by Jason Feng"}, {url: "https://docs.google.com/presentation/d/1Ye36keKSoKQRIMoQIULE8lPYGmhA6ROMIkbHL_RqSns/edit", title: "Object-oriented Design Patterns, presented by Jason Feng and Justin Chen"}], title: 'Problemsetter/Interview Prep Lecturer', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: ["images/academia/interview_minecraft.jpg"] },
 			
 	// 	],
 	// },
@@ -27,13 +22,14 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#AF2124', date: '2025-04-26', caption: 'SCPE Spring 2025', urls: [{url: "https://www.hackerrank.com/contests/scpe-spring-2025/challenges", title: "SCPE Spring 2025 Problemset"}], title: 'Sole Problemsetter', description: "Interestingly enough, my last SCPE welcomed many special guests from all around California to participate virtually. A UCLA CS graduate joined us in-person to represent SoCal. Multiple competitive programmers from UC Davis participated virtually, including one of my ICPC teammates who solved the whole problemset. Finally, we welcomed competitive programming legend Nick Wu to compete virtually, who finished the entire set in 20 minutes!\n\nIn the coming years, Sierra's Computer Science Club officers will be taking over SCPE problemsetting and hosting. Look forward to contests in the coming years!\n\nSCPE Spring 2025 has 10 new original problems, and one \"extra credit\" problem returning from SCPE Spring 2024. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2025/4.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2025/1.jpg"] },
 
 			// Davis, DCPC, ACPC
-			{ type: 'interval', backgroundColor: '#022851', start: '2024-09', end: '2025-06', caption: 'DCPC', urls: [{url: "https://engineering.ucdavis.edu/news/coding-community-algorithm-davis-competitive-programming-club", title: "Coding with a Community: The Algorithm of the Davis Competitive Programming Club"}, {url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc", title: "Original ACPC Problems"}], title: 'Vice President + ACPC Problemsetter/System Ops', description: "I led Davis Competitive Programming Club as an active and welcoming Vice President during the 2024-2025 academic year, during which I taught competitive programming topics such as bitmask, dynamic programming, max-flow, and Z-algorithm. DCPC's weekly 2-hour meetings begin with a lecture, then move into a practice session with a set of problems. We covered a lot of topics, learning hard while having a ton of fun working with likeminded competitive programmers.", imageUrls: ["images/academia/acpc2025_team.jpg", "images/academia/acpc2024_team.jpg", "images/academia/acpc2023_competing.jpg", "images/academia/dcpc_lecture.jpg" ] },
-			{ type: 'point', backgroundColor: '#022851', date: '2024-05-04', caption: 'ACPC 2024', urls: [{url: "https://acpc-ucd.com/2024/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/ANhuR0iBIH/contest/522146", title: "ACPC 2024 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202024", title: "Original ACPC 2024 Problems"}, {url: "https://photos.google.com/share/AF1QipMQl6XctF6R_k60AzSZIVFW3ji94XsoM6oJ6a6VahiAbLr-xEUAnP8GBcE8xiXN-A?key=WmJtLThyVzdUakNXR1RtYzlYQVVydG5HZjEyY05B", title: "ACPC 2024 Gallery"}], title: 'Problemsetter', description: "For my experience and contributions to Sierra College's competitive programming community, I was invited to help out UC Davis's own contest. I brought my four hardest problems to the contest, challenging contestants and organizers alike.\n\nI had a ton of fun working together with this truly talented and dedicated team of organizers! Compared to Sierra, where I was the sole problemsetter, it was amazing to see problems across all topics, written in a different style than mine. We had a lot of fun working together to make ACPC the best one yet, and I'm looking forward to seeing how great it can be in the coming years.", imageUrls: ["images/academia/acpc2024_balloons.jpg", "images/academia/acpc2024_woodstock.jpg", "images/academia/acpc2024_competing.jpg", "images/academia/acpc2024_prize.jpg"] },
-			{ type: 'point', backgroundColor: '#022851', date: '2025-04-06', caption: 'ACPC 2025', urls: [{url: "https://acpc-ucd.com/2025/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/Agsm1DY0x3/contest/600925", title: "ACPC 2025 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202025", title: "Original ACPC 2025 Problems"}, {url: "https://photos.google.com/share/AF1QipNcQu1fv5a55btmyhCqp0H_3xRwW50jAdwla-4qwvd6dukpyhVGqo3LaJ2cYG5ABA?key=WENrckE4OWZHdDFOVVdvTmNxX21VQzRFcHlSMHF3", title: "ACPC 2025 Gallery"}], title: 'Lead Problemsetter / System Ops / Website Design', description: "My experiences with contest hosting brought some logistical improvements to ACPC 2025, where I advocated for contestant experience and transparency as much as possible. Some edits to the website ensured that location and parking information are at the very top, easily accessible to contestants. I revamped the signup sheet to allow contestants to let us know if they can't make it, letting us plan food and logistics better. And of course, ACPC 2025 was my first beta test of CANIS, which let us deliver balloons promptly and smoothly, and let us have a live updating counter of seats remaining on the homepage, letting contestants know if they're signed up or not.\n\nCANIS was an instant hit, easing work on organizers by providing an easy-to-read list of contestants who needed balloons. I'll continue to iterate on it to make it even easier to use and more powerful for future ACPCs.", imageUrls: ["images/academia/acpc2025_projector.jpg", "images/academia/acpc2025_balloons.jpg", "images/academia/acpc2025_canis.jpg"] },
-			{ type: 'point', backgroundColor: '#022851', date: '2026-05-30', caption: 'ACPC 2026', urls: [{url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}], title: 'Problemsetter / System Ops / Website Design', description: "We're planning for ACPC 2026 to take place in May. As before, I'll be dedicating some of my problems to the contest, and will be on-site running system ops with CANIS. Stay tuned for the official contest announcement!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#022851', start: '2024-09', end: '2025-06', caption: 'DCPC', urls: [{url: "https://engineering.ucdavis.edu/news/coding-community-algorithm-davis-competitive-programming-club", title: "Coding with a Community: The Algorithm of the Davis Competitive Programming Club"}, {url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc", title: "Original ACPC Problems"}], title: 'Vice President + ACPC Problemsetter/System Ops', description: "I led Davis Competitive Programming Club as an active and welcoming Vice President during the 2024-2025 academic year, during which I taught competitive programming topics such as bitmask, dynamic programming, max-flow, and Z-algorithm. DCPC's weekly 2-hour meetings begin with a lecture, then move into a practice session with a set of problems. We covered a lot of topics, learning hard while having a ton of fun working with likeminded competitive programmers.", imageUrls: ["images/academia/acpc2026_team.jpg", "images/academia/acpc2023_competing.jpg", "images/academia/dcpc_lecture.jpg" ] },
+			{ type: 'point', backgroundColor: '#022851', date: '2024-05-04', caption: 'ACPC 2024', urls: [{url: "https://acpc-ucd.com/2024/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/ANhuR0iBIH/contest/522146", title: "ACPC 2024 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202024", title: "Original ACPC 2024 Problems"}, {url: "https://photos.google.com/share/AF1QipMQl6XctF6R_k60AzSZIVFW3ji94XsoM6oJ6a6VahiAbLr-xEUAnP8GBcE8xiXN-A?key=WmJtLThyVzdUakNXR1RtYzlYQVVydG5HZjEyY05B", title: "ACPC 2024 Gallery"}], title: 'Problemsetter', description: "For my experience and contributions to Sierra College's competitive programming community, I was invited to help out UC Davis's own contest. I brought my four hardest problems to the contest, challenging contestants and organizers alike.\n\nI had a ton of fun working together with this truly talented and dedicated team of organizers! Compared to Sierra, where I was the sole problemsetter, it was amazing to see problems across all topics, written in a different style than mine. We had a lot of fun working together to make ACPC the best one yet, and I'm looking forward to seeing how great it can be in the coming years.", imageUrls: ["images/academia/acpc2024_team.jpg", "images/academia/acpc2024_balloons.jpg", "images/academia/acpc2024_woodstock.jpg", "images/academia/acpc2024_competing.jpg", "images/academia/acpc2024_prize.jpg"] },
+			{ type: 'point', backgroundColor: '#022851', date: '2025-04-06', caption: 'ACPC 2025', urls: [{url: "https://acpc-ucd.com/2025/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/Agsm1DY0x3/contest/600925", title: "ACPC 2025 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202025", title: "Original ACPC 2025 Problems"}, {url: "https://photos.google.com/share/AF1QipNcQu1fv5a55btmyhCqp0H_3xRwW50jAdwla-4qwvd6dukpyhVGqo3LaJ2cYG5ABA?key=WENrckE4OWZHdDFOVVdvTmNxX21VQzRFcHlSMHF3", title: "ACPC 2025 Gallery"}], title: 'Lead Problemsetter / System Ops / Website Design', description: "My experiences with contest hosting brought some logistical improvements to ACPC 2025, where I advocated for contestant experience and transparency as much as possible. Some edits to the website ensured that location and parking information are at the very top, easily accessible to contestants. I revamped the signup sheet to allow contestants to let us know if they can't make it, letting us plan food and logistics better. And of course, ACPC 2025 was my first beta test of CANIS, which let us deliver balloons promptly and smoothly, and let us have a live updating counter of seats remaining on the homepage, letting contestants know if they're signed up or not.\n\nCANIS was an instant hit, easing work on organizers by providing an easy-to-read list of contestants who needed balloons. I'll continue to iterate on it to make it even easier to use and more powerful for future ACPCs.", imageUrls: ["images/academia/acpc2025_team.jpg", "images/academia/acpc2025_projector.jpg", "images/academia/acpc2025_balloons.jpg", "images/academia/acpc2025_canis.jpg"] },
+			{ type: 'point', backgroundColor: '#022851', date: '2026-05-30', caption: 'ACPC 2026', urls: [{url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/7voJiqlljS/contest/695483", title: "ACPC 2026 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202026", title: "Original ACPC 2026 Problems"}, {url: "https://photos.google.com/share/AF1QipOg6oh4de9UqeVETehhOm8UdtsVbrrF8AU_nawyRiSqNdoxcjY-3k3o1nNvhMwm1g?key=WWw5VlBSUE85NXJoSXBJNkdPdVhRQmRTNzIyaTNn", title: "ACPC 2026 Gallery"}], title: 'Problemsetter / System Ops / Website Design', description: "I made my return to UC Davis in late May to help officiate 2026's edition of ACPC, contributing three problems to the 11-problem set. With some stability improvements for CANIS to assist in balloon distribution and live score tracking, my team and I hosted another successful and educational contest!\n\n\"ACPC is 100x easier since we got CANIS\" -ritakura1", imageUrls: ["images/academia/acpc2026_team.jpg", "images/academia/acpc2026_intro.jpg", "images/academia/acpc2026_bruh.jpg", "images/academia/acpc2026_balloons.jpg", "images/academia/acpc2026_canis.jpg"] },
 
 			// UCLA, club, CodeSprint
-			{ type: 'point', backgroundColor: '#2774AE', date: '2026-05', caption: 'CodeSprint 2026', urls: [{url: "https://codesprintla.uclaacm.com/", title: "CodeSprint"}], title: 'Problemsetter', description: "We're beginning to plan out CodeSprint's 2026 contest. Stay tuned for the official contest announcement!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [{url: "https://docs.google.com/presentation/d/14G1quUAdxqM_lkIW0Nk3DzFlp1egsCYCdX4JGLUii8Q/edit", title: "Concurrency, presented by Jason Feng"}, {url: "https://docs.google.com/presentation/d/1Ye36keKSoKQRIMoQIULE8lPYGmhA6ROMIkbHL_RqSns/edit", title: "Object-oriented Design Patterns, presented by Jason Feng and Justin Chen"}], title: 'Problemsetter/Interview Prep Lecturer', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: ["images/academia/interview_minecraft.jpg"] },
+			{ type: 'point', backgroundColor: '#2774AE', date: '2026-05-09', caption: 'CodeSprint 2026', urls: [{url: "https://codesprintla.uclaacm.com/", title: "CodeSprint"}], title: 'Problemsetter', description: "We're beginning to plan out CodeSprint's 2026 contest. Stay tuned for the official contest announcement!", imageUrls: [] },
 
 			// ICPC
 			{ type: 'point', backgroundColor: '#d18147', date: '2023-02-25', caption: 'ICPC PacNW 2022', urls: [], title: 'Mighty Polymorphers (Sierra D2)', description: "I first heard about the ICPC from my mentor, Lego Haryanto, who encouraged me to participate as a way of challenging myself. My teammates and I were Sierra College's first ever ICPC participants. We participated in the lower Division 2, where we scored 22nd place out of 53 teams across the whole Pacific Northwest.\n\nMy teammates were Sam Asbell and Neil Dandekar, led by coach Professor Barry Brown.", imageUrls: ["images/icpc/polymorphers.jpg"] },
@@ -88,7 +84,7 @@ const timelines = [
 
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
+const clampValue = (value, min, max) => Math.min(max, Math.max(min, value));
 
 
 function makeCarouselButtons(carouselName, count) {
@@ -135,16 +131,34 @@ function makeCarousel(entry) {
 const vue = new Vue({
   el: '#app',
   data: {
-        timelines: timelines,
+		timelines: timelines,
 		selectedEntry: timelines[0].entries[0],
 		curDate: new Date(),
-		percentOfFuture: 0
+		percentCurrentDate: 0,
+		zoomLevel: 1.0,
+		zoomPow: 0,
+		zoomBase: 1.2
   },
   created() {
-    this.processTimelines();
-    this.generateAxisLabels();
+	this.processTimelines(1.0);
+	this.generateAxisLabels();
   },
   methods: {
+	zoomIn(increment) {
+		console.log("Zooming by "+increment)
+		this.zoomPow += increment;
+
+		let newLevel = 1.0 * this.zoomBase ** this.zoomPow;
+		this.zoomLevel = parseFloat(newLevel.toFixed(2));
+		// CRITICAL: Recalculate all positions based on the new zoom level
+		this.processTimelines(this.zoomLevel); 
+	},
+
+	zoomOut(decrement) {
+		this.zoomIn(-decrement);
+	},
+
+
 	getIntervals(org) {
 		const intervals = org.entries.filter(entry => entry.type === 'interval');
 		intervals.sort((a, b) => new Date(a.start) - new Date(b.start));
@@ -155,7 +169,7 @@ const vue = new Vue({
 		points.sort((a, b) => new Date(a.date) - new Date(b.date));
 		return points;
 	},
-	processTimelines() {
+	processTimelines(zoom = 1.0) {
 		const allEntries = this.timelines.flatMap(org => org.entries);
 		const allDates = [];
 
@@ -177,26 +191,44 @@ const vue = new Vue({
 		}
 		const totalDuration = latest - earliest;
 
+		// Percentage of timeframe that's in the future
+		this.percentCurrentDate = (((this.curDate - earliest) / totalDuration) * 100) * zoom;
 		
-
-		// Percentage of timeframe that's in the future = (latest - current date) / all
-		this.percentOfFuture = 100*(latest.getTime() - this.curDate.getTime()) / totalDuration;
-
 		// Process each entry (interval or point)
 		this.timelines.forEach(org => {
 			org.entries.forEach(entry => {
-			if (entry.type === 'interval') {
-				const start = new Date(entry.start);
-				const end = entry.end === 'present' ? latest : new Date(entry.end);
-				entry.startPercent = ((start - earliest) / totalDuration) * 100;
-				entry.widthPercent = ((end - start) / totalDuration) * 100;
-			} else if (entry.type === 'point') {
-				const date = new Date(entry.date);
-				entry.datePercent = ((date - earliest) / totalDuration) * 100;
-			}
+				if (entry.type === 'interval') {
+					const start = new Date(entry.start);
+					const end = entry.end === 'present' ? latest : new Date(entry.end);
+
+					// 1. Calculate the raw percentage positions (Start and End)
+					let rawStartPercent = (((start - earliest) / totalDuration) * 100) * zoom;
+					let rawEndPercent = (((end - earliest) / totalDuration) * 100) * zoom;
+
+					// 2. Clamp both Start and End points to [0, 100]
+					// entry.startPercent = clampValue(rawStartPercent, 0, 100);
+					entry.startPercent = rawStartPercent
+					let clampedEndPercent = clampValue(rawEndPercent, 0, 100);
+
+					// 3. Calculate the width based on the two clamped endpoints (this fixes continuity)
+					// The calculated width will automatically be positive if start <= end
+					entry.widthPercent = Math.max(0, clampedEndPercent - entry.startPercent);
+
+
+				} else if (entry.type === 'point') {
+					const date = new Date(entry.date);
+					// Points still only need to be calculated and clamped independently.
+					let rawPointPercent = (((date - earliest) / totalDuration) * 100) * zoom;
+					// entry.datePercent = clampValue(rawPointPercent, 0, 100);
+					entry.datePercent = rawPointPercent
+				}
 			});
 		});
+		// console.log("After processTimelines")
+		this.generateAxisLabels();
 	},
+
+
 
     generateAxisLabels() {
 		const allEntries = this.timelines.flatMap(org => org.entries);
@@ -218,7 +250,7 @@ const vue = new Vue({
 		// Generate 10 evenly spaced labels
 		const earliest = new Date(uniqueDates[0]);
 		const latest = Math.max(...uniqueDates);
-		const totalDuration = latest - earliest;
+		const totalDuration = (latest - earliest) / this.zoomLevel;
 
 		const startYear = new Date()
 		startYear.setFullYear(uniqueDates[0].getFullYear())

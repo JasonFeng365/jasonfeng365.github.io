@@ -133,11 +133,6 @@
 <!-- <div id="app" v-cloak v-if="false"> -->
 <div id="app" v-cloak>
 
-	<!-- <div class="name-title">
-		
-	</div> -->
-
-
 <div class="name-title-noclick text-light text-center" style="height: 80vh;">
 	<!-- https://www.dochub.com/en/esignature-generation-tools/svg-signature-generator -->
 	 
@@ -175,14 +170,20 @@
   <!-- Scrollable container for all timeline rows -->
 
   <div class="container-fluid">
+	
 
 	<div class="overall-container">
-	
+
+		
+	<div class="zoom-controls text-center mb-4"> 
+		<button class="btn btn-primary me-3" @click="zoomOut(1)">Zoom Out</button>
+		<button class="btn btn-success" @click="zoomIn(1)">Zoom In</button>
+	</div>
 
 	<!-- <div class="timeline-scroll-container"> -->
 		<div class="timeline-container" v-for="org in timelines" :key="org.name"
 			:style="{
-				'background-color': org.backgroundColor
+				'background-color': org.backgroundColor,
 			}"
 		>
 		
@@ -191,7 +192,8 @@
 			<!-- data-bs-trigger="focus"  -->
 			<div
 				v-for="entry in [...getIntervals(org), ...getPoints(org)]"
-				:key="entry.type + entry.start || entry.date"
+				:key="entry.type + (entry.start || entry.date)"
+				v-if="(entry.type === 'interval' && entry.startPercent<100 && entry.startPercent + entry.widthPercent<=100) || (entry.type === 'point' && entry.datePercent<95)"
 				
 
 				data-bs-toggle="modal" data-bs-target="#timelineModal"
@@ -223,7 +225,13 @@
 			</button>
 				
 			</div>
-		<div class="future-overlay text-end text-white":style="{width: percentOfFuture+'%'}"></div>
+		<!-- <div class="future-overlay text-end text-white":style="{
+			width: percentOfFuture+'%'
+		}"></div> -->
+		<div v-if="percentCurrentDate<100" class="future-overlay text-white":style="{
+			left: percentCurrentDate + '%',
+			width: (100-percentCurrentDate) + '%',
+		}"></div>
 		</div>
 
 		</div>
