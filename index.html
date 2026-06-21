@@ -173,78 +173,68 @@
 	
 
 	<div class="overall-container">
+     <div class="zoom-controls text-center mb-4">
+       <button class="btn btn-primary me-3" @click="zoomOut(1)" :disabled="zoomPow<=0">Zoom Out</button>
+       <button class="btn btn-success" @click="zoomIn(1)">Zoom In</button>
+     </div>
 
+     <div class="timeline-scroll-container">
+       <div class="timeline-container" v-for="org in timelines" :key="org.name"
+         :style="{
+           'background-color': org.backgroundColor,
+           'width': (zoomLevel*100) + '%'
+         }"
+       >
+         <div class="timeline-events">
+           <div
+             v-for="entry in [...getIntervals(org), ...getPoints(org)]"
+             :key="entry.type + (entry.start || entry.date)"
+
+             data-bs-toggle="modal" data-bs-target="#timelineModal"
+           >
+             <button
+               :style="{
+                 left: entry.type === 'interval' ? entry.startPercent + '%' : entry.datePercent + '%',
+                 width: entry.type === 'interval' ? entry.widthPercent + '%' : '0%',
+                 'background-color': entry.backgroundColor,
+                 color: entry.type === 'interval' ? entry.intervalColor : entry.pointColor,
+               }"
+               @click="selectEntry(entry)"
+               class="dropdown text-start interval-label"
+               :class="{
+                 'selected': entry.selected,
+                 'timeline-event': entry.type === 'interval',
+                 'timeline-event-point': entry.type !== 'interval'
+               }"
+               data-bs-trigger="hover" data-bs-toggle="popover" data-bs-placement="top"
+               data-bs-html="true"
+               :data-bs-content='genPopoverTemplate(entry)'
+             >
+               <span class="ignoremouse" v-if="entry.type === 'interval'">{{ entry.caption }}</span>
+               <span class="ignoremouse" v-else>&nbsp;</span>
+             </button>
+           </div>
+           <div class="future-overlay text-white" :style="{
+             left: percentCurrentDate + '%',
+             width: (100-percentCurrentDate) + '%',
+           }"></div>
+         </div>
+       </div>
+	   <div class="timeline-axis">
+		<div class="timeline-axis-line" :style="{'width': (zoomLevel*100) + '%'}"></div>
+		<div class="timeline-axis-labels"></div>
+	   </div>
 		
-	<div class="zoom-controls text-center mb-4"> 
-		<button class="btn btn-primary me-3" @click="zoomOut(1)">Zoom Out</button>
-		<button class="btn btn-success" @click="zoomIn(1)">Zoom In</button>
-	</div>
 
-	<!-- <div class="timeline-scroll-container"> -->
-		<div class="timeline-container" v-for="org in timelines" :key="org.name"
-			:style="{
-				'background-color': org.backgroundColor,
-			}"
-		>
-		
-		<div class="timeline-events">
-			<!-- :title="entry.title" -->
-			<!-- data-bs-trigger="focus"  -->
-			<div
-				v-for="entry in [...getIntervals(org), ...getPoints(org)]"
-				:key="entry.type + (entry.start || entry.date)"
-				v-if="(entry.type === 'interval' && entry.startPercent<100 && entry.startPercent + entry.widthPercent<=100) || (entry.type === 'point' && entry.datePercent<95)"
-				
-
-				data-bs-toggle="modal" data-bs-target="#timelineModal"
-				
-			>
-			<button
-				:style="{
-					left: entry.type === 'interval' ? entry.startPercent + '%' : entry.datePercent + '%',
-					width: entry.type === 'interval' ? entry.widthPercent + '%' : '0%',
-					'background-color': entry.backgroundColor,
-					color: entry.type === 'interval' ? entry.intervalColor : entry.pointColor,
-				}"
-				@click="selectEntry(entry)"
-				class="dropdown text-start interval-label"
-				:class="{ 
-					'selected': entry.selected,
-					'timeline-event': entry.type === 'interval',
-					'timeline-event-point': entry.type !== 'interval'
-				}"
-				data-bs-trigger="hover" data-bs-toggle="popover" data-bs-placement="top"
-				data-bs-html="true"
-				
-				:data-bs-content='genPopoverTemplate(entry)'
-			
-			>
-				<span class="ignoremouse" v-if="entry.type === 'interval'">{{ entry.caption }}</span >
-				<span class="ignoremouse" v-else>&nbsp;</span>
-
-			</button>
-				
-			</div>
-		<!-- <div class="future-overlay text-end text-white":style="{
-			width: percentOfFuture+'%'
-		}"></div> -->
-		<div v-if="percentCurrentDate<100" class="future-overlay text-white":style="{
-			left: percentCurrentDate + '%',
-			width: (100-percentCurrentDate) + '%',
-		}"></div>
-		</div>
-
-		</div>
-		
-		<!-- Axis below all rows -->
-		<div class="timeline-axis">
-			<div class="timeline-axis-line"></div>
-			<div class="timeline-axis-labels"></div>
-		</div>
-
-		
-	</div>
+       <!-- Axis below all rows -->
+       <!-- <div class="timeline-axis" :style="{ 'width': (zoomLevel*100) + '%' }">
+         <div class="timeline-axis-line"></div>
+         <div class="timeline-axis-labels"></div>
+       </div> -->
+     </div>
+   </div>
   </div>
+
 
   <div class="ignoremouse" style="height: 100vh;"></div>
 

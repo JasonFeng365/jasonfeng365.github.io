@@ -137,7 +137,8 @@ const vue = new Vue({
 		percentCurrentDate: 0,
 		zoomLevel: 1.0,
 		zoomPow: 0,
-		zoomBase: 1.2
+		zoomBase: 1.2,
+		maxPercent: 100 // Add this line
   },
   created() {
 	this.processTimelines(1.0);
@@ -151,7 +152,9 @@ const vue = new Vue({
 		let newLevel = 1.0 * this.zoomBase ** this.zoomPow;
 		this.zoomLevel = parseFloat(newLevel.toFixed(2));
 		// CRITICAL: Recalculate all positions based on the new zoom level
-		this.processTimelines(this.zoomLevel); 
+		// this.processTimelines(this.zoomLevel);
+		this.processTimelines(1)
+		console.log(this.zoomLevel)
 	},
 
 	zoomOut(decrement) {
@@ -175,12 +178,12 @@ const vue = new Vue({
 
 		// Collect all dates from both intervals and points
 		allEntries.forEach(entry => {
-			if (entry.type === 'interval') {
-				allDates.push(new Date(entry.start));
-				allDates.push(entry.end === 'present' ? this.curDate : new Date(entry.end));
-			} else if (entry.type === 'point') {
-				allDates.push(new Date(entry.date));
-			}
+		if (entry.type === 'interval') {
+			allDates.push(new Date(entry.start));
+			allDates.push(entry.end === 'present' ? this.curDate : new Date(entry.end));
+		} else if (entry.type === 'point') {
+			allDates.push(new Date(entry.date));
+		}
 		});
 
 		// Find the earliest and latest dates across all entries
@@ -191,40 +194,48 @@ const vue = new Vue({
 		}
 		const totalDuration = latest - earliest;
 
+		let maxPercent = 100;
+		allEntries.forEach(entry => {
+		if (entry.type === 'interval') {
+			const start = new Date(entry.start);
+			const end = entry.end === 'present' ? latest : new Date(entry.end);
+			const rawStart = (((start - earliest) / totalDuration) * 100) * zoom;
+			const rawEnd = (((end - earliest) / totalDuration) * 100) * zoom;
+			maxPercent = Math.max(maxPercent, rawStart, rawEnd);
+		} else if (entry.type === 'point') {
+			const date = new Date(entry.date);
+			const rawPoint = (((date - earliest) / totalDuration) * 100) * zoom;
+			maxPercent = Math.max(maxPercent, rawPoint);
+		}
+		});
+
 		// Percentage of timeframe that's in the future
 		this.percentCurrentDate = (((this.curDate - earliest) / totalDuration) * 100) * zoom;
-		
+
 		// Process each entry (interval or point)
 		this.timelines.forEach(org => {
-			org.entries.forEach(entry => {
-				if (entry.type === 'interval') {
-					const start = new Date(entry.start);
-					const end = entry.end === 'present' ? latest : new Date(entry.end);
+		org.entries.forEach(entry => {
+			if (entry.type === 'interval') {
+				const start = new Date(entry.start);
+				const end = entry.end === 'present' ? latest : new Date(entry.end);
 
-					// 1. Calculate the raw percentage positions (Start and End)
-					let rawStartPercent = (((start - earliest) / totalDuration) * 100) * zoom;
-					let rawEndPercent = (((end - earliest) / totalDuration) * 100) * zoom;
+				let rawStartPercent = (((start - earliest) / totalDuration) * 100) * zoom;
+				let rawEndPercent = (((end - earliest) / totalDuration) * 100) * zoom;
 
-					// 2. Clamp both Start and End points to [0, 100]
-					// entry.startPercent = clampValue(rawStartPercent, 0, 100);
-					entry.startPercent = rawStartPercent
-					let clampedEndPercent = clampValue(rawEndPercent, 0, 100);
+				entry.startPercent = rawStartPercent;
+				let clampedEndPercent = clampValue(rawEndPercent, 0, 100);
 
-					// 3. Calculate the width based on the two clamped endpoints (this fixes continuity)
-					// The calculated width will automatically be positive if start <= end
-					entry.widthPercent = Math.max(0, clampedEndPercent - entry.startPercent);
+				// entry.widthPercent = Math.max(0, clampedEndPercent - entry.startPercent);
+				entry.widthPercent = Math.max(0, rawEndPercent - rawStartPercent);
 
-
-				} else if (entry.type === 'point') {
-					const date = new Date(entry.date);
-					// Points still only need to be calculated and clamped independently.
-					let rawPointPercent = (((date - earliest) / totalDuration) * 100) * zoom;
-					// entry.datePercent = clampValue(rawPointPercent, 0, 100);
-					entry.datePercent = rawPointPercent
-				}
-			});
+			} else if (entry.type === 'point') {
+				const date = new Date(entry.date);
+				let rawPointPercent = (((date - earliest) / totalDuration) * 100) * zoom;
+				entry.datePercent = rawPointPercent;
+			}
 		});
-		// console.log("After processTimelines")
+		});
+		this.maxPercent = maxPercent;
 		this.generateAxisLabels();
 	},
 
@@ -250,7 +261,7 @@ const vue = new Vue({
 		// Generate 10 evenly spaced labels
 		const earliest = new Date(uniqueDates[0]);
 		const latest = Math.max(...uniqueDates);
-		const totalDuration = (latest - earliest) / this.zoomLevel;
+		const totalDuration = (latest - earliest);
 
 		const startYear = new Date()
 		startYear.setFullYear(uniqueDates[0].getFullYear())
@@ -269,7 +280,8 @@ const vue = new Vue({
 			
 			// const monthLabel = `${months[date.getMonth()]} ${date.getFullYear()}`;
 			const monthLabel = `${date.getFullYear()}`;
-			const percent = ((date - earliest) / totalDuration) * 100;
+			const percent = ((date - earliest) / totalDuration) * 100 * this.zoomLevel;
+			if (percent > 100) break;
 			axisLabels.push({ label: monthLabel, percent });
 		}
 		// Update the axis labels in the DOM
