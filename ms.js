@@ -65,8 +65,8 @@ new Vue({
 	data: {
 		rows: 0,
 		cols: 0,
-		mines: 22,
-		difficulty: 4,
+		mines: 33,
+		difficulty: 8,
 		grid: [],
 		gameStarted: false,
 		gameOver: false,
@@ -110,8 +110,8 @@ new Vue({
 	methods: {
 		onWindowResize() {
 			const rem = getWindowSizeInRem();
-			this.rows = Math.floor(rem.height/5)-1
-			this.cols = Math.floor(rem.width/5)
+			this.rows = Math.floor(rem.height/4)-1
+			this.cols = Math.floor(rem.width/4)
 
 			this.restartGame()
 		},
