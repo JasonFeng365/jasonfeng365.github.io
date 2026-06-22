@@ -137,7 +137,7 @@ const vue = new Vue({
 		percentCurrentDate: 0,
 		zoomLevel: 1.0,
 		zoomPow: 0,
-		zoomBase: 1.2,
+		zoomBase: 1.5,
 		maxPercent: 100 // Add this line
   },
   created() {
@@ -153,7 +153,7 @@ const vue = new Vue({
 		this.zoomLevel = parseFloat(newLevel.toFixed(2));
 		// CRITICAL: Recalculate all positions based on the new zoom level
 		// this.processTimelines(this.zoomLevel);
-		this.processTimelines(1)
+		// this.processTimelines(1)
 		console.log(this.zoomLevel)
 	},
 
