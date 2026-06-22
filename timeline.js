@@ -129,7 +129,7 @@ function makeCarousel(entry) {
 
 
 const vue = new Vue({
-  el: '#app',
+  el: '#timeline',
   data: {
 		timelines: timelines,
 		selectedEntry: timelines[0].entries[0],

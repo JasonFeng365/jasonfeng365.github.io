@@ -131,7 +131,7 @@
 
 
 <!-- <div id="app" v-cloak v-if="false"> -->
-<div id="app" v-cloak>
+<div>
 
 <div class="name-title-noclick text-light text-center" style="height: 80vh;">
 	<!-- https://www.dochub.com/en/esignature-generation-tools/svg-signature-generator -->
@@ -170,107 +170,137 @@
 
 <div class="intermediate-section">
 
-<!-- Scrollable container for all timeline rows -->
-<div class="container-fluid">
-	<div class="overall-container">
+	<!-- Scrollable container for all timeline rows -->
+	<div class="container-fluid" id="timeline" v-cloak>
 
-		<div class="timeline-scroll-container" :style="{'overflow-x': 'scroll'}">
-			<div class="timeline-container" v-for="org in timelines" :key="org.name"
-				:style="{
-				'background-color': org.backgroundColor,
-				'width': (zoomLevel*100) + '%',
-				}"
-			>
-				<div class="timeline-events">
-					<div
-						v-for="entry in [...getIntervals(org), ...getPoints(org)]"
-						:key="entry.type + (entry.start || entry.date)"
+		<!-- Modals -->
+		<div data-bs-theme="dark" class="modal fade" id="timelineModal" tabindex="-1" aria-labelledby="timelineModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg text-light">
+				<div class="modal-content">
+					<div class="modal-header modal-title" id="timelineModalLabel">
+						<div class="modal-title" id="timelineModalLabel">
+							<h5>{{selectedEntry.caption}}: {{selectedEntry.title}}</h5>
+							<p class="card-text">{{genTimeframeText(selectedEntry)}}</p>
+						</div>
+						
+						</div>
+						
+						<div class="modal-body">
+							<p style="white-space: pre-wrap;">{{selectedEntry.description}}</p>
+							<div v-if="selectedEntry.imageUrls.length>0" v-html="getCurrentImageCarousel()"></div>
 
-						data-bs-toggle="modal" data-bs-target="#timelineModal"
-					>
-						<button
-						:style="{
-							left: entry.type === 'interval' ? entry.startPercent + '%' : entry.datePercent + '%',
-							width: entry.type === 'interval' ? entry.widthPercent + '%' : '0%',
-							'background-color': entry.backgroundColor,
-							color: entry.type === 'interval' ? entry.intervalColor : entry.pointColor,
-						}"
-						@click="selectEntry(entry)"
-						class="dropdown text-start interval-label"
-						:class="{
-							'selected': entry.selected,
-							'timeline-event': entry.type === 'interval',
-							'timeline-event-point': entry.type !== 'interval'
-						}"
-						data-bs-trigger="hover" data-bs-toggle="popover" data-bs-placement="top"
-						data-bs-html="true"
-						:data-bs-content='genPopoverTemplate(entry)'
-						>
-							<span class="ignoremouse" v-if="entry.type === 'interval'">{{ entry.caption }}</span>
-							<span class="ignoremouse" v-else>&nbsp;</span>
-						</button>
+							<div v-if="selectedEntry.urls.length>0" class="card-footer text-muted">
+							<br>
+							<div v-for="url in selectedEntry.urls" class="card-link"><a :href="url.url" target="_blank">{{url.title}}</a></div>
+						</div>
 					</div>
-					<div class="future-overlay text-white" :style="{
-						left: percentCurrentDate + '%',
-						width: (100-percentCurrentDate) + '%',
-					}"></div>
+
 				</div>
 			</div>
-			<div class="timeline-axis" :style="{'width': (zoomLevel*100) + '%'}">
+		</div>
+
+
+		<div class="overall-container">
+
+			<div class="timeline-scroll-container" :style="{'overflow-x': 'scroll'}">
+				<div class="timeline-container" v-for="org in timelines" :key="org.name"
+					:style="{
+					'background-color': org.backgroundColor,
+					'width': (zoomLevel*100) + '%',
+					}"
+				>
+					<div class="timeline-events">
+						<div
+							v-for="entry in [...getIntervals(org), ...getPoints(org)]"
+							:key="entry.type + (entry.start || entry.date)"
+
+							data-bs-toggle="modal" data-bs-target="#timelineModal"
+						>
+							<button
+							:style="{
+								left: entry.type === 'interval' ? entry.startPercent + '%' : entry.datePercent + '%',
+								width: entry.type === 'interval' ? entry.widthPercent + '%' : '0%',
+								'background-color': entry.backgroundColor,
+								color: entry.type === 'interval' ? entry.intervalColor : entry.pointColor,
+							}"
+							@click="selectEntry(entry)"
+							class="dropdown text-start interval-label"
+							:class="{
+								'selected': entry.selected,
+								'timeline-event': entry.type === 'interval',
+								'timeline-event-point': entry.type !== 'interval'
+							}"
+							data-bs-trigger="hover" data-bs-toggle="popover" data-bs-placement="top"
+							data-bs-html="true"
+							:data-bs-content='genPopoverTemplate(entry)'
+							>
+								<span class="ignoremouse" v-if="entry.type === 'interval'">{{ entry.caption }}</span>
+								<span class="ignoremouse" v-else>&nbsp;</span>
+							</button>
+						</div>
+						<div class="future-overlay text-white" :style="{
+							left: percentCurrentDate + '%',
+							width: (100-percentCurrentDate) + '%',
+						}"></div>
+					</div>
+				</div>
+				<div class="timeline-axis" :style="{'width': (zoomLevel*100) + '%'}">
+					<div class="timeline-axis-line"></div>
+					<div class="timeline-axis-labels"></div>
+				</div>
+			
+
+			<!-- Axis below all rows -->
+			<!-- <div class="timeline-axis" :style="{ 'width': (zoomLevel*100) + '%' }">
 				<div class="timeline-axis-line"></div>
 				<div class="timeline-axis-labels"></div>
+			</div> -->
 			</div>
 		
-
-		<!-- Axis below all rows -->
-		<!-- <div class="timeline-axis" :style="{ 'width': (zoomLevel*100) + '%' }">
-			<div class="timeline-axis-line"></div>
-			<div class="timeline-axis-labels"></div>
-		</div> -->
-		</div>
-	 
-		<div class="zoom-controls text-end mb-4 pt-2">
-			<button class="btn btn-primary me-3" @click="zoomOut(1)" :disabled="zoomPow<=0" :style="{ 'width': '2.5rem', 'height': '2.5rem', }">-</button>
-			<button class="btn btn-success" @click="zoomIn(1)" :style="{ 'width': '2.5rem', 'height': '2.5rem', }">+</button>
+			<div class="zoom-controls text-end mb-4 pt-2">
+				<button class="btn btn-primary me-3" @click="zoomOut(1)" :disabled="zoomPow<=0" :style="{ 'width': '2.5rem', 'height': '2.5rem', }">-</button>
+				<button class="btn btn-success" @click="zoomIn(1)" :style="{ 'width': '2.5rem', 'height': '2.5rem', }">+</button>
+			</div>
 		</div>
 	</div>
-</div>
 
-</div>
+	<!-- Projects -->
+	<div class="container-fluid" id="achievements" v-cloak>
 
-
-  <div class="ignoremouse" style="height: 100vh;"></div>
-
-    <div data-bs-theme="dark" class="modal fade" id="timelineModal" tabindex="-1" aria-labelledby="timelineModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-lg text-light">
-        <div class="modal-content">
-          <div class="modal-header modal-title" id="timelineModalLabel">
-            <div class="modal-title" id="timelineModalLabel">
-				<h5>{{selectedEntry.caption}}: {{selectedEntry.title}}</h5>
-				<p class="card-text">{{genTimeframeText(selectedEntry)}}</p>
-			</div>
-			
-          </div>
-		  
-          <div class="modal-body">
-			<p style="white-space: pre-wrap;">{{selectedEntry.description}}</p>
-			<div v-if="selectedEntry.imageUrls.length>0" v-html="getCurrentImageCarousel()"></div>
-
-			<div v-if="selectedEntry.urls.length>0" class="card-footer text-muted">
+		<div v-for="section in sections" :key="section.name">
+			<h2 class="text-light text-center" style="padding-bottom: .5rem;">{{section.name}}</h2>
+			<div v-for="entry in section.entries" :key="entry.title + section.name">
+				<div class="card" :style="{'background-color': entry.backgroundColor}">
+					<div class="card-body">
+						<h4 class="card-title text-light">{{entry.title}}</h4>
+						<h5 class="card-subtitle mb-2" style="color: #ddd;">{{entry.subtitle}}</h5>
+						<p class="card-text" style="color: #bbb;">{{entry.description}}</p>
+						<!-- <a href="#(url)" class="card-link">(link)</a> -->
+					</div>
+				</div>
 				<br>
-				<div v-for="url in selectedEntry.urls" class="card-link"><a :href="url.url" target="_blank">{{url.title}}</a></div>
 			</div>
-          </div>
+		</div>
 
-        </div>
-      </div>
-    </div>
+	</div>
+
+
+</div>
+
+<div class="after-intermediate-section" id="timeline" style="height: 10vh;">
+</div>
+
+
+<div class="ignoremouse" style="height: 100vh;"></div>
+
+
 
 </div>
 
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
   <script src="timeline.js"></script>
   <script src="ms.js"></script>
+  <script src="achievements.js"></script>
 
   <!-- Enable popovers -->
   <script>
