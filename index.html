@@ -141,7 +141,7 @@
 	<br>
 
 	
-	<h3>Software Engineering Intern @ <span class="glow-oracle">Oracle</span>, Summer 2026</h3>
+	<h3>Software Engineering Intern @ <span class="glow-oracle">Oracle</span></h3>
 	<br>
 
 	<h3>Computer Science, M.S. @ <span class="glow-ucla">UCLA</span>; grad. June 2027</h3>
@@ -271,14 +271,24 @@
 		<div v-for="section in sections" :key="section.name">
 			<h2 class="text-light text-center" style="padding-bottom: .5rem;">{{section.name}}</h2>
 			<div v-for="entry in section.entries" :key="entry.title + section.name" class="hover-container">
-				<div class="card" :style="{'background-color': entry.backgroundColor}">
+				<div class="card" :style="{'background': getBg(entry)}">
 					<div class="card-body">
 						<h4 class="card-title text-light">{{entry.title}}</h4>
-						<h5 class="card-subtitle mb-2" style="color: #ccc;">{{entry.subtitle}}</h5>
-						<p class="card-subtitle mb-2" style="color: #999;">{{entry.timeframe}}</p>
-						<p class="card-text" style="color: #ddd; white-space: pre-wrap;">{{entry.description}}</p>
+						<h5 class="card-subtitle mb-2" style="color: #ddd;">{{entry.subtitle}}</h5>
+						<p class="card-subtitle mb-2" style="color: #bbb;">{{entry.timeframe}}</p>
+						<p class="card-text" style="color: #eee; white-space: pre-wrap;">{{entry.description}}</p>
+
+						<div v-if="entry.imageUrls.length>0">
+							<div class="row">
+								<div class="col-6"><img v-bind:src="entry.imageUrls[0]" class="rounded img-fluid"></div>
+								<div class="col-6"><img v-bind:src="entry.imageUrls[1]" class="rounded img-fluid"></div>
+							</div>
+							<br>
+						</div>
 						
-						<div v-for="url in entry.urls" class="card-text"><a :href="url.url" target="_blank">{{url.title}}</a></div>
+						
+
+						<div v-for="url in entry.urls" class="card-text"><h6><a class="achievement-link" :href="url.url" target="_blank">{{url.title}}</a></h6></div>
 					</div>
 				</div>
 					<br>
