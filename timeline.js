@@ -3,22 +3,11 @@ const timelines = [
 		name: 'Academia',
 		backgroundColor: '#b49ed940', intervalColor: 'brown', pointColor: 'white',
 		entries: [
+			// School
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2021-06', end: '2023-05', caption: 'Sierra College', urls: [], title: 'Computer Science, A.S.', description: "Associate's for transfer to UC Davis through TAG program.\n\nA.S. in Computer Science, Mathematics, Physics, Natural Science", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2023/0.jpg"] },
-			
-
 			{ type: 'interval', backgroundColor: '#022851', start: '2023-09', end: '2025-06', caption: 'UC Davis', urls: [{url: "https://cs.ucdavis.edu/news/outstanding-senior-spotlight-jason-feng", title: "Outstanding Senior Spotlight: Jason Feng"}], title: 'Computer Science and Engineering, B.S.', description: "Bachelor's in Computer Science and Engineering. Graduated with highest honors, 4.0 GPA.\n\nSole recipient of CSE 2025 Outstanding Senior award; I'm not CSE Major, I'm Major CSE", imageUrls: ["images/academia/ceremony_all.jpg", "images/academia/ceremony_picture.jpg", "images/academia/ceremony_ghosal.jpg", "images/academia/ceremony_mom.jpg", "images/academia/ceremony_plaque.jpg"] },
-
-
-
 			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-09', end: 'present', caption: 'UCLA', urls: [], title: 'Computer Science, M.S.', description: "Pursuing Master's in computer science. Estimated graduation: June 2027", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [{url: "https://docs.google.com/presentation/d/14G1quUAdxqM_lkIW0Nk3DzFlp1egsCYCdX4JGLUii8Q/edit", title: "Concurrency, presented by Jason Feng"}, {url: "https://docs.google.com/presentation/d/1Ye36keKSoKQRIMoQIULE8lPYGmhA6ROMIkbHL_RqSns/edit", title: "Object-oriented Design Patterns, presented by Jason Feng and Justin Chen"}], title: 'Problemsetter/Interview Prep Lecturer', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: ["images/academia/interview_minecraft.jpg"] },
 			
-	// 	],
-	// },
-	// {
-	// 	name: 'Competitive Programming',
-	// 	backgroundColor: '#b49ed980', intervalColor: 'pink', pointColor: 'white',
-	// 	entries: [
 			// Sierra and SCPE
 			{ type: 'interval', backgroundColor: '#AF2124', start: '2022-06', end: '2023-05', caption: 'Sierra CS Club', urls: [{url: "https://jasonfeng365.github.io/scpe/", title: "Sierra Competitive Programming Exhibition"}, {url: "https://jasonfeng365.github.io/challenges/?name=scpe", title: "Original SCPE Problems"}, {url: "https://jasonfeng365.github.io/scpe/past-events/", title: "SCPE Past Events and Gallery"}], title: 'Co-President and Competitive Programming Advisor', description: "I was the founder and problemsetter for the Sierra Competitive Programming Exhibition, a beginner-friendly contest for future contestants who want to explore competitive programming! Contests are hosted at Sierra College's campus, and are open to any current college or under student willing to learn. As of the 2023-2025 season, we've hosted 4 SCPE events with 30 original problems.\n\nI hosted the first ever SCPE in November 2023, with 10 problems I wrote myself. Contests are in-person, with an online option for people who cannot make it. Participation is completely free for everyone, and all current students are welcome to attend. Breakfast and lunch will be provided, and prizes are given out at the end of the contest, as well as a problem review session where I explain solutions to every single problem.\n\nUnlike most other contests, I walk around the contest room and give hints to contestants, to help push them along the problem-solving process. The goal of the SCPE is for contestants to not necessarily participate for bragging rights or prizes, but rather to have fun and explore new approaches to problem solving.", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2025/0.jpg", "https://jasonfeng365.github.io/scpe/past-events/f2023/3.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/5.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/7.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/9.jpg", "https://jasonfeng365.github.io/scpe/past-events/f2024/11.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2024/2.jpg", "images/academia/scpe-goofy.jpg"] },
 			{ type: 'point', backgroundColor: '#AF2124', date: '2023-11-04', caption: 'SCPE Fall 2023', urls: [{url: "https://www.hackerrank.com/contests/scpe-fall-2023/challenges", title: "SCPE Fall 2023 Problemset"}], title: 'Lead Organizer + Sole Problemsetter', description: "Our first ever SCPE was a huge success! Over 30 participants took part in the contest, with 64 total problem submissions. This was a huge opportunity for contestants to practice their critical thinking and problem-solving skills, along with being a huge opportunity for Sierra’s Coding Club officers to practice leadership.\n\nAll 10 problems are originals written by myself over the course of around 5 months. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/f2023/1.jpg","https://jasonfeng365.github.io/scpe/past-events/f2023/4.jpg"] },
@@ -27,13 +16,14 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#AF2124', date: '2025-04-26', caption: 'SCPE Spring 2025', urls: [{url: "https://www.hackerrank.com/contests/scpe-spring-2025/challenges", title: "SCPE Spring 2025 Problemset"}], title: 'Sole Problemsetter', description: "Interestingly enough, my last SCPE welcomed many special guests from all around California to participate virtually. A UCLA CS graduate joined us in-person to represent SoCal. Multiple competitive programmers from UC Davis participated virtually, including one of my ICPC teammates who solved the whole problemset. Finally, we welcomed competitive programming legend Nick Wu to compete virtually, who finished the entire set in 20 minutes!\n\nIn the coming years, Sierra's Computer Science Club officers will be taking over SCPE problemsetting and hosting. Look forward to contests in the coming years!\n\nSCPE Spring 2025 has 10 new original problems, and one \"extra credit\" problem returning from SCPE Spring 2024. Give them a try!", imageUrls: ["https://jasonfeng365.github.io/scpe/past-events/s2025/4.jpg", "https://jasonfeng365.github.io/scpe/past-events/s2025/1.jpg"] },
 
 			// Davis, DCPC, ACPC
-			{ type: 'interval', backgroundColor: '#022851', start: '2024-09', end: '2025-06', caption: 'DCPC', urls: [{url: "https://engineering.ucdavis.edu/news/coding-community-algorithm-davis-competitive-programming-club", title: "Coding with a Community: The Algorithm of the Davis Competitive Programming Club"}, {url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc", title: "Original ACPC Problems"}], title: 'Vice President + ACPC Problemsetter/System Ops', description: "I led Davis Competitive Programming Club as an active and welcoming Vice President during the 2024-2025 academic year, during which I taught competitive programming topics such as bitmask, dynamic programming, max-flow, and Z-algorithm. DCPC's weekly 2-hour meetings begin with a lecture, then move into a practice session with a set of problems. We covered a lot of topics, learning hard while having a ton of fun working with likeminded competitive programmers.", imageUrls: ["images/academia/acpc2025_team.jpg", "images/academia/acpc2024_team.jpg", "images/academia/acpc2023_competing.jpg", "images/academia/dcpc_lecture.jpg" ] },
-			{ type: 'point', backgroundColor: '#022851', date: '2024-05-04', caption: 'ACPC 2024', urls: [{url: "https://acpc-ucd.com/2024/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/ANhuR0iBIH/contest/522146", title: "ACPC 2024 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202024", title: "Original ACPC 2024 Problems"}, {url: "https://photos.google.com/share/AF1QipMQl6XctF6R_k60AzSZIVFW3ji94XsoM6oJ6a6VahiAbLr-xEUAnP8GBcE8xiXN-A?key=WmJtLThyVzdUakNXR1RtYzlYQVVydG5HZjEyY05B", title: "ACPC 2024 Gallery"}], title: 'Problemsetter', description: "For my experience and contributions to Sierra College's competitive programming community, I was invited to help out UC Davis's own contest. I brought my four hardest problems to the contest, challenging contestants and organizers alike.\n\nI had a ton of fun working together with this truly talented and dedicated team of organizers! Compared to Sierra, where I was the sole problemsetter, it was amazing to see problems across all topics, written in a different style than mine. We had a lot of fun working together to make ACPC the best one yet, and I'm looking forward to seeing how great it can be in the coming years.", imageUrls: ["images/academia/acpc2024_balloons.jpg", "images/academia/acpc2024_woodstock.jpg", "images/academia/acpc2024_competing.jpg", "images/academia/acpc2024_prize.jpg"] },
-			{ type: 'point', backgroundColor: '#022851', date: '2025-04-06', caption: 'ACPC 2025', urls: [{url: "https://acpc-ucd.com/2025/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/Agsm1DY0x3/contest/600925", title: "ACPC 2025 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202025", title: "Original ACPC 2025 Problems"}, {url: "https://photos.google.com/share/AF1QipNcQu1fv5a55btmyhCqp0H_3xRwW50jAdwla-4qwvd6dukpyhVGqo3LaJ2cYG5ABA?key=WENrckE4OWZHdDFOVVdvTmNxX21VQzRFcHlSMHF3", title: "ACPC 2025 Gallery"}], title: 'Lead Problemsetter / System Ops / Website Design', description: "My experiences with contest hosting brought some logistical improvements to ACPC 2025, where I advocated for contestant experience and transparency as much as possible. Some edits to the website ensured that location and parking information are at the very top, easily accessible to contestants. I revamped the signup sheet to allow contestants to let us know if they can't make it, letting us plan food and logistics better. And of course, ACPC 2025 was my first beta test of CANIS, which let us deliver balloons promptly and smoothly, and let us have a live updating counter of seats remaining on the homepage, letting contestants know if they're signed up or not.\n\nCANIS was an instant hit, easing work on organizers by providing an easy-to-read list of contestants who needed balloons. I'll continue to iterate on it to make it even easier to use and more powerful for future ACPCs.", imageUrls: ["images/academia/acpc2025_projector.jpg", "images/academia/acpc2025_balloons.jpg", "images/academia/acpc2025_canis.jpg"] },
-			{ type: 'point', backgroundColor: '#022851', date: '2026-05-30', caption: 'ACPC 2026', urls: [{url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}], title: 'Problemsetter / System Ops / Website Design', description: "We're planning for ACPC 2026 to take place in May. As before, I'll be dedicating some of my problems to the contest, and will be on-site running system ops with CANIS. Stay tuned for the official contest announcement!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#022851', start: '2024-09', end: '2025-06', caption: 'DCPC', urls: [{url: "https://engineering.ucdavis.edu/news/coding-community-algorithm-davis-competitive-programming-club", title: "Coding with a Community: The Algorithm of the Davis Competitive Programming Club"}, {url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc", title: "Original ACPC Problems"}], title: 'Vice President + ACPC Problemsetter/System Ops', description: "I led Davis Competitive Programming Club as an active and welcoming Vice President during the 2024-2025 academic year, during which I taught competitive programming topics such as bitmask, dynamic programming, max-flow, and Z-algorithm. DCPC's weekly 2-hour meetings begin with a lecture, then move into a practice session with a set of problems. We covered a lot of topics, learning hard while having a ton of fun working with likeminded competitive programmers.", imageUrls: ["images/academia/acpc2026_team.jpg", "images/academia/acpc2023_competing.jpg", "images/academia/dcpc_lecture.jpg" ] },
+			{ type: 'point', backgroundColor: '#022851', date: '2024-05-04', caption: 'ACPC 2024', urls: [{url: "https://acpc-ucd.com/2024/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/ANhuR0iBIH/contest/522146", title: "ACPC 2024 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202024", title: "Original ACPC 2024 Problems"}, {url: "https://photos.google.com/share/AF1QipMQl6XctF6R_k60AzSZIVFW3ji94XsoM6oJ6a6VahiAbLr-xEUAnP8GBcE8xiXN-A?key=WmJtLThyVzdUakNXR1RtYzlYQVVydG5HZjEyY05B", title: "ACPC 2024 Gallery"}], title: 'Problemsetter', description: "For my experience and contributions to Sierra College's competitive programming community, I was invited to help out UC Davis's own contest. I brought my four hardest problems to the contest, challenging contestants and organizers alike.\n\nI had a ton of fun working together with this truly talented and dedicated team of organizers! Compared to Sierra, where I was the sole problemsetter, it was amazing to see problems across all topics, written in a different style than mine. We had a lot of fun working together to make ACPC the best one yet, and I'm looking forward to seeing how great it can be in the coming years.", imageUrls: ["images/academia/acpc2024_team.jpg", "images/academia/acpc2024_balloons.jpg", "images/academia/acpc2024_woodstock.jpg", "images/academia/acpc2024_competing.jpg", "images/academia/acpc2024_prize.jpg"] },
+			{ type: 'point', backgroundColor: '#022851', date: '2025-04-06', caption: 'ACPC 2025', urls: [{url: "https://acpc-ucd.com/2025/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/Agsm1DY0x3/contest/600925", title: "ACPC 2025 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202025", title: "Original ACPC 2025 Problems"}, {url: "https://photos.google.com/share/AF1QipNcQu1fv5a55btmyhCqp0H_3xRwW50jAdwla-4qwvd6dukpyhVGqo3LaJ2cYG5ABA?key=WENrckE4OWZHdDFOVVdvTmNxX21VQzRFcHlSMHF3", title: "ACPC 2025 Gallery"}], title: 'Lead Problemsetter / System Ops / Website Design', description: "My experiences with contest hosting brought some logistical improvements to ACPC 2025, where I advocated for contestant experience and transparency as much as possible. Some edits to the website ensured that location and parking information are at the very top, easily accessible to contestants. I revamped the signup sheet to allow contestants to let us know if they can't make it, letting us plan food and logistics better. And of course, ACPC 2025 was my first beta test of CANIS, which let us deliver balloons promptly and smoothly, and let us have a live updating counter of seats remaining on the homepage, letting contestants know if they're signed up or not.\n\nCANIS was an instant hit, easing work on organizers by providing an easy-to-read list of contestants who needed balloons. I'll continue to iterate on it to make it even easier to use and more powerful for future ACPCs.", imageUrls: ["images/academia/acpc2025_team.jpg", "images/academia/acpc2025_projector.jpg", "images/academia/acpc2025_balloons.jpg", "images/academia/acpc2025_canis.jpg"] },
+			{ type: 'point', backgroundColor: '#022851', date: '2026-05-30', caption: 'ACPC 2026', urls: [{url: "https://acpc-ucd.com/", title: "Aggie Competitive Programming Contest"}, {url: "https://codeforces.com/group/7voJiqlljS/contest/695483", title: "ACPC 2026 Problemset"}, {url: "https://jasonfeng365.github.io/challenges/?name=acpc%202026", title: "Original ACPC 2026 Problems"}, {url: "https://photos.google.com/share/AF1QipOg6oh4de9UqeVETehhOm8UdtsVbrrF8AU_nawyRiSqNdoxcjY-3k3o1nNvhMwm1g?key=WWw5VlBSUE85NXJoSXBJNkdPdVhRQmRTNzIyaTNn", title: "ACPC 2026 Gallery"}], title: 'Problemsetter / System Ops / Website Design', description: "I made my return to UC Davis in late May to help officiate 2026's edition of ACPC, contributing three problems to the 11-problem set. With some stability improvements for CANIS to assist in balloon distribution and live score tracking, my team and I hosted another successful and educational contest!\n\n\"ACPC is 100x easier since we got CANIS\" -ritakura1", imageUrls: ["images/academia/acpc2026_team.jpg", "images/academia/acpc2026_intro.jpg", "images/academia/acpc2026_bruh.jpg", "images/academia/acpc2026_balloons.jpg", "images/academia/acpc2026_canis.jpg"] },
 
 			// UCLA, club, CodeSprint
-			{ type: 'point', backgroundColor: '#2774AE', date: '2026-05', caption: 'CodeSprint 2026', urls: [{url: "https://codesprintla.uclaacm.com/", title: "CodeSprint"}], title: 'Problemsetter', description: "We're beginning to plan out CodeSprint's 2026 contest. Stay tuned for the official contest announcement!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'ACM ICPC', urls: [{url: "https://docs.google.com/presentation/d/14G1quUAdxqM_lkIW0Nk3DzFlp1egsCYCdX4JGLUii8Q/edit", title: "Concurrency, presented by Jason Feng"}, {url: "https://docs.google.com/presentation/d/1Ye36keKSoKQRIMoQIULE8lPYGmhA6ROMIkbHL_RqSns/edit", title: "Object-oriented Design Patterns, presented by Jason Feng and Justin Chen"}], title: 'Problemsetter/Interview Prep Lecturer', description: "I'm working together with UCLA's ACM ICPC chapter to teach interview preparation and problem-solving approaches to my peers in computer science. And problemsetting for CodeSprint, of course!", imageUrls: ["images/academia/interview_minecraft.jpg"] },
+			{ type: 'point', backgroundColor: '#2774AE', date: '2026-05-09', caption: 'CodeSprint 2026', urls: [{url: "https://codesprintla.uclaacm.com/", title: "CodeSprint"}], title: 'Problemsetter', description: "We're beginning to plan out CodeSprint's 2026 contest. Stay tuned for the official contest announcement!", imageUrls: [] },
 
 			// ICPC
 			{ type: 'point', backgroundColor: '#d18147', date: '2023-02-25', caption: 'ICPC PacNW 2022', urls: [], title: 'Mighty Polymorphers (Sierra D2)', description: "I first heard about the ICPC from my mentor, Lego Haryanto, who encouraged me to participate as a way of challenging myself. My teammates and I were Sierra College's first ever ICPC participants. We participated in the lower Division 2, where we scored 22nd place out of 53 teams across the whole Pacific Northwest.\n\nMy teammates were Sam Asbell and Neil Dandekar, led by coach Professor Barry Brown.", imageUrls: ["images/icpc/polymorphers.jpg"] },
@@ -69,8 +59,8 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#d18147', date: '2022-09-18', caption: 'Fours Redux', urls: [{url:"https://jasonfeng365.github.io/challenges/?name=fours%20redux", name:"Fours Redux"}], title: 'Start of problemsetting!', description: "I started building a contest problem repository on this fateful day, when I discovered Fours Redux! By now, I have over 130 contest problems of varying difficulty and algorithms, across six contests.", imageUrls: [] },
 
 			// Davis
-			{ type: 'interval', backgroundColor: '#8040FF', start: '2024-07', end: '2025-04', caption: 'CANIS', urls: [{url: "https://canis.jasonfeng365.top/", title: "CANIS"}], title: 'Contest Administration, Notifications, and Information System', description: "The Contest Administration, Notifications, and Information System has been both the most daunting and the greatest project I've taken on. Built by a contest-writer for contest-writers, CANIS simplifies monitoring of contestants during large contests, bringing attention to contestants who may be stuck and need a little hint, along with reporting on submission statuses and keeping a live-updating scoreboard.\n\nI was inspired by UC Davis's ACPC to make CANIS. ACPC organizers bring a balloon to contestants who solve a problem successfully. There was no automation on those first two contests, so an unfortunate contest organizer had to sit and constantly refresh Codeforces to retrieve submission status and manually record it into a spreadsheet. CANIS completely eliminates all of that; with a Spring server constantly polling Codeforces (or platform of choice) and pushing submissions to client devices, all an organizer has to do is to filter by new accepted submissions, see the team and team number pre-loaded into the system, and deliver a balloon to the happy contestants. CANIS runs on a server and is able to push to multiple clients at a time through the Live Contest Overview system, through STOMP JS sockets, so multiple organizers can process submissions in parallel.\n\nCANIS is aimed at educational school contests where organizers are able to gently nudge contestants in the right direction. As such, the integrated Alerts system allows admins to set up custom notifications that appear when contestants meet some threshold. For example, organizers may want to be alerted by any contestant that hasn't made a successful submission in 20 minutes since the contest began; maybe this contestant wasn't able to set up correctly, or may not know how to read standard input. Or, organizers may want to be alerted to teams that haven't made an AC in the past 45 minutes, who may need some help getting unstuck. Alerts is for helping orgainzers to identify who may need help, and to deliver that assistance promptly.\n\nCANIS's integration begins even before the contest starts with its Signups feature, where an admin can configure a Google Form to be parsed by the system. By reading responses to a configured form, CANIS detects how many people are signed up for the contest, including how many people signed up solo or as a team. This information is visible on the interface and can be exposed as a public REST API, allowing contestants to know if there's still remaining space to sign up.\n\nCANIS is truly a project born out of passion. So far, I've used it to faciliate UC Davis's and Sierra College's contests. One day, I hope it reaches out to more schools to help organizers around the world nurture the art of competitive programming!", imageUrls: [] },
-			{ type: 'interval', backgroundColor: '#FF9617', start: '2025-01', end: '2025-06', caption: 'CycleGuard', urls: [{url: "https://github.com/UCD-193AB-ws24/CycleGuardFrontend", title: "Frontend Code"}, {url: "https://github.com/UCD-193AB-ws24/CycleGuardBackend", title: "Backend Code"}], title: 'Gamified smart helmet and mobile app', description: "Computer Science and Engineering majors at UC Davis end off their undergraduate with a two-quarter capstone project. My team of three other passionate peers and I developed CycleGuard, a cross-platform gamified fitness app interfacing with a custom-made smart helmet. CycleGuard tracks a user's location through the helmet's integrated GPS, logs the user's past trips, distance, and time, and estimates calories burned. We added multiplayer features so multiple users can join a team (\"pack\") and work together to team goals, and achievements to earn through consistent exercise, to help motivate users to bicycle more.\n\nI was in charge of developing a backend server for our application. I hosted a Spring server on Google Cloud Run, providing an HTTPS endpoint and scaling, and used AWS DynampDB for persistent NoSQL storage of Java objects. I helped with the Flutter frontend as well, with my first foray into mobile development.\n\nMy teammates were Andrew Hoang, Shanu Kota, and Ian O'Connell. I had a ton of fun working together with such a dedicated team!", imageUrls: [] },
+			{ type: 'interval', backgroundColor: '#8040FF', start: '2024-07', end: '2025-04', caption: 'CANIS', urls: [{url: "https://canis.jasonfeng365.top/", title: "CANIS"}], title: 'Contest Administration, Notifications, and Information System', description: "The Contest Administration, Notifications, and Information System has been both the most daunting and the greatest project I've taken on. Built by a contest-writer for contest-writers, CANIS simplifies monitoring of contestants during large contests, bringing attention to contestants who may be stuck and need a little hint, along with reporting on submission statuses and keeping a live-updating scoreboard.\n\nI was inspired by UC Davis's ACPC to make CANIS. ACPC organizers bring a balloon to contestants who solve a problem successfully. There was no automation on those first two contests, so an unfortunate contest organizer had to sit and constantly refresh Codeforces to retrieve submission status and manually record it into a spreadsheet. CANIS completely eliminates all of that; with a Spring server constantly polling Codeforces (or platform of choice) and pushing submissions to client devices, all an organizer has to do is to filter by new accepted submissions, see the team and team number pre-loaded into the system, and deliver a balloon to the happy contestants. CANIS runs on a server and is able to push to multiple clients at a time through the Live Contest Overview system, through STOMP JS sockets, so multiple organizers can process submissions in parallel.\n\nCANIS is aimed at educational school contests where organizers are able to gently nudge contestants in the right direction. As such, the integrated Alerts system allows admins to set up custom notifications that appear when contestants meet some threshold. For example, organizers may want to be alerted by any contestant that hasn't made a successful submission in 20 minutes since the contest began; maybe this contestant wasn't able to set up correctly, or may not know how to read standard input. Or, organizers may want to be alerted to teams that haven't made an AC in the past 45 minutes, who may need some help getting unstuck. Alerts is for helping orgainzers to identify who may need help, and to deliver that assistance promptly.\n\nCANIS's integration begins even before the contest starts with its Signups feature, where an admin can configure a Google Form to be parsed by the system. By reading responses to a configured form, CANIS detects how many people are signed up for the contest, including how many people signed up solo or as a team. This information is visible on the interface and can be exposed as a public REST API, allowing contestants to know if there's still remaining space to sign up.\n\nCANIS is truly a project born out of passion. So far, I've used it to faciliate UC Davis's and Sierra College's contests. One day, I hope it reaches out to more schools to help organizers around the world nurture the art of competitive programming!", imageUrls: ["images/academia/acpc2026_canis.jpg", "images/academia/acpc2025_canis.jpg"] },
+			{ type: 'interval', backgroundColor: '#FF9617', start: '2025-01', end: '2025-06', caption: 'CycleGuard', urls: [{url: "https://github.com/UCD-193AB-ws24/CycleGuardFrontend", title: "Frontend Code"}, {url: "https://github.com/UCD-193AB-ws24/CycleGuardBackend", title: "Backend Code"}], title: 'Gamified smart helmet and mobile app', description: "Computer Science and Engineering majors at UC Davis end off their undergraduate with a two-quarter capstone project. My team of three other passionate peers and I developed CycleGuard, a cross-platform gamified fitness app interfacing with a custom-made smart helmet. CycleGuard tracks a user's location through the helmet's integrated GPS, logs the user's past trips, distance, and time, and estimates calories burned. We added multiplayer features so multiple users can join a team (\"pack\") and work together to team goals, and achievements to earn through consistent exercise, to help motivate users to bicycle more.\n\nI was in charge of developing a backend server for our application. I hosted a Spring server on Google Cloud Run, providing an HTTPS endpoint and scaling, and used AWS DynamoDB for persistent NoSQL storage of Java objects. I helped with the Flutter frontend as well, with my first foray into mobile development.\n\nMy teammates were Andrew Hoang, Shanu Kota, and Ian O'Connell. I had a ton of fun working together with such a dedicated team!", imageUrls: ["images/projects/cycleguard_group.jpg", "images/projects/cycleguard_poster.jpg"] },
 			{ type: 'interval', backgroundColor: '#022851', start: '2024-01', end: '2024-06', caption: 'Build Your Own Labyrinth', urls: [{url: "https://jasonfeng365.github.io/BuildYourOwnLabyrinth/", title: "Project webpage"}, {url: "https://jasonfeng365.github.io/BuildYourOwnLabyrinth/about/", title: "Demo and technical report"}], title: 'UC Davis Embedded Systems final project', description: "Embedded Systems was one of the most interesting class at UC Davis. As a required class for CSE majors, it's an infamous canon event for poor students just trying to graduate. Student pairs worked through four predefined labs throughout the first 8 weeks, spending about two weeks per lab, exploring parsing wireless signals from a TV remote using a bandpass circuit, transmitting and receiving through UART to a host device or a separate embedded device, and interfacing with AWS IoT to store data on a central server.\n\nAt the end of the class, my teammate Andrew Hoang and I spent two weeks on our final project: Build Your Own Labyrinth, 2.5D isomorphic maze game with C engine and AWS IoT integration. We worked together to develop the entire rendering and physics engine over a crazy 30-hour weekend of work. I also spent time on a website, linked below, which presented our work in an elegant way. I also wrote a Fabric.js level editor, allowing for visitors to the website to create their own levels and upload them to AWS, to be played on the microcontrollers.\n\nOur section's TA was so impressed by our performance, we were immediately offered an internship position with UC Davis's embedded systems laboratory over the summer, which we accepted. In his words, in two weeks, we had created the best project in the course in seven years.", imageUrls: [] },
 			{ type: 'point', backgroundColor: '#31c766', date: '2025-06', caption: 'SeleneHR', urls: [{url: "https://github.com/JasonFeng365/selenehr", title: "GitHub repo"}], title: 'Command-line macros for HackerRank problemsetting', description: "To faciliate problemsetting and contest administration with HackerRank, I developed some Selenium scripts to interface with HackerRank for uploading and updating problem statements and testcases. During ICPC NAC, I pulled these scripts together to fully make a command-line tool for contest preparation.", imageUrls: [] },
 			{ type: 'point', backgroundColor: '#007bff', date: '2025-07', caption: 'SCRIBE', urls: [{url: "https://github.com/JasonFeng365/SCRIBE", title: "GitHub repo"}], title: 'Local problemsetting problem organizer', description: "Eventually, my contest problem repo got too long to effectively manage! I wrote SCRIBE to orgnize everything by concepts (algorithms, approaches) and statuses (finished, writing generator, writing solution). It boasts integration with SeleneHR for easy uploading to HackerRank.", imageUrls: [] },
@@ -88,7 +78,7 @@ const timelines = [
 
 
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
-
+const clampValue = (value, min, max) => Math.min(max, Math.max(min, value));
 
 
 function makeCarouselButtons(carouselName, count) {
@@ -133,18 +123,39 @@ function makeCarousel(entry) {
 
 
 const vue = new Vue({
-  el: '#app',
+  el: '#timeline',
   data: {
-        timelines: timelines,
+		timelines: timelines,
 		selectedEntry: timelines[0].entries[0],
 		curDate: new Date(),
-		percentOfFuture: 0
+		percentCurrentDate: 0,
+		zoomLevel: 1.0,
+		zoomPow: 0,
+		zoomBase: 1.5,
+		maxPercent: 100 // Add this line
   },
   created() {
-    this.processTimelines();
-    this.generateAxisLabels();
+	this.processTimelines(1.0);
+	this.generateAxisLabels();
   },
   methods: {
+	zoomIn(increment) {
+		console.log("Zooming by "+increment)
+		this.zoomPow += increment;
+
+		let newLevel = 1.0 * this.zoomBase ** this.zoomPow;
+		this.zoomLevel = parseFloat(newLevel.toFixed(2));
+		// CRITICAL: Recalculate all positions based on the new zoom level
+		// this.processTimelines(this.zoomLevel);
+		// this.processTimelines(1)
+		console.log(this.zoomLevel)
+	},
+
+	zoomOut(decrement) {
+		this.zoomIn(-decrement);
+	},
+
+
 	getIntervals(org) {
 		const intervals = org.entries.filter(entry => entry.type === 'interval');
 		intervals.sort((a, b) => new Date(a.start) - new Date(b.start));
@@ -155,18 +166,18 @@ const vue = new Vue({
 		points.sort((a, b) => new Date(a.date) - new Date(b.date));
 		return points;
 	},
-	processTimelines() {
+	processTimelines(zoom = 1.0) {
 		const allEntries = this.timelines.flatMap(org => org.entries);
 		const allDates = [];
 
 		// Collect all dates from both intervals and points
 		allEntries.forEach(entry => {
-			if (entry.type === 'interval') {
-				allDates.push(new Date(entry.start));
-				allDates.push(entry.end === 'present' ? this.curDate : new Date(entry.end));
-			} else if (entry.type === 'point') {
-				allDates.push(new Date(entry.date));
-			}
+		if (entry.type === 'interval') {
+			allDates.push(new Date(entry.start));
+			allDates.push(entry.end === 'present' ? this.curDate : new Date(entry.end));
+		} else if (entry.type === 'point') {
+			allDates.push(new Date(entry.date));
+		}
 		});
 
 		// Find the earliest and latest dates across all entries
@@ -177,26 +188,52 @@ const vue = new Vue({
 		}
 		const totalDuration = latest - earliest;
 
-		
+		let maxPercent = 100;
+		allEntries.forEach(entry => {
+		if (entry.type === 'interval') {
+			const start = new Date(entry.start);
+			const end = entry.end === 'present' ? latest : new Date(entry.end);
+			const rawStart = (((start - earliest) / totalDuration) * 100) * zoom;
+			const rawEnd = (((end - earliest) / totalDuration) * 100) * zoom;
+			maxPercent = Math.max(maxPercent, rawStart, rawEnd);
+		} else if (entry.type === 'point') {
+			const date = new Date(entry.date);
+			const rawPoint = (((date - earliest) / totalDuration) * 100) * zoom;
+			maxPercent = Math.max(maxPercent, rawPoint);
+		}
+		});
 
-		// Percentage of timeframe that's in the future = (latest - current date) / all
-		this.percentOfFuture = 100*(latest.getTime() - this.curDate.getTime()) / totalDuration;
+		// Percentage of timeframe that's in the future
+		this.percentCurrentDate = (((this.curDate - earliest) / totalDuration) * 100) * zoom;
 
 		// Process each entry (interval or point)
 		this.timelines.forEach(org => {
-			org.entries.forEach(entry => {
+		org.entries.forEach(entry => {
 			if (entry.type === 'interval') {
 				const start = new Date(entry.start);
 				const end = entry.end === 'present' ? latest : new Date(entry.end);
-				entry.startPercent = ((start - earliest) / totalDuration) * 100;
-				entry.widthPercent = ((end - start) / totalDuration) * 100;
+
+				let rawStartPercent = (((start - earliest) / totalDuration) * 100) * zoom;
+				let rawEndPercent = (((end - earliest) / totalDuration) * 100) * zoom;
+
+				entry.startPercent = rawStartPercent;
+				let clampedEndPercent = clampValue(rawEndPercent, 0, 100);
+
+				// entry.widthPercent = Math.max(0, clampedEndPercent - entry.startPercent);
+				entry.widthPercent = Math.max(0, rawEndPercent - rawStartPercent);
+
 			} else if (entry.type === 'point') {
 				const date = new Date(entry.date);
-				entry.datePercent = ((date - earliest) / totalDuration) * 100;
+				let rawPointPercent = (((date - earliest) / totalDuration) * 100) * zoom;
+				entry.datePercent = rawPointPercent;
 			}
-			});
 		});
+		});
+		this.maxPercent = maxPercent;
+		this.generateAxisLabels();
 	},
+
+
 
     generateAxisLabels() {
 		const allEntries = this.timelines.flatMap(org => org.entries);
@@ -218,7 +255,7 @@ const vue = new Vue({
 		// Generate 10 evenly spaced labels
 		const earliest = new Date(uniqueDates[0]);
 		const latest = Math.max(...uniqueDates);
-		const totalDuration = latest - earliest;
+		const totalDuration = (latest - earliest);
 
 		const startYear = new Date()
 		startYear.setFullYear(uniqueDates[0].getFullYear())
@@ -237,7 +274,8 @@ const vue = new Vue({
 			
 			// const monthLabel = `${months[date.getMonth()]} ${date.getFullYear()}`;
 			const monthLabel = `${date.getFullYear()}`;
-			const percent = ((date - earliest) / totalDuration) * 100;
+			const percent = ((date - earliest) / totalDuration) * 100 * this.zoomLevel;
+			if (percent > 100) break;
 			axisLabels.push({ label: monthLabel, percent });
 		}
 		// Update the axis labels in the DOM
