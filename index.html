@@ -271,7 +271,12 @@
 		<div v-for="section in sections" :key="section.name">
 			<h2 class="text-light text-center" style="padding-bottom: .5rem;">{{section.name}}</h2>
 			<div v-for="entry in section.entries" :key="entry.title + section.name" class="hover-container">
-				<div class="card" :style="{'background': getBg(entry)}">
+				<div class="card" :style="{
+					'--color1-base': getColor(entry, 0, false),
+					'--color2-base': getColor(entry, 1, false),
+					'--color1-hover': getColor(entry, 0, true),
+					'--color2-hover': getColor(entry, 1, true),
+				}">
 					<div class="card-body">
 						<h4 class="card-title text-light">{{entry.title}}</h4>
 						<h5 class="card-subtitle mb-2" style="color: #ddd;">{{entry.subtitle}}</h5>
@@ -280,8 +285,8 @@
 
 						<div v-if="entry.imageUrls.length>0">
 							<div class="row">
-								<div class="col-6"><img v-bind:src="entry.imageUrls[0]" class="rounded img-fluid"></div>
-								<div class="col-6"><img v-bind:src="entry.imageUrls[1]" class="rounded img-fluid"></div>
+								<div class="col-6"><img v-bind:src="entry.imageUrls[0]" class="rounded img-fluid scale"></div>
+								<div class="col-6"><img v-bind:src="entry.imageUrls[1]" class="rounded img-fluid scale"></div>
 							</div>
 							<br>
 						</div>

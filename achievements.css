@@ -1,5 +1,18 @@
 /* https://medium.com/%40forfrontendofficial/14-css-shine-effects-for-frontend-3194b796c174 */
 
+@property --c0 {
+	syntax: '<color>';
+	initial-value: gold;
+	inherits: true;
+}
+
+@property --c1 {
+	syntax: '<color>';
+	initial-value: gold;
+	inherits: true;
+}
+
+
 .hover-container {
 	display: inline;
 }
@@ -17,14 +30,27 @@
 }
 
 .card {
-	transition: all 0.3s ease;
-	background-color: rgba(64, 32, 128, 0.3);
+	--c0: var(--color1-base);
+	--c1: var(--color2-base);
+	background: linear-gradient(225deg, var(--c0), var(--c1), var(--c0));
+	transition: all 0.3s ease, --c0 0.3s ease, --c1 0.3s ease;
+
 	outline-style: solid;
 	outline-color: gray;
 	overflow: hidden;
 	
 	backdrop-filter: blur(3px);
 	-webkit-backdrop-filter: blur(3px);
+}
+.card:hover {
+	--c0: var(--color1-hover);
+	--c1: var(--color2-hover);
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: fill,
 }
 
 
@@ -43,7 +69,7 @@
 		transparent,
 		transparent
 	);
-	transition: all 1s;
+	transition: all 1.5s;
 }
 
 
