@@ -62,11 +62,9 @@ img {
 	width: 400%;
 	height: 400%;
 	background: linear-gradient(
-		135deg,
-		transparent,
+		90deg,
 		transparent,
 		rgba(255, 255, 255, 0.2),
-		transparent,
 		transparent
 	);
 	transition: all 1.5s;
