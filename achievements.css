@@ -1,14 +1,14 @@
 /* https://medium.com/%40forfrontendofficial/14-css-shine-effects-for-frontend-3194b796c174 */
 
-@property --c0 {
+@property --c0-achievements {
 	syntax: '<color>';
-	initial-value: gold;
+	initial-value: #6C757D;
 	inherits: true;
 }
 
-@property --c1 {
+@property --c1-achievements {
 	syntax: '<color>';
-	initial-value: gold;
+	initial-value: #6C757D;
 	inherits: true;
 }
 
@@ -30,10 +30,10 @@
 }
 
 .card {
-	--c0: var(--color1-base);
-	--c1: var(--color2-base);
-	background: linear-gradient(225deg, var(--c0), var(--c1), var(--c0));
-	transition: all 0.3s ease, --c0 0.3s ease, --c1 0.3s ease;
+	--c0-achievements: var(--color1-base);
+	--c1-achievements: var(--color2-base);
+	background: linear-gradient(225deg, var(--c0-achievements), var(--c1-achievements), var(--c0-achievements));
+	transition: all 0.3s ease, --c0-achievements 0.3s ease, --c1-achievements 0.3s ease;
 
 	outline-style: solid;
 	outline-color: gray;
@@ -43,8 +43,8 @@
 	-webkit-backdrop-filter: blur(3px);
 }
 .card:hover {
-	--c0: var(--color1-hover);
-	--c1: var(--color2-hover);
+	--c0-achievements: var(--color1-hover);
+	--c1-achievements: var(--color2-hover);
 }
 
 img {
