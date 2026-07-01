@@ -87,14 +87,11 @@
 	width: 200%;
 	height: 200%;
 	background: linear-gradient(
-		135deg,
-		transparent,
+		90deg,
 		transparent,
 		rgba(255, 255, 255, 0.25),
-		transparent,
 		transparent
 	);
-  transition: all 1s;
 
 }
 
@@ -125,6 +122,7 @@
 .timeline-event:hover:before,
 .timeline-event.selected::before {
 	left: 100%;
+  transition: all 1s;
 }
 
 
