@@ -31,6 +31,7 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#d18147', date: '2024-11-16', caption: 'ICPC PacNW 2024', urls: [], title: 'Oneirophages (UC Davis D1)', description: "My team and I crushed my first and last ICPC with UC Davis in Division 1, beating out over 60 other teams for a spot at the ICPC North American Championship. After weeks of grueling 5-hour Saturday practices, we were confident in our abilities, and went on to be UC Davis's second ever team to attend NAC.\n\nMy teammates were Reina Itakura and Jack Xiang, led by coach Dr. Slobodan Mitrovic.", imageUrls: ["images/icpc/oneirophages.jpg", "images/icpc/ucd_2024.jpg"] },
 			{ type: 'point', backgroundColor: '#d18147', date: '2025-05-22', caption: 'ICPC NAC 2025', urls: [], title: 'UC Davis', description: "Oneirophages represented UC Davis at the North American Championship in Orlando, Florida from May 22-27. Though we weren't able to advance to World Finals, we had a lot of fun chatting with the celebrities of competitive programming and hanging out with each other. Afterwards, I was invited to judge the Pacific Northwest regional contests, and I'll be dedicating my time and problem repository to PacNW for the foreseeable future. I'm happy with ending my journey as a contestant while representing UC Davis at NAC, and I look forward to serving ICPC as a judge in the future!\n\nMy teammates were Reina Itakura and Jack Xiang, led by co-coach Theodore Pan.", imageUrls: ["images/icpc/nac_team.png", "images/icpc/nac_heart.jpg", "images/icpc/nac_point.jpg", "images/icpc/nac_code.jpg", "images/icpc/nac_post.jpg"] },
 			{ type: 'point', backgroundColor: '#d18147', date: '2025-11-15', caption: 'ICPC PacNW 2025', urls: [{url: "https://jasonfeng365.github.io/challenges/?name=pacnw%202025", title: "Original PacNW 2025 Problems"}], title: 'Judge', description: "Though I'm staying in Los Angeles from 2025-2027, I'm returning to my home region as a judge, and to encourage more people to participate in the art of competitive programming. My first time judging was quite fun, and I'll keep judging in the coming years!", imageUrls: ["images/icpc/2025_team.jpg", "images/icpc/2025_selfie.jpg", "images/icpc/2025_cow.jpg", "images/icpc/2025_bruh.jpg"] },
+			{ type: 'point', backgroundColor: '#d18147', date: '2026-11-14', caption: 'ICPC PacNW 2026', urls: [ /* {url: "https://jasonfeng365.github.io/challenges/?name=pacnw%202026", title: "Original PacNW 2026 Problems"} */ ], title: 'Judge', description: "Upcoming ICPC PacNW regional!", imageUrls: [] },
 		],
 	},
 	{
@@ -45,6 +46,8 @@ const timelines = [
 
 			{ type: 'interval', backgroundColor: '#d18147', start: '2025-09', end: 'present', caption: 'ICPC', urls: [], title: 'Pacific Northwest Regionals Judge', description: "Starting from 2025's Pacific Northwest regional contest, I'm now serving the prestigious International Collegiate Programming Contest as a problemsetter, judge, and livestream commentator. I'll be dedicating my hardest problems to ICPC for the foreseeable future!", imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#C74634', start: '2026-06', end: '2026-09', caption: 'Oracle', urls: [], title: 'Software Engineering Intern', description: "I'll be joining Oracle's Fusion team as an intern during Summer 2026, after a round of interviews from November-December 2025. Looking forward to contributing to and learning from Oracle!", imageUrls: [] },
+
+			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-09-28', end: '2026-12-10', caption: '35L TA', urls: [], title: 'Teaching Assistant', description: "Teaching and grading for UCLA Software Construction under Dr. Tobias Dürschmid.", imageUrls: [] },
 		],
 	},
 	{
@@ -66,7 +69,6 @@ const timelines = [
 			{ type: 'point', backgroundColor: '#007bff', date: '2025-07', caption: 'SCRIBE', urls: [{url: "https://github.com/JasonFeng365/SCRIBE", title: "GitHub repo"}], title: 'Local problemsetting problem organizer', description: "Eventually, my contest problem repo got too long to effectively manage! I wrote SCRIBE to orgnize everything by concepts (algorithms, approaches) and statuses (finished, writing generator, writing solution). It boasts integration with SeleneHR for easy uploading to HackerRank.", imageUrls: [] },
 
 			// UCLA
-			{ type: 'interval', backgroundColor: '#2774AE', start: '2025-10', end: 'present', caption: 'eSIM Parser', urls: [], title: 'Local web interface for editing eSIM .der files', description: "Open-source tool for researchers to parse and edit eSIM profiles.", imageUrls: [] },
 			{ type: 'interval', backgroundColor: '#2774AE', start: '2026-01', end: 'present', caption: 'GenValGen', urls: [], title: 'LLM-generated inputs for differential testing', description: "Possible UCLA capstone project!", imageUrls: [] },
 		],
 	}
